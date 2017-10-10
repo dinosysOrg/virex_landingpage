@@ -9,6 +9,11 @@
 @import 'sec_4';
 @import 'sec_5';
 @import 'sec_contact';
+@import 'sec_1_proj';
+@import 'sec_2_proj';
+@import 'sec_3_proj';
+@import 'sec_4_proj';
+@import 'sec_5_proj';
 
 .sec{
   position: relative;
@@ -25,6 +30,14 @@
   font-size: rem(14);
   border: 0px;
 }
+.btn-2{
+  background: #fbaf3f;
+  border-radius: 37px;
+  padding: rem(9) rem(35);
+  text-transform: uppercase;
+  font-size: rem(14);
+  border: 0px;
+}
 .contact-form{
   margin: auto;
   width: 20%;
@@ -34,4 +47,3 @@
     border-radius: 5px;
   }
 }
-

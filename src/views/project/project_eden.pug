@@ -4,7 +4,61 @@ block vars
   -title = 'Project page'
   -bodyClass = 'project-page'
   -menuIndex = 1
-  include ../../data/data.pug
+  -
+    project = {
+      name: "The Eden Rose Thanh Trì",
+      address: "Xã Thanh Luyệt, Huyện Thanh Trì, Hà Nội",
+      info: {
+          model: "Nhà liền kề, biệt thự liền kề, shophouse, villa",
+          investor: {
+            content: "Công ty CP đầu tư bất động sản ",
+            bold: [
+              "VimeFulland"
+            ]
+          },
+          price: {
+            content: "Thời gian mở bán:",
+            bold: [
+              "55",
+              "60 triệu/m2",
+              "Quý 4 năm 2017"
+            ]
+          },
+      },
+      detail: {
+        text: [
+          "là dự án gồm tổ hợp các căn biệt thự, villa, shophouse liền kề cao cấp nhất khu vực.",
+          "được tích hợp mọi hệ thống tiện ích cao cấp và hiện đại trong một khuôn viên không gian xanh với bầu không khí trong lành. Hiếm có dự án nào đạt đủ các tiêu chí không gian sống lý tưởng như The Eden Rose.",
+          "Bên cạnh đó,",
+          "cũng sở hữu vị trí đắc địa, thuận tiện kết nối các quận cũng như trung tâm thủ đô Hà Nội thông qua hệ thống",
+        ],
+        bold: [
+          "The Eden Rose - Thanh Trì",
+          "The Eden Rose",
+          "The Eden Rose",
+        ],
+        more: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc auctor egestas est, sed suscipit ante interdum vel. Quisque sed tellus at turpis eleifend imperdiet a in dui. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus non mauris et lectus tincidunt tincidunt a congue urna",
+      },
+      area: {
+        contruction: {
+          value: "8000 m2",
+          desc: "Tổng diện tích xây dựng"
+        },
+        greenery: {
+          value: "1000 m2",
+          desc: "Diện tích cây xanh và hồ điều hòa"
+        },
+        mansion: {
+          value: "130 - 300 m2",
+          desc: "Diện tích các căn biệt thự liền kề"
+        },
+        apartment: {
+          value: "82 - 218 m2",
+          desc: "Diện tích các căn liền kề:"
+        }
+      }
+    }
+
   
 block container
   include _sec_1

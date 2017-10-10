@@ -1,0 +1,49 @@
+.section-proj-4 {
+  background-color: #f8f8f8;
+  &__detail {
+    &__title {
+      color: #c7202f;
+      font-size: rem(24);
+      &:after {
+        position: relative;
+        content: "";
+        width: 145px;
+        display: block;
+        border-bottom: 2px solid #fbaf3f;
+      }
+    }
+    &__content {
+      color: #464646;
+      font-size: rem(16);
+      span {
+        color: #464646;
+        font-weight: bold;
+        &.more {
+          font-style: italic;
+          color: #c7202f;
+          font-weight: normal;
+          &:hover {
+            text-decoration: underline;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+  &__download {
+    &__title {
+      color: #c7202f;
+      font-size: rem(24);
+      &:after {
+        position: relative;
+        content: "";
+        width: 145px;
+        display: block;
+        border-bottom: 2px solid #fbaf3f;
+      }
+    }
+    &__content {
+      color: #464646;
+    }
+  }
+}

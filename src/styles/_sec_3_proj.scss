@@ -1,0 +1,24 @@
+.section-proj-3 {
+  &__item {
+    &__title {
+      color: #c7202f;
+      font-size: rem(24);
+      font-weight: bold;
+      &:after {
+        position: relative;
+        content: "";
+        width: 65px;
+        display: block;
+        border-bottom: 2px solid #fbaf3f;
+      }
+    }
+    &__content {
+      font-size: rem(28);
+      color: #464646;
+      span {
+        color: #464646;
+        font-weight: bold;
+      }
+    }
+  }
+}
