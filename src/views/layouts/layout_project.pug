@@ -1,0 +1,24 @@
+block vars
+  -title = 'Site'
+  -bodyClass = ''
+  
+doctype html
+html(lang='en')  
+  head
+  meta(charset="utf-8")
+  meta(name="viewport", content="width=device-width, initial-scale=1, minimal-ui")
+  title=title
+  link(rel='stylesheet', href='./css/styles.min.css')
+  
+body(class="page-content")
+  .loading
+    .boxLoading
+      .circle
+  include header
+  block container
+  include footer
+script(src='./js/app.project.mins.js')
+
+
+
+
