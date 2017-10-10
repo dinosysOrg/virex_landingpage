@@ -1,4 +1,6 @@
 include ../../data/data.pug
+  if menuIndex===0
+    - checkHome = 'active'
 header
   nav.navbar.navbar-expand-md#main-menu
     a.navbar-brand(href="#")
@@ -7,8 +9,8 @@ header
       span.navbar-toggler-icon
     #navbarCollapse.collapse.navbar-collapse
       ul.navbar-nav.ml-auto
-        li.nav-item
-          a.nav-link.smooth-scroll(href="#about") VỀ CHÚNG TÔI 
+        li.nav-item(class=checkHome)
+          a.nav-link.smooth-scroll(href="#about") GIỚI THIỆU
         li.nav-item
           a.nav-link.smooth-scroll(href="#portfolio") DỰ ÁN
           ul.subMenu.list-unstyled
