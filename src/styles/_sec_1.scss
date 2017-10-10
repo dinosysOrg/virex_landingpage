@@ -1,0 +1,11 @@
+.section-1{
+  background-image: url($src+'images/bg_section_1.jpg');
+  &__txt{
+    // @include center(right);
+    position: absolute;
+    top: 42%;
+    right: 0%;
+    margin-right: 10%;
+    font-size: rem(25);
+  }
+}

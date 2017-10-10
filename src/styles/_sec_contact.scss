@@ -1,0 +1,14 @@
+.section-contact{
+  background-image: url($src+'images/bg_section_2.jpg');
+  &__title{
+    font-size: rem(35);
+    color: #4d4d4d;
+    padding-top: 10%;
+  }
+  &__des{
+    color: #4d4d4d;
+    margin-top: rem(15);
+    margin-bottom: rem(150)
+  }
+}
+

@@ -1,0 +1,49 @@
+.section-3{
+  // background-image: url($src+'images/bg_section_1.jpg');
+  background: #000;
+  .container-fuild{
+    width: 100%;
+    margin: auto;
+  }
+  &__list{
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+    &_1{
+      background-image: url($src+'images/bg_section_1.jpg');
+      background-size: cover;
+      background-position: center center;
+    };
+    &_2{
+      background-image: url($src+'images/bg_section_2.jpg');
+      background-size: cover;
+      background-position: center center;
+    }
+    &_3{
+      background-image: url($src+'images/bg_section_1.jpg');
+      background-size: cover;
+      background-position: center center;
+    }
+    .list-inline-item{
+      flex: 1;
+      padding-top: 10%;
+      padding-left: 3%;
+      margin-right: 0px;
+      transition: all 500ms ease-out;
+      transform: scale(1);
+      &:not(:last-child){
+        margin-right: 0px;
+      }
+      &:hover{
+        flex: 3;
+        background-size: cover;
+        background-position: center center;
+        transform: scale(1.1);
+        background-color: red;
+        background-blend-mode: multiply;
+      }
+    }
+  }
+}
