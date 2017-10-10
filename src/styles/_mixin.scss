@@ -1,0 +1,58 @@
+// location 
+$src: '../';
+$base-font-size: 16;
+// Mixin cover rem
+@function rem($px, $base:$base-font-size) { @return ($px / $base) * 1rem; }
+// vertical center
+@mixin center($pos:both ){
+  position: absolute;
+  @if ($pos==both) {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  } @else if ($pos==top) {
+    left: 50%;
+    transform: translate(-50%, 0);
+  } @else if ($pos==left) {
+    top: 50%;
+    transform: translate(0, -50%);
+  } @else if ($pos==right) {
+    top: 50%;
+    right:0;
+    transform: translate(0, -50%);
+  } @else if ($pos==bottom) {
+    bottom: 0;
+    left:50%;
+    transform: translate(-50%, 0);
+  }
+}
+// Mixin query media
+// @include maxs($sp-1600) {
+//   style
+// }
+$sp-320: 320px;
+$sp-360: 360px;
+$sp-480: 480px;
+$sp-640: 640px;
+$sp-768: 768px;
+$sp-767: 767px;
+$sp-992: 992px;
+$sp-1024: 1024px;
+$sp-1200: 1200px;
+$sp-1366: 1366px;
+$sp-1400: 1400px;
+$sp-1600: 1600px;
+$sp-1920: 1920px;
+@mixin min($device-width) {
+  @media screen and (min-width: $device-width) {
+    @content
+  }
+};
+@mixin maxs($device-width) {
+  @media screen and (max-width: $device-width) {
+    @content
+  }
+}
+
+*, a{color: #fff}
+body{position: relative;}

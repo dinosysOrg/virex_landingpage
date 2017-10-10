@@ -1,0 +1,18 @@
+.section-2{
+  background-image: url($src+'images/bg_section_2.jpg');
+  &__box{
+    width: 35%;
+    background: rgba(190,30,45,0.6);
+    position: absolute;
+    top: 30%;
+    @include maxs($sp-1400) {
+      width: 45%;
+    }
+  }
+  &__title{
+    font-size: rem(25);
+  }
+  &__txt{
+    font-size: rem(14);
+  }
+}

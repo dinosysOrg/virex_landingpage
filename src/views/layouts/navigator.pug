@@ -1,0 +1,10 @@
+- var content = ['home', 'about', 'vision', 'comment', 'portfolio', 'contact']
+ul.navigator.list-unstyled#navigation
+  each item in content
+    li
+      a.nav-link.smooth-scroll(href=`#${item}`) 1
+
+//- header
+//-   +link('Logo', 'index.html').logo
+//-   nav
+//-     +nav([{title: 'Home', href: 'index.html'}, {title: 'Layer', href: 'template-layer.html'}, {title: 'Sprite', href: 'template-sprite.html'}, {title: 'Style Guide', href: 'template-style-guide.html'}, {title: 'Sitemap', href: 'sitemap.html'}])
