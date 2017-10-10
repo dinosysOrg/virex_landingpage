@@ -84,7 +84,7 @@ gulp.task('watch', function(){
     gulp.watch('./src/styles/_*.scss',['sass'])
     gulp.watch('./src/views/**/*.pug',['pug'])
     gulp.watch('./src/views/**/_**.pug',['pug'])
-    gulp.watch('./src/js/*.js', ['js'])
+    gulp.watch('./src/js/*.js', ['js', 'jsproject'])
     gulp.watch('./public/js/*.js').on('change', reload)
     gulp.watch('./public/*.html').on('change', reload)
 });
