@@ -23,6 +23,7 @@ gulp.task('pug', function () {
       '!./src/views/layouts/*.pug',
       '!./src/views/**/_*.pug',
       './src/views/home/*.pug',
+      './src/views/project/*.pug',
     ])
     .pipe(pug({
     }))
@@ -31,6 +32,7 @@ gulp.task('pug', function () {
 gulp.task('sass', function () {
     return gulp.src([
             './src/styles/bootstrap.scss',
+            './src/styles/jquery.fancybox.scss',
             './src/styles/styles.scss',
         ])
         .pipe(sourcemaps.init())
@@ -52,9 +54,23 @@ gulp.task('js', function () {
             './src/js/aos.js',
             './src/js/popper.min.js',
             './src/js/bootstrap.js',
+            './src/js/jquery.fancybox.js',
             './src/js/scripts.js',
         ])
         .pipe(concat('app.mins.js'))
+        .pipe(uglify())
+        .pipe(gulp.dest('./public/js'));
+});
+gulp.task('jsproject', function () {
+    return gulp.src ([
+            './src/js/jquery-3.2.1.min.js',
+            './src/js/jquery.nicescroll.js',
+            './src/js/popper.min.js',
+            './src/js/bootstrap.js',
+            './src/js/jquery.fancybox.js',
+            './src/js/scripts.project.js',
+        ])
+        .pipe(concat('app.project.mins.js'))
         .pipe(uglify())
         .pipe(gulp.dest('./public/js'));
 });
@@ -73,4 +89,4 @@ gulp.task('watch', function(){
     gulp.watch('./public/*.html').on('change', reload)
 });
 
-gulp.task('default', ['watch', 'browser-sync', 'sass', 'pug', 'js', 'img']);
+gulp.task('default', ['watch', 'browser-sync', 'sass', 'pug', 'js', 'jsproject', 'img']);
