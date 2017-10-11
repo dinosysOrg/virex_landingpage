@@ -58,7 +58,7 @@ gulp.task('js', function () {
             './src/js/scripts.js',
         ])
         .pipe(concat('app.mins.js'))
-        .pipe(uglify())
+        //.pipe(uglify())
         .pipe(gulp.dest('./public/js'));
 });
 gulp.task('jsproject', function () {
@@ -71,12 +71,16 @@ gulp.task('jsproject', function () {
             './src/js/scripts.project.js',
         ])
         .pipe(concat('app.project.mins.js'))
-        .pipe(uglify())
+        //.pipe(uglify())
         .pipe(gulp.dest('./public/js'));
 });
 gulp.task('img', function () {
-    return gulp.src ('./src/assets/images/*.+(jpg|jpeg|gif|png)')
+    return gulp.src ('./src/assets/images/*.+(jpg|jpeg|gif|png|svg)')
         .pipe(gulp.dest('./public/images'));
+});
+gulp.task('font', function () {
+    return gulp.src ('./src/assets/font/*.+(otf|eot|svg|ttf|woff|woff2)')
+        .pipe(gulp.dest('./public/font'));
 });
 gulp.task('watch', function(){
     gulp.watch('./src/data/data.pug',['pug'])
@@ -89,4 +93,4 @@ gulp.task('watch', function(){
     gulp.watch('./public/*.html').on('change', reload)
 });
 
-gulp.task('default', ['watch', 'browser-sync', 'sass', 'pug', 'js', 'jsproject', 'img']);
+gulp.task('default', ['watch', 'browser-sync', 'sass', 'pug', 'js', 'jsproject', 'img', 'font']);
