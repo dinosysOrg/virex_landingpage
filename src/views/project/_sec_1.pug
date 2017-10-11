@@ -1,6 +1,6 @@
 .sec-proj.section-proj-1#banner
-  img.section-proj-1__bg.img-fluid(src=src+'images/image-eden-rose.jpg')
+  img.section-proj-1__bg.img-fluid(src=project.banner)
   .section-proj-1__button-group.row
-    .section-proj-1__button-group__picture.btn.col HÌNH ẢNH
-    .section-proj-1__button-group__civil-guide.btn.col.mr-4.ml-4 MẶT BẰNG
-    .section-proj-1__button-group__position.btn.col VỊ TRÍ
+    a(onclick="openGallery(" + "'" + JSON.stringify(project.gallery.picture) + "'" + ")").fancybox.section-proj-1__button-group__picture.btn.col HÌNH ẢNH
+    a(onclick="openGallery(" + "'" + JSON.stringify(project.gallery.guide) + "'" + ")").fancybox.section-proj-1__button-group__civil-guide.btn.col.mr-4.ml-4 MẶT BẰNG
+    a(onclick="openGallery(" + "'" + JSON.stringify(project.gallery.position) + "'" + ")").fancybox.section-proj-1__button-group__position.btn.col VỊ TRÍ

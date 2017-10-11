@@ -16,6 +16,7 @@
 @import 'sec_4_proj';
 @import 'sec_5_proj';
 @import 'sec_6_proj';
+@import 'fancybox_modal.scss';
 
 .sec{
   position: relative;
@@ -47,5 +48,10 @@
     border: 0px;
     margin-top: rem(15);
     border-radius: 5px;
+  }
+}
+.project-content {
+  header {
+    position: absolute;
   }
 }
