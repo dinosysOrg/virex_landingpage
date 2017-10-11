@@ -1,11 +1,14 @@
 .section-1{
   background-image: url($src+'images/bg_section_1.jpg');
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100%;
   &__txt{
     // @include center(right);
-    position: absolute;
-    top: 42%;
-    right: 0%;
-    margin-right: 10%;
-    font-size: rem(25);
+    margin-left: auto;
+    width: 500px;
+    margin-right: 5%;
+    font-size: rem(35);
   }
 }

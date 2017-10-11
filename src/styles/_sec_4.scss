@@ -1,13 +1,19 @@
 .section-4{
   background-image: url($src+'images/bg_section_2.jpg');
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100%;
   &__slide{
-    width: 35%;
-    position: absolute;
-    bottom: 15%;
-    left: 7%;
-    @include maxs($sp-1400) {
-      width: 50%;
-    }
+    width: 50%;
+    margin-top: auto;
+    margin-bottom: 6%;
+    margin-left: 3%;
+    // bottom: 15%;
+    // left: 7%;
+    // @include maxs($sp-1400) {
+    //   width: 50%;
+    // }
     .title{
       font-size: rem(28);
     }

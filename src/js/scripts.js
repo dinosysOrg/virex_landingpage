@@ -2,41 +2,38 @@
 window.onload = function() {
   $('.loading').fadeOut('slow');
 };
-// smooth on scroll
-$("body").niceScroll({
-  cursorcolor:		"#888",
-  cursorwidth: 		"7px",
-  cursorborder: 		"0px solid #000",
-  scrollspeed: 		70,
-  background: 		'#ddd',
-  cursorminheight: 	20,
-  enablekeyboard: 	true,
-  horizrailenabled: 	true,
-  autohidemode: 		false,
-  bouncescroll: 		false,
-  smoothscroll: 		true,
-  iframeautoresize: 	true,
-  touchbehavior: 		false,
-  zindex: 999
-});
-// animation 
-AOS.init({
-  offset: 200,
-  // once: true,
+$(document).ready(function() {
+  $('#fullpage').fullpage({
+      sectionSelector: '.sec',
+      scrollOverflow: true,
+      css3: true,
+      verticalCentered: false,
+      navigation: true,
+      navigationPosition: 'right',
+      // sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
+      // anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
+      // menu: '#menu',
+      afterLoad: function(anchorLink, index){
+        if(index === 1){
+          $('.section-1__txt').addClass('fadeInRight')
+        }
+      }
+  });
+  $('.section-4__slide').carousel({
+    interval: 3000
+  })
 });
 // scroll spy
-$('body').scrollspy({ target: '#navigation' })
+// $('body').scrollspy({ target: '#navigation' })
 // smooth on link
-$(".smooth-scroll").on('click', function(event) {
-  event.preventDefault();
-  var hash = this.hash;
-  $('html, body').animate({
-    scrollTop: $(hash).offset().top
-  }, 700, function() {
-    window.location.hash = hash;
-  });
-});
-$('.section-4__slide').carousel({
-  interval: 3000
-})
+// $(".smooth-scroll").on('click', function(event) {
+//   event.preventDefault();
+//   var hash = this.hash;
+//   $('html, body').animate({
+//     scrollTop: $(hash).offset().top
+//   }, 700, function() {
+//     window.location.hash = hash;
+//   });
+// });
+
 

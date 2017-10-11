@@ -22,7 +22,7 @@
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 100vh;
+  // min-height: 100vh;
 }
 .btn{
   background: #BE1E2D;
@@ -47,5 +47,19 @@
     border: 0px;
     margin-top: rem(15);
     border-radius: 5px;
+  }
+}
+#fp-nav{
+  ul{
+    li{
+      margin: rem(50) 0px;
+      a{
+        span{
+          width: 10px;
+          height: 50px;
+          background: red;
+        }
+      }
+    }
   }
 }

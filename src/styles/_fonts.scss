@@ -10,4 +10,51 @@
   font-weight: normal;
   font-style: normal;
 }
-$font-bold: FontAwesome;
+@font-face {
+  font-family: HelveticaNeue;
+  src: url($src + 'font/HelveticaNeue.eot');
+  src: url($src + 'font/HelveticaNeue.woff2') format('woff2'),
+       url($src + 'font/HelveticaNeue.woff') format('woff'),
+       url($src + 'font/HelveticaNeue.ttf') format('truetype'),
+       url($src + 'font/HelveticaNeue.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: HelveticaNeueLight;
+  src: url($src + 'font/HelveticaNeue-Light.eot');
+  src: url($src + 'font/HelveticaNeue-Light.woff2') format('woff2'),
+       url($src + 'font/HelveticaNeue-Light.woff') format('woff'),
+       url($src + 'font/HelveticaNeue-Light.ttf') format('truetype'),
+       url($src + 'font/HelveticaNeue-Light.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: HelveticaNeueBold;
+  src: url($src + 'font/HelveticaNeue-Bold.eot');
+  src: url($src + 'font/HelveticaNeue-Bold.woff2') format('woff2'),
+       url($src + 'font/HelveticaNeue-Bold.woff') format('woff'),
+       url($src + 'font/HelveticaNeue-Bold.ttf') format('truetype'),
+       url($src + 'font/HelveticaNeue-Bold.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: HelveticaNeueMedium;
+  src: url($src + 'font/HelveticaNeue-Medium.eot');
+  src: url($src + 'font/HelveticaNeue-Medium.woff2') format('woff2'),
+       url($src + 'font/HelveticaNeue-Medium.woff') format('woff'),
+       url($src + 'font/HelveticaNeue-Medium.ttf') format('truetype'),
+       url($src + 'font/HelveticaNeue-Medium.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+$font: HelveticaNeue;
+$font-L: HelveticaNeueLight;
+$font-B: HelveticaNeueBold;
+$font-M: HelveticaNeueMedium;
+
+*, a{color: #fff;font-family: $font}
+body{position: relative;}
