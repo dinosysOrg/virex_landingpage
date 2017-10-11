@@ -1,15 +1,19 @@
 .section-proj-4 {
+  strong {
+    color: #464646;
+  }
   background-color: #f8f8f8;
   &__detail {
     &__title {
       color: #c7202f;
-      font-size: rem(24);
+      font-size: rem(18);
       &:after {
         position: relative;
         content: "";
         width: 145px;
         display: block;
         border-bottom: 2px solid #fbaf3f;
+        margin-top: 5px;
       }
     }
     &__content {
@@ -33,17 +37,19 @@
   &__download {
     &__title {
       color: #c7202f;
-      font-size: rem(24);
+      font-size: rem(18);
       &:after {
         position: relative;
         content: "";
         width: 145px;
         display: block;
         border-bottom: 2px solid #fbaf3f;
+        margin-top: 5px;
       }
     }
     &__content {
       color: #464646;
+      font-size: rem(16);
     }
   }
 }

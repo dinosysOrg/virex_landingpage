@@ -5,13 +5,7 @@
       .section-proj-3__item__content #{project.info.model}
     .section-proj-3__item.col
       .section-proj-3__item__title CHỦ ĐẦU TƯ
-      .section-proj-3__item__content #{project.info.investor.content} 
-        span #{project.info.investor.bold[0]}
+      .section-proj-3__item__content !{project.info.investor}
     .section-proj-3__item.col
       .section-proj-3__item__title GIÁ BÁN
-      .section-proj-3__item__content Từ 
-        span #{project.info.price.bold[0]} 
-        | đến 
-        span #{project.info.price.bold[1]} 
-        | #{project.info.price.content} 
-        span #{project.info.price.bold[2]}
+      .section-proj-3__item__content !{project.info.price}

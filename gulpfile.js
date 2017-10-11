@@ -58,7 +58,7 @@ gulp.task('js', function () {
             './src/js/scripts.js',
         ])
         .pipe(concat('app.mins.js'))
-        .pipe(uglify())
+        //.pipe(uglify())
         .pipe(gulp.dest('./public/js'));
 });
 gulp.task('jsproject', function () {
@@ -71,11 +71,11 @@ gulp.task('jsproject', function () {
             './src/js/scripts.project.js',
         ])
         .pipe(concat('app.project.mins.js'))
-        .pipe(uglify())
+        //.pipe(uglify())
         .pipe(gulp.dest('./public/js'));
 });
 gulp.task('img', function () {
-    return gulp.src ('./src/assets/images/*.+(jpg|jpeg|gif|png)')
+    return gulp.src ('./src/assets/images/*.+(jpg|jpeg|gif|png|svg)')
         .pipe(gulp.dest('./public/images'));
 });
 gulp.task('font', function () {

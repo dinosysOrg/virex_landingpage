@@ -1,5 +1,14 @@
-.section-proj-4 {
+.section-proj-5 {
   &__item {
     color: #464646;
+  }
+  &__value {
+    color: #464646;
+    font-weight: bold;
+    font-size: rem(24);
+  }
+  &__desc {
+    color: #464646;
+    font-size: rem(14);
   }
 }

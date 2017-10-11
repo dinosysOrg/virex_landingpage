@@ -3,16 +3,7 @@
     .row
       .section-proj-4__detail.col-md-8
         .section-proj-4__detail__title GIỚI THIỆU CHUNG
-        .section-proj-4__detail__content.mt-4
-          span #{project.detail.bold[0]} 
-          | #{project.detail.text[0]}
-          span #{project.detail.bold[1]} 
-          | #{project.detail.text[1]}
-          br
-          br
-          | #{project.detail.text[2]} 
-          span #{project.detail.bold[2]} 
-          | #{project.detail.text[3]}...
+        .section-proj-4__detail__content.mt-4 !{project.detail.text} 
           span.more xem thêm
       .section-proj-4__download.col-md-4
         .section-proj-4__download__title TÀI LIỆU TẢI VỀ
