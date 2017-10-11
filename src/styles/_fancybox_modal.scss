@@ -8,6 +8,14 @@
   padding: 10px;
   box-sizing: border-box;
   background: rgba(0, 0, 0, 0.3);
+  &>ul {
+    text-align:center;
+    li {
+      float: initial;
+      display:inline-block;
+      margin-right:10px;
+    }
+  }
 }
 
 .fancybox-show-thumbs .fancybox-inner {
