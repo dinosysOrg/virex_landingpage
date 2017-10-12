@@ -2,10 +2,21 @@
   position: relative;
   &__button-group {
     position: absolute;
-    right: 150px;
+    right: 10%;
     bottom: -20px;
     .btn {
       font-weight: bold;
+      position: relative;
+      border: none;
+      outline: none;
+      text-align: left;
+      cursor: pointer;
+      &:active,
+      &:focus,
+      &:hover {
+        outline: none;
+        box-shadow: none;
+      }
     }
   }
 }

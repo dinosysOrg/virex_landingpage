@@ -15,6 +15,7 @@
       border: none;
       outline: none;
       text-align: left;
+      cursor: pointer;
       &:after{
         position: absolute;
         content: '';
@@ -60,6 +61,7 @@
       li {
         color: #464646;
         margin-bottom: 20px;
+        line-height: 2;
       }
     }
   }

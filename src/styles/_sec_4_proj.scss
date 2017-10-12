@@ -1,4 +1,15 @@
 .section-proj-4 {
+  span {
+    &.more {
+      font-style: italic;
+      color: #c7202f;
+      font-weight: normal;
+      cursor: pointer;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
   strong {
     color: #464646;
   }
@@ -19,18 +30,9 @@
     &__content {
       color: #464646;
       font-size: rem(16);
-      span {
+      &__more {
         color: #464646;
-        font-weight: bold;
-        &.more {
-          font-style: italic;
-          color: #c7202f;
-          font-weight: normal;
-          &:hover {
-            text-decoration: underline;
-            cursor: pointer;
-          }
-        }
+        display: none;
       }
     }
   }
@@ -50,6 +52,12 @@
     &__content {
       color: #464646;
       font-size: rem(16);
+    }
+    &__brochure,
+    &__leaflet {
+      font-weight: bold;
+      cursor: pointer;
+      color: #ffffff !important;
     }
   }
 }
