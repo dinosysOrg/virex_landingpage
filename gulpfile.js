@@ -24,6 +24,7 @@ gulp.task('pug', function () {
       '!./src/views/**/_*.pug',
       './src/views/home/*.pug',
       './src/views/project/*.pug',
+      './src/views/contact/*.pug',
     ])
     .pipe(pug({
     }))
@@ -74,6 +75,18 @@ gulp.task('jsproject', function () {
         // .pipe(uglify())
         .pipe(gulp.dest('./public/js'));
 });
+gulp.task('jscontact', function () {
+    return gulp.src ([
+            './src/js/jquery-3.2.1.min.js',
+            './src/js/jquery.nicescroll.js',
+            './src/js/popper.min.js',
+            './src/js/bootstrap.js',
+            './src/js/scripts.contact.js',
+        ])
+        .pipe(concat('app.contact.mins.js'))
+        // .pipe(uglify())
+        .pipe(gulp.dest('./public/js'));
+});
 gulp.task('img', function () {
     return gulp.src ('./src/assets/images/*.+(jpg|jpeg|gif|png|svg)')
         .pipe(gulp.dest('./public/images'));
@@ -93,4 +106,4 @@ gulp.task('watch', function(){
     gulp.watch('./public/*.html').on('change', reload)
 });
 
-gulp.task('default', ['watch', 'browser-sync', 'sass', 'pug', 'js', 'jsproject', 'img', 'font']);
+gulp.task('default', ['watch', 'browser-sync', 'sass', 'pug', 'js', 'jsproject', 'jscontact', 'img', 'font']);

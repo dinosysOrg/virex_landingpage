@@ -1,0 +1,104 @@
+.sec-contact-1 {
+  background: url($src+'images/image-contact.jpg') no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
+  position: relative;
+  .container {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  &__form {
+    input {
+      display: block;
+      width: 100%;
+      margin-bottom: 10px;
+      font-size: rem(18);
+      padding: 14px 16px;
+      border: none;
+      border-radius: 7px;
+      color: #464646;
+      &::placeholder {
+        color: #9b9b9b;
+      }
+    }
+    textarea {
+      width: 100%;
+      resize: none;
+      padding: 14px 16px;
+      font-size: rem(18);
+      border: none;
+      border-radius: 7px;
+      color: #464646;
+      &::placeholder {
+        color: #9b9b9b;
+      }
+    }
+  }
+  &__button {
+    .btn{
+      font-size: rem(16);
+      font-weight: bold;
+      padding: 16px 70px;
+    }
+    text-align: center;
+  }
+  &__info {
+    i {
+      color: #f6a623;
+      font-size: rem(36);
+    }
+    &__company-name {
+      color: #c7202f;
+      font-size: rem(30);
+      font-weight: bold;
+      &:after {
+        position: relative;
+        content: "";
+        width: 110px;
+        display: block;
+        border-bottom: 2px solid #fbaf3f;
+        margin-top: 5px;
+      }
+    }
+    &__company-contact {
+      color: #474747;
+      font-size:  rem(20);
+    }
+  }
+  &__social {
+    &__facebook {
+      cursor: pointer;
+      i {
+        border: 2px solid #f6a623;
+        border-radius: 50%;
+        padding: 10px 18.719px;
+      }
+    }
+    &__youtube {
+      cursor: pointer;
+      i {
+        border: 2px solid #f6a623;
+        border-radius: 50%;
+        padding: 10px 10.992px;
+      }
+    }
+    &__pinterest {
+      cursor: pointer;
+      i {
+        border: 2px solid #f6a623;
+        border-radius: 50%;
+        padding: 10px 15.1485px;
+      }
+    }
+  }
+}
+.contact-content {
+  footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+}
