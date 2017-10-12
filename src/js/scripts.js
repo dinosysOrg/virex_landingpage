@@ -24,6 +24,11 @@ $(document).ready(function() {
         if(index === 2){
           $('.section-2__box').addClass('fadeInLeft animated')
         }
+        if(index === 7){
+          $('.section-contact__title').addClass('fadeInLeft animated')
+          $('.section-contact__des').addClass('fadeInLeft animated')
+          $('.contact-form').addClass('fadeInRight animated')
+        }
       },
       onLeave: function(index, nextIndex, direction){
         if(nextIndex !== 1){
@@ -32,10 +37,14 @@ $(document).ready(function() {
         if(nextIndex !== 2){
           $('.section-2__box').removeClass('fadeInLeft animated')
         }
+        // if(nextIndex !== 7){
+        //   $('.section-contact__title').removeClass('fadeInLeft animated')
+        //   $('.section-contact__des').removeClass('fadeInLeft animated')
+        //   $('.contact-form').removeClass('fadeInRight animated')
+        // }
       },
   });
   $('.section-4__slide').carousel({
     interval: 4000
   })
-
 });

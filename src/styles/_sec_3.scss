@@ -32,15 +32,21 @@
       transition: all 500ms ease;
       position: relative;
       .title{
+        opacity: 1;
         position: absolute;
         top: 25%;
         left: rem(20);
+        @include maxs($sp-1400) {
+          top: 20%;
+        }
       }
       .txtHover{
         opacity: 0;
-        font-size: rem(27);
+        font-size: rem(21);
+        width: 50%;
         @include maxs($sp-1400) {
-          font-size: rem(25);
+          top: 20%;
+          width: 55%;
         }
         position: absolute;
         top: 24.4%;

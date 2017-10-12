@@ -3,14 +3,14 @@ include ../../data/data.pug
     - checkHome = 'active'
 header
   nav.navbar.navbar-expand-md#main-menu
-    a.navbar-brand(href="#")
+    a.navbar-brand(href="./")
       img.logo(src=src+'images/logo.png')
     button.navbar-toggler(type="button", data-toggle="collapse", data-target="#navbarCollapse", aria-controls="navbarCollapse", aria-expanded="false", aria-label="Toggle navigation")
       span.navbar-toggler-icon
     #navbarCollapse.collapse.navbar-collapse
       ul.navbar-nav.ml-auto
         li.nav-item(class=checkHome)
-          a.nav-link.smooth-scroll(href="#about") GIỚI THIỆU
+          a.nav-link.smooth-scroll(href="./") GIỚI THIỆU
         li.nav-item
           a.nav-link.smooth-scroll(href="#portfolio") DỰ ÁN
           ul.subMenu.list-unstyled
@@ -21,8 +21,8 @@ header
             li
               a(href="/project_phucat.html") PHÚ CÁT CITY
         li.nav-item
-          a.nav-link.smooth-scroll(href="#contact") LIÊN HỆ
-      a.btnGetNew(href="#") NHẬN TIN MỚI
+          a.nav-link.smooth-scroll(href="/contact.html") LIÊN HỆ
+      a.btnGetNew(href="#contact") NHẬN TIN MỚI
 
 
 
