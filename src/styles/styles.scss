@@ -45,15 +45,14 @@
 .animated{
   opacity: 1;
 }
-// .project-content {
-//   header {
-//     position: absolute;
-//   }
-// }
-
+.project-content {
+  header {
+    position: absolute;
+  }
+}
 .modal{
   .modal-body{
     padding: rem(40)
   }
-  p{color: #000;}
+  p, h3{color: #000;}
 }
