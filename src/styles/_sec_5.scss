@@ -1,24 +1,16 @@
 .section-5{
   background-image: url($src+'images/bg_section_2.jpg');
-  .container-fuild{
-    width: 80%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  &__snap{
+    width: 90%;
     margin: auto;
-  }
-  &__title{
-    font-size: rem(30);
-    padding-top: 12%;
-    margin-bottom: rem(40);
-    @include maxs($sp-1400) {
-      padding-top: 10%
+    overflow: hidden;
+    .projectBox{
+      background: red;
+      margin: 0px rem(15);
     }
-  }
-  &__des{
-    width: 40%;
-    margin: auto;
-    margin-bottom: rem(55)
-  }
-  &__box{
-    position: relative;
   }
 }
 

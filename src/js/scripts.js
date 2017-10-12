@@ -2,41 +2,40 @@
 window.onload = function() {
   $('.loading').fadeOut('slow');
 };
-// smooth on scroll
-$("body").niceScroll({
-  cursorcolor:		"#888",
-  cursorwidth: 		"7px",
-  cursorborder: 		"0px solid #000",
-  scrollspeed: 		70,
-  background: 		'#ddd',
-  cursorminheight: 	20,
-  enablekeyboard: 	true,
-  horizrailenabled: 	true,
-  autohidemode: 		false,
-  bouncescroll: 		false,
-  smoothscroll: 		true,
-  iframeautoresize: 	true,
-  touchbehavior: 		false,
-  zindex: 999
-});
-// animation 
-AOS.init({
-  offset: 200,
-  // once: true,
-});
-// scroll spy
-$('body').scrollspy({ target: '#navigation' })
-// smooth on link
-$(".smooth-scroll").on('click', function(event) {
-  event.preventDefault();
-  var hash = this.hash;
-  $('html, body').animate({
-    scrollTop: $(hash).offset().top
-  }, 700, function() {
-    window.location.hash = hash;
+$(document).ready(function() {
+  $('.multiple-snap').slick({
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1
   });
-});
-$('.section-4__slide').carousel({
-  interval: 3000
-})
+  $('#fullpage').fullpage({
+      anchors: ['home', 'about', 'vision', 'comment', 'portfolio','flow', 'contact','footer'],
+      sectionSelector: '.sec',
+      scrollOverflow: true,
+      css3: true,
+      verticalCentered: false,
+      menu: '#navigation',
+      afterRender: function(){
+      },
+      afterLoad: function(anchorLink, index){
+        if(index === 1){
+          $('.section-1__txt').addClass('fadeInRight animated')
+        }
+        if(index === 2){
+          $('.section-2__box').addClass('fadeInLeft animated')
+        }
+      },
+      onLeave: function(index, nextIndex, direction){
+        if(nextIndex !== 1){
+          $('.section-1__txt').removeClass('fadeInRight animated')
+        }
+        if(nextIndex !== 2){
+          $('.section-2__box').removeClass('fadeInLeft animated')
+        }
+      },
+  });
+  $('.section-4__slide').carousel({
+    interval: 4000
+  })
 
+});

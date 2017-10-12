@@ -1,7 +1,7 @@
-- var content = ['home', 'about', 'vision', 'comment', 'portfolio', 'contact']
+- var content = ['home', 'about', 'vision', 'comment', 'portfolio', 'flow' ,'contact','footer']
 ul.navigator.list-unstyled#navigation
   each item in content
-    li
+    li(data-menuanchor=item)
       a.nav-link.smooth-scroll(href=`#${item}`) 1
 
 //- header

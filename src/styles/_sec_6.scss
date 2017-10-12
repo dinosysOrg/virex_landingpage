@@ -1,0 +1,88 @@
+.section-6{
+  background: #000;
+  .container-fuild{
+    width: 100%;
+    margin: auto;
+  }
+  &__list{
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+    .list-inline-item:not(:last-child) {
+        margin-right: 0px;
+    }
+    &_1{
+      background-image: url($src+'images/bg_section_6.1.jpg');
+      background-size: cover;
+      background-position: center center;
+    };
+    &_2{
+      background-image: url($src+'images/bg_section_6.2.jpg');
+      background-size: cover;
+      background-position: center center;
+    }
+    .section-6__li{
+      flex: 1;
+      transition: all 500ms ease;
+      position: relative;
+      .title{
+        font-family: $font-B;
+        font-size: rem(27);
+        padding-top: rem(150);
+        padding-left: rem(25);
+      }
+      .section-6__boxHover {
+        opacity: 0;
+        margin-top: rem(40);
+        padding-left: rem(25);
+        .list-inline-item{
+          vertical-align: top;
+          margin-left: rem(30);
+          .lineNumber{
+            font-size: rem(80);
+            font-family: $font-B;
+            padding-right: rem(10);
+            color: rgba(255,255,255,0.6)
+          }
+          .line{
+            display: inline-block;
+            vertical-align: top;
+          }
+          .lineTxt{
+            width: 300px;
+            @include maxs($sp-1400) {
+              width: 220px;
+            }
+            .icon img{
+              width: 50px;
+            }
+            .lineTitle{
+              font-size: rem(22);
+              font-family: $font-B;
+              margin-top: rem(10);
+            }
+            .lineDes{
+              font-size: rem(14)
+            }
+          }
+        }
+      }
+      &:hover{
+        flex: 3;
+        background-size: cover;
+        background-position: center center;
+        background-color: #be1e2c;
+        background-blend-mode: multiply;
+        .title{
+          // font-size: rem(25);
+        }
+        .section-6__boxHover{
+          transition-delay: 300ms;
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

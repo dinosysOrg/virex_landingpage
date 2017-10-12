@@ -8,6 +8,7 @@
 @import 'sec_3';
 @import 'sec_4';
 @import 'sec_5';
+@import 'sec_6';
 @import 'sec_contact';
 @import 'footer';
 @import 'sec_1_proj';
@@ -16,18 +17,14 @@
 @import 'sec_4_proj';
 @import 'sec_5_proj';
 @import 'sec_6_proj';
-<<<<<<< HEAD
 @import 'fancybox_modal.scss';
-=======
 @import 'sec_1_contact';
->>>>>>> origin
 
 .sec{
   position: relative;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 100vh;
 }
 .btn{
   background: #BE1E2D;
@@ -53,6 +50,9 @@
     margin-top: rem(15);
     border-radius: 5px;
   }
+}
+.animated{
+  opacity: 1;
 }
 .project-content {
   header {

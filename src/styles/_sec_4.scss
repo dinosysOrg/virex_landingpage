@@ -1,19 +1,20 @@
 .section-4{
-  background-image: url($src+'images/bg_section_2.jpg');
+  background-image: url($src+'images/bg_section_4.jpg');
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100%;
   &__slide{
-    width: 35%;
-    position: absolute;
-    bottom: 15%;
-    left: 7%;
-    @include maxs($sp-1400) {
-      width: 50%;
-    }
+    width: 55%;
+    margin-top: auto;
+    margin-bottom: 6%;
+    margin-left: 3%;
     .title{
-      font-size: rem(28);
+      font-size: rem(20);
     }
     p{
       font-size: rem(14);
-      margin-top: rem(10);
+      margin-top: rem(25);
     }
     .carousel-control-next{
       top: -25%;
