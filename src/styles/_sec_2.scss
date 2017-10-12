@@ -7,7 +7,7 @@
   &__box{
     opacity: 0;
     width: 55%;
-    background: rgba(190,30,45,0.6);
+    background: rgba(109, 0, 10, 0.75);
     @include maxs($sp-1400) {
       width: 60%;
     }

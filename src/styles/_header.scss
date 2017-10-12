@@ -34,6 +34,8 @@ header{
       a.nav-link{
         color: #fff;
         font-size: rem(14);
+        font-family: Roboto;
+        font-weight: 700;
         position: relative;
         z-index: 2;
       }
@@ -44,21 +46,24 @@ header{
     display: none;
     position: absolute;
     width: 200px;
+    left: -100%;
     padding-top: 5px;
     li{
+      border: 1px solid #fff;
+      text-align: center;
       a{
         text-transform: uppercase;
-        background-color: #fff;
-        color: #4A4A4A;
+        background-color: transparent;
+        color: #fff;
         font-size: rem(14);
         display: block;
         margin-left: 0px;
         padding-left: 0px;
         padding: rem(8) rem(12);
         &:hover{
-          background-color: #F0F0F0;
+          background-color: #C7202F;
           text-decoration: none;
-          color: #C7202F;
+          color: #fff;
         }
       }
     }
@@ -76,7 +81,7 @@ header{
     &:hover{
       text-decoration: none;
       color: #fff;
-      background: red;
+      background: #be1e2d;
     }
   }
 }
@@ -106,7 +111,7 @@ header{
         border-radius: 4px;
         left: 0px;
         top: 0px;
-        height: 30px;
+        height: 100%;
         width: 4px;
         background: rgba(255,255,255,0.4);
         color: transparent;

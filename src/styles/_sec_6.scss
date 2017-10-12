@@ -53,7 +53,7 @@
           .lineTxt{
             width: 300px;
             @include maxs($sp-1400) {
-              width: 220px;
+              width: 200px;
             }
             .icon img{
               width: 50px;

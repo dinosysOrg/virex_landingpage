@@ -6,11 +6,23 @@
     font-family: $font-B;
     color: #4d4d4d;
     padding-top: 5%;
+    opacity: 0;
   }
   &__des{
+    opacity: 0;
     color: #4d4d4d;
     margin-top: rem(15);
     margin-bottom: rem(100)
+  }
+  .contact-form{
+    margin: auto;
+    opacity: 0;
+    width: 20%;
+    .form-control{
+      border: 0px;
+      margin-top: rem(15);
+      border-radius: 5px;
+    }
   }
 }
 
