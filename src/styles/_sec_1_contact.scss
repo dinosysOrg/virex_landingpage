@@ -3,6 +3,9 @@
   background-size: cover;
   min-height: 100vh;
   position: relative;
+  a, tel{
+    color: #464646;
+  }
   .container {
     position: absolute;
     top: 50%;
