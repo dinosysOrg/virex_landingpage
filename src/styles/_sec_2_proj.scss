@@ -23,6 +23,7 @@
       font-size: rem(36);
     }
     &__website {
+      cursor: pointer;
       i {
         border: 2px solid #fbaf3f;
         border-radius: 50%;
@@ -30,6 +31,7 @@
       }
     }
     &__facebook {
+      cursor: pointer;
       i {
         border: 2px solid #fbaf3f;
         border-radius: 50%;
@@ -37,6 +39,7 @@
       }
     }
     &__youtube {
+      cursor: pointer;
       i {
         border: 2px solid #fbaf3f;
         border-radius: 50%;
