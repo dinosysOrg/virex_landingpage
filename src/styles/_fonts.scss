@@ -1,5 +1,25 @@
 @import './fontawesome/font-awesome.scss';
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+
+@font-face {
+    font-family: Roboto;
+    src: url($src + 'font/Roboto-Regular.eot');
+    src: url($src + 'font/Roboto-Regular.woff2') format('woff2'),
+         url($src + 'font/Roboto-Regular.woff') format('woff'),
+         url($src + 'font/Roboto-Regular.ttf') format('truetype'),
+         url($src + 'font/Roboto-Regular.eot?#iefix') format('embedded-opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: RobotoBold;
+    src: url($src + 'font/Roboto-Bold.eot');
+    src: url($src + 'font/Roboto-Bold.woff2') format('woff2'),
+         url($src + 'font/Roboto-Bold.woff') format('woff'),
+         url($src + 'font/Roboto-Bold.ttf') format('truetype'),
+         url($src + 'font/Roboto-Bold.eot?#iefix') format('embedded-opentype');
+    font-weight: normal;
+    font-style: normal;
+}
 @font-face {
   font-family: FontAwesome;
   src: url($src + 'font/fontawesome-webfont.eot');
@@ -56,7 +76,12 @@ $font-L: HelveticaNeueLight;
 $font-B: HelveticaNeueBold;
 $font-M: HelveticaNeueMedium;
 
-*, a{color: #fff;font-family: $font}
+*, a{
+    color: #fff;
+    font-family: $font;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
 body{position: relative;}
 
 

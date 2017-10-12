@@ -12543,7 +12543,7 @@ function activeTab(event, id){
   for (i = 0; i < tabcontent.length; i++) {
       tabcontent[i].style.display = "none";
   }
-  $('.active').removeClass('active');
+  $('.section-proj-6 .active').removeClass('active');
   itemId = '#item' + id;
   $(itemId).css('display', 'block');
   event.target.classList.add('active');

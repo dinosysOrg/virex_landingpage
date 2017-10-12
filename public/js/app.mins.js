@@ -12138,11 +12138,6 @@ $(document).ready(function() {
         if(nextIndex !== 2){
           $('.section-2__box').removeClass('fadeInLeft animated')
         }
-        // if(nextIndex !== 7){
-        //   $('.section-contact__title').removeClass('fadeInLeft animated')
-        //   $('.section-contact__des').removeClass('fadeInLeft animated')
-        //   $('.contact-form').removeClass('fadeInRight animated')
-        // }
       },
   });
   $('.section-4__slide').carousel({
