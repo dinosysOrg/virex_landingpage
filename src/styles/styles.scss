@@ -50,3 +50,9 @@
     position: absolute;
   }
 }
+.modal{
+  .modal-body{
+    padding: rem(40)
+  }
+  p, h3{color: #000;}
+}

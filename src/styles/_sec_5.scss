@@ -3,6 +3,14 @@
   position: relative;
   display: flex;
   align-items: center;
+  &__title{
+    font-family:$font-B;
+    font-size: rem(40);
+    padding-bottom: rem(100);
+    @include maxs($sp-1400) {
+      padding-bottom: rem(50);
+    }
+  }
   &__snap{
     width: 90%;
     margin: auto;
@@ -25,7 +33,6 @@
           position: absolute;
           right: rem(10);
           bottom: rem(10);
-          font-family: $font-B;
           font-size: rem(22);
           color: #faaf3f;
         }
