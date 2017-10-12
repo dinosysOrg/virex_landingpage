@@ -85,6 +85,9 @@ header{
   right: 15px;
   top: 30vh;
   z-index: 2;
+  @include maxs($sp-1400) {
+    top: 22vh;
+  }
   li{
     cursor: pointer;
     margin: rem(10) 0px;

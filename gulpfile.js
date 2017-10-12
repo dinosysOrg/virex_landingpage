@@ -51,13 +51,11 @@ gulp.task('sass', function () {
 gulp.task('js', function () {
     return gulp.src ([
             './src/js/jquery-3.2.1.min.js',
+            './src/js/slick.js',
             './src/js/scrolloverflow.js',
             './src/js/jquery.fullpage.js',
-            //'./src/js/jquery.nicescroll.js',
-            //'./src/js/aos.js',
             './src/js/popper.min.js',
             './src/js/bootstrap.js',
-            //'./src/js/jquery.fancybox.js',
             './src/js/scripts.js',
         ])
         .pipe(concat('app.mins.js'))

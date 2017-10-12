@@ -5,11 +5,13 @@
   align-items: center;
   height: 100%;
   &__txt{
-    // @include center(right);
     opacity: 0;
     margin-left: auto;
     width: 500px;
     margin-right: 5%;
-    font-size: rem(35);
+    font-size: rem(33);
+    @include maxs($sp-1400) {
+      font-size: rem(30);
+    }
   }
 }

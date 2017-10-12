@@ -27,14 +27,12 @@
       .title{
         font-family: $font-B;
         font-size: rem(27);
-        transition: 300ms;
         padding-top: rem(150);
         padding-left: rem(25);
       }
       .section-6__boxHover {
         opacity: 0;
         margin-top: rem(40);
-        transition: 300ms;
         padding-left: rem(25);
         .list-inline-item{
           vertical-align: top;
@@ -50,7 +48,10 @@
             vertical-align: top;
           }
           .lineTxt{
-            width: 250px;
+            width: 300px;
+            @include maxs($sp-1400) {
+              width: 220px;
+            }
             .icon img{
               width: 50px;
             }
@@ -75,6 +76,7 @@
           // font-size: rem(25);
         }
         .section-6__boxHover{
+          transition-delay: 300ms;
           opacity: 1;
         }
       }

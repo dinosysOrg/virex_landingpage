@@ -39,6 +39,9 @@
       .txtHover{
         opacity: 0;
         font-size: rem(27);
+        @include maxs($sp-1400) {
+          font-size: rem(25);
+        }
         position: absolute;
         top: 24.4%;
         left: rem(30);
@@ -58,6 +61,7 @@
           opacity: 0;
         }
         .txtHover{
+          transition-delay: 400ms;
           opacity: 1;
         }
       }
