@@ -4,20 +4,31 @@ window.onload = function() {
 };
 $(document).ready(function() {
   $('#fullpage').fullpage({
+      anchors: ['home', 'about', 'vision', 'comment', 'portfolio','flow', 'contact'],
       sectionSelector: '.sec',
       scrollOverflow: true,
       css3: true,
       verticalCentered: false,
-      anchors: ['home', 'about', 'vision', 'comment', 'portfolio', 'contact'],
       menu: '#navigation',
       afterLoad: function(anchorLink, index){
         if(index === 1){
-          $('.section-1__txt').addClass('fadeInRight')
+          $('.section-1__txt').addClass('fadeInRight animated')
         }
-      }
+        if(index === 2){
+          $('.section-2__box').addClass('fadeInLeft animated')
+        }
+      },
+      onLeave: function(index, nextIndex, direction){
+        if(nextIndex !== 1){
+          $('.section-1__txt').removeClass('fadeInRight animated')
+        }
+        if(nextIndex !== 2){
+          $('.section-2__box').removeClass('fadeInLeft animated')
+        }
+      },
   });
   $('.section-4__slide').carousel({
-    interval: 3000
+    interval: 4000
   })
 });
 // scroll spy

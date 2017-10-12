@@ -2965,7 +2965,6 @@
                 var iScrollInstance = $(this).data('iscrollInstance');
                 if(typeof iScrollInstance !== 'undefined' && iScrollInstance){
                     if(value){
-                        console.log(iScrollInstance)
                         iScrollInstance.wheelOn();
                     }
                     else{    

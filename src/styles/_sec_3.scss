@@ -39,11 +39,11 @@
       .txtHover{
         opacity: 0;
         font-size: rem(27);
-        transform: scale(1);
         position: absolute;
         top: 24.4%;
         left: rem(30);
-        right: rem(30)
+        right: rem(30);
+        transition: all 200ms ease-out;
       }
       &:not(:last-child){
         margin-right: 0px;
@@ -52,15 +52,13 @@
         flex: 3;
         background-size: cover;
         background-position: center center;
-        background-color: red;
+        background-color: #be1e2c;
         background-blend-mode: multiply;
-        // transform: scale(1.1);
         .title{
           opacity: 0;
         }
         .txtHover{
           opacity: 1;
-          // transform: scale(0.9);
         }
       }
     }

@@ -5,18 +5,17 @@
   align-items: center;
   height: 100%;
   &__box{
+    opacity: 0;
     width: 55%;
     background: rgba(190,30,45,0.6);
-    // position: absolute;
-    // top: 30%;
     @include maxs($sp-1400) {
-      width: 45%;
+      width: 50%;
     }
   }
   &__title{
-    font-size: rem(25);
+    font-size: rem(23);
   }
   &__txt{
-    font-size: rem(14);
+    font-size: rem(15);
   }
 }

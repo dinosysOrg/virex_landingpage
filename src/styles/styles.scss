@@ -8,6 +8,7 @@
 @import 'sec_3';
 @import 'sec_4';
 @import 'sec_5';
+@import 'sec_6';
 @import 'sec_contact';
 @import 'footer';
 @import 'sec_1_proj';
@@ -22,7 +23,6 @@
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  // min-height: 100vh;
 }
 .btn{
   background: #BE1E2D;
@@ -49,17 +49,6 @@
     border-radius: 5px;
   }
 }
-#fp-nav{
-  ul{
-    li{
-      margin: rem(50) 0px;
-      a{
-        span{
-          width: 10px;
-          height: 50px;
-          background: red;
-        }
-      }
-    }
-  }
+.animated{
+  opacity: 1;
 }
