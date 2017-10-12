@@ -41,6 +41,12 @@
       font-size: rem(16);
       font-weight: bold;
       padding: 16px 70px;
+      cursor: pointer;
+      &:active,
+      &:focus {
+        outline: none;
+        box-shadow: none;
+      }
     }
     text-align: center;
   }
