@@ -9,7 +9,34 @@ footer{
     margin-top: rem(10);
   }
   .social-list{
-    margin-top: rem(20)
+    margin-top: rem(20);
+    i {
+      font-size: rem(40);
+    }
+    &__facebook {
+      cursor: pointer;
+      i {
+        border: 1px solid #ffffff;
+        border-radius: 50%;
+        padding: 25px 33.5705px;
+      }
+    }
+    &__youtube {
+      cursor: pointer;
+      i {
+        border: 1px solid #ffffff;
+        border-radius: 50%;
+        padding: 25px;
+      }
+    }
+    &__pinterest {
+      cursor: pointer;
+      i {
+        border: 1px solid #ffffff;
+        border-radius: 50%;
+        padding: 25px 30.711px;
+      }
+    }
   }
   p{
     margin-bottom: 3px;
