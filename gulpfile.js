@@ -89,7 +89,10 @@ gulp.task('jscontact', function () {
         .pipe(gulp.dest('./public/js'));
 });
 gulp.task('img', function () {
-    return gulp.src ('./src/assets/images/*.+(jpg|jpeg|gif|png|svg)')
+    return gulp.src ([
+        './src/assets/images/*.+(jpg|jpeg|gif|png|svg)',
+        './src/assets/images/**/**/**.+(jpg|jpeg|gif|png|svg)'
+        ])
         .pipe(gulp.dest('./public/images'));
 });
 gulp.task('font', function () {
