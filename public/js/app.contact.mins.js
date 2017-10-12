@@ -4318,7 +4318,7 @@ var Carousel = function ($) {
   var ClassName = {
     CAROUSEL: 'carousel',
     ACTIVE: 'active',
-    SLIDE: 'slide',
+    SLIDE: 'slideNew',
     RIGHT: 'carousel-item-right',
     LEFT: 'carousel-item-left',
     NEXT: 'carousel-item-next',

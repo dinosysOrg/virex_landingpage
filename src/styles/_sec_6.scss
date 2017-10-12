@@ -10,13 +10,16 @@
     display: flex;
     height: 100vh;
     overflow: hidden;
+    .list-inline-item:not(:last-child) {
+        margin-right: 0px;
+    }
     &_1{
-      background-image: url($src+'images/bg_section_1.jpg');
+      background-image: url($src+'images/bg_section_6.1.jpg');
       background-size: cover;
       background-position: center center;
     };
     &_2{
-      background-image: url($src+'images/bg_section_2.jpg');
+      background-image: url($src+'images/bg_section_6.2.jpg');
       background-size: cover;
       background-position: center center;
     }

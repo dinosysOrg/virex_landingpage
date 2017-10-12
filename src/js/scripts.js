@@ -9,7 +9,7 @@ $(document).ready(function() {
     slidesToScroll: 1
   });
   $('#fullpage').fullpage({
-      anchors: ['home', 'about', 'vision', 'comment', 'portfolio','flow', 'contact'],
+      anchors: ['home', 'about', 'vision', 'comment', 'portfolio','flow', 'contact','footer'],
       sectionSelector: '.sec',
       scrollOverflow: true,
       css3: true,
