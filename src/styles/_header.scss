@@ -82,12 +82,14 @@ header{
   li{
     cursor: pointer;
     margin: rem(10) 0px;
+    &.active{
+      a:after{
+        background: #fff;
+      }
+    }
     a{
       position: relative;
       color: transparent;
-      &.active:after{
-        background: #fff;
-      }
       &:after{
         content: '';
         position: absolute;

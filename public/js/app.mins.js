@@ -9099,11 +9099,8 @@ $(document).ready(function() {
       scrollOverflow: true,
       css3: true,
       verticalCentered: false,
-      navigation: true,
-      navigationPosition: 'right',
-      // sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
-      // anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
-      // menu: '#menu',
+      anchors: ['home', 'about', 'vision', 'comment', 'portfolio', 'contact'],
+      menu: '#navigation',
       afterLoad: function(anchorLink, index){
         if(index === 1){
           $('.section-1__txt').addClass('fadeInRight')
