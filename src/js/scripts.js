@@ -35,11 +35,11 @@ $(document).ready(function() {
           if(index === 2){
             $('.section-2__box').addClass('fadeInLeft animated')
           }
-          if(index === 7){
-            $('.section-contact__title').addClass('fadeInLeft animated')
-            $('.section-contact__des').addClass('fadeInLeft animated')
-            $('.contact-form').addClass('fadeInRight animated')
-          }
+          // if(index === 7){
+          //   $('.section-contact__title').addClass('fadeInLeft animated')
+          //   $('.section-contact__des').addClass('fadeInLeft animated')
+          //   $('.contact-form').addClass('fadeInRight animated')
+          // }
         },
         onLeave: function(index, nextIndex, direction){
           if(nextIndex !== 1){

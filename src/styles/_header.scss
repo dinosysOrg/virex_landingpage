@@ -111,6 +111,9 @@ header{
       text-decoration: none;
       color: #fff;
       background: #be1e2d;
+      @include maxs($sp-767) {
+        background: transparent;
+      }
     }
     @include maxs($sp-767) {
       border: 0px;

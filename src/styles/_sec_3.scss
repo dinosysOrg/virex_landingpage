@@ -37,11 +37,12 @@
       transition: all 500ms ease;
       position: relative;
       @include maxs($sp-767) {
+        // min-height: 50vh;
         width: 100%;
         border: 0px;
         background-color: #be1e2c;
         background-blend-mode: multiply;
-        padding: rem(100) 0px;
+        padding: rem(50) 0px;
       }
       .title{
         opacity: 1;
@@ -55,6 +56,7 @@
           position: initial;
           opacity: 0px;
           top: 0%;
+          display: none;
         }
       }
       .txtHover{
