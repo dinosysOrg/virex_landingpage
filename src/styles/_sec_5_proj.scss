@@ -6,9 +6,15 @@
     color: #464646;
     font-weight: bold;
     font-size: rem(24);
+    @include maxs($sp-1024) {
+      font-size: rem(18);
+    }
   }
   &__desc {
     color: #464646;
     font-size: rem(14);
+    @include maxs($sp-1024) {
+      font-size: rem(12);
+    }
   }
 }

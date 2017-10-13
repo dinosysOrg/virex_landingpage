@@ -63,6 +63,9 @@
         color: #464646;
         margin-bottom: 20px;
         line-height: 1.5;
+        @include maxs($sp-1024) {
+          font-size: rem(14);
+        }
       }
     }
   }

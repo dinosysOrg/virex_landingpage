@@ -1,6 +1,9 @@
+script.
+  var project = !{JSON.stringify(project)};
+
 .sec-proj.section-proj-1#banner
   img.section-proj-1__bg.img-fluid(src=project.banner)
   .section-proj-1__button-group.row
-    a(onclick="openGallery(" + "'" + JSON.stringify(project.gallery.picture) + "'" + ")").fancybox.section-proj-1__button-group__picture.btn.col HÌNH ẢNH
-    a(onclick="openGallery(" + "'" + JSON.stringify(project.gallery.guide) + "'" + ")").fancybox.section-proj-1__button-group__civil-guide.btn.col.mr-4.ml-4 MẶT BẰNG
-    a(onclick="openGallery(" + "'" + JSON.stringify(project.gallery.position) + "'" + ")").fancybox.section-proj-1__button-group__position.btn.col VỊ TRÍ
+    a.fancybox.section-proj-1__button-group__picture.btn.col HÌNH ẢNH
+    a.fancybox.section-proj-1__button-group__civil-guide.btn.col MẶT BẰNG
+    a.fancybox.section-proj-1__button-group__position.btn.col VỊ TRÍ
