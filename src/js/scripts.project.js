@@ -2,25 +2,6 @@
 window.onload = function() {
   $('.loading').fadeOut('slow');
 };
-// smooth on scroll
-$("body").niceScroll({
-  cursorcolor:		"#888",
-  cursorwidth: 		"7px",
-  cursorborder: 		"0px solid #000",
-  scrollspeed: 		70,
-  background: 		'#ddd',
-  cursorminheight: 	20,
-  enablekeyboard: 	true,
-  horizrailenabled: 	true,
-  autohidemode: 		false,
-  bouncescroll: 		false,
-  smoothscroll: 		true,
-  iframeautoresize: 	true,
-  touchbehavior: 		false,
-  zindex: 999
-});
-
-photos = [ {href : 'https://via.placeholder.com/960x480', title : 'Title'}, {href : 'https://via.placeholder.com/960x480', title : 'Title'}, {href : 'https://via.placeholder.com/960x480', title : 'Title'}, {href : 'https://via.placeholder.com/960x480', title : 'Title'}, {href : 'https://via.placeholder.com/960x480', title : 'Title'} ]
 
 function activeTab(event, id){
   var i, tabcontent, tablinks, itemId, prevActive;
@@ -35,9 +16,9 @@ function activeTab(event, id){
 }
 
 $('#defaultOpen').click();
+
 function openGallery(photos) {
-  var data = JSON.parse(photos)
-  $.fancybox.open(data,{
+  $.fancybox.open(photos,{
       thumbs : {
         autoStart : true
       },
@@ -54,4 +35,14 @@ $('.more').click(function(){
     $(this).html('xem thêm');
     moreBlock.css('display', 'none');
   }
+});
+
+$('.section-proj-1__button-group__picture').on('click', function() {
+  openGallery(project.gallery.picture);
+});
+$('.section-proj-1__button-group__civil-guide').on('click', function() {
+  openGallery(project.gallery.guide);
+});
+$('.section-proj-1__button-group__position').on('click',function() {
+  openGallery(project.gallery.position);
 });

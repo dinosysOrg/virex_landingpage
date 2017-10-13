@@ -66,7 +66,6 @@ gulp.task('js', function () {
 gulp.task('jsproject', function () {
     return gulp.src ([
             './src/js/jquery-3.2.1.min.js',
-            './src/js/jquery.nicescroll.js',
             './src/js/popper.min.js',
             './src/js/bootstrap.js',
             './src/js/jquery.fancybox.js',
@@ -79,7 +78,6 @@ gulp.task('jsproject', function () {
 gulp.task('jscontact', function () {
     return gulp.src ([
             './src/js/jquery-3.2.1.min.js',
-            './src/js/jquery.nicescroll.js',
             './src/js/popper.min.js',
             './src/js/bootstrap.js',
             './src/js/scripts.contact.js',

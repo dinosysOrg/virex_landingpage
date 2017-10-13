@@ -3,7 +3,13 @@
   &__button-group {
     position: absolute;
     right: 10%;
-    bottom: -20px;
+    bottom: -18px;
+    @include maxs($sp-1024) {
+      bottom: -14px;
+    }
+    &__civil-guide {
+      margin: 0 10px;
+    }
     .btn {
       font-weight: bold;
       position: relative;
@@ -16,6 +22,9 @@
       &:hover {
         outline: none;
         box-shadow: none;
+      }
+      @include maxs($sp-1024) {
+        padding: 6px 15px;
       }
     }
   }

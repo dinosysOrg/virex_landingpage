@@ -19,6 +19,20 @@
       padding-top: rem(170);
       padding-bottom: rem(170);
     }
+    @include maxs($sp-1024) {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    @include maxs($sp-767) {
+      position: initial;
+      top: initial;
+      left: initial;
+      transform: initial;
+      padding-top: rem(170);
+      padding-bottom: rem(170);
+    }
   }
   &__form {
     input {
@@ -62,6 +76,9 @@
     text-align: center;
   }
   &__info {
+    @include maxs($sp-1024) {
+      margin-top: 15px;
+    }
     i {
       color: #f6a623;
       font-size: rem(36);
@@ -70,6 +87,8 @@
       color: #c7202f;
       font-size: rem(30);
       font-weight: bold;
+      margin-left: 30px;
+      margin-bottom: 10px;
       &:after {
         position: relative;
         content: "";
@@ -82,9 +101,17 @@
     &__company-contact {
       color: #474747;
       font-size:  rem(20);
+      margin-left: 30px;
     }
   }
   &__social {
+    margin-left: 30px;
+    margin-bottom: 10px;
+    @include maxs($sp-767) {
+      text-align: center;
+      margin-left: 0;
+      margin-bottom: 0;
+    }
     &__facebook {
       cursor: pointer;
       i {
@@ -110,4 +137,9 @@
       }
     }
   }
+}
+.contact-content {
+  header {
+    position: absolute;
+  };
 }
