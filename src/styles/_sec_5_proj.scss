@@ -1,6 +1,9 @@
 .section-proj-5 {
   &__item {
     color: #464646;
+    @include maxs($sp-640) {
+      margin-bottom: 10px;
+    }
   }
   &__value {
     color: #464646;
