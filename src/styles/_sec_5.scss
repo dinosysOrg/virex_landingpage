@@ -35,12 +35,12 @@
           bottom: rem(10);
           font-size: rem(22);
           color: #faaf3f;
+          text-transform: uppercase;
         }
         &:hover{
           text-decoration: none;
           background: rgba(109, 0, 10, 0.75);
           .slideTitle{
-            opacity: 0;
           }
           .slideDes{
             opacity: 1;

@@ -8,8 +8,13 @@
     margin: 0px;
     padding: 0px;
     display: flex;
-    height: 100vh;
+    min-height: 100vh;
     overflow: hidden;
+    @include maxs($sp-767) {
+      overflow: initial;
+      display: initial;
+      min-height: 100vh;
+    }
     &_1{
       background-image: url($src+'images/bg_section_3.1.jpg');
       background-size: cover;
@@ -31,29 +36,50 @@
       flex: 1;
       transition: all 500ms ease;
       position: relative;
+      @include maxs($sp-767) {
+        // min-height: 50vh;
+        width: 100%;
+        border: 0px;
+        background-color: #be1e2c;
+        background-blend-mode: multiply;
+        padding: rem(50) 0px;
+      }
       .title{
         opacity: 1;
         position: absolute;
         top: 25%;
-        left: rem(20);
+        left: rem(60);
         @include maxs($sp-1400) {
           top: 20%;
         }
+        @include maxs($sp-767) {
+          position: initial;
+          opacity: 0px;
+          top: 0%;
+          display: none;
+        }
       }
       .txtHover{
-        opacity: 0;
         font-size: rem(21);
         width: 50%;
+        opacity: 0;
+        position: absolute;
+        top: 24.4%;
+        left: rem(60);
+        right: rem(30);
+        transition: all 100ms ease-out;
         @include maxs($sp-1400) {
           top: 20%;
           width: 55%;
           font-size: rem(18);
         }
-        position: absolute;
-        top: 24.4%;
-        left: rem(60);
-        right: rem(30);
-        transition: all 200ms ease-out;
+        @include maxs($sp-767) {
+          width: 80%;
+          opacity: 1;
+          position: initial;
+          margin-top: initial;
+          margin-left: rem(20);
+        }
         span{
           font-size: rem(30);
           font-family: $font-B;
@@ -68,9 +94,7 @@
         background-position: center center;
         background-color: #be1e2c;
         background-blend-mode: multiply;
-        .title{
-          opacity: 0;
-        }
+        .title{opacity: 0}
         .txtHover{
           transition-delay: 400ms;
           opacity: 1;

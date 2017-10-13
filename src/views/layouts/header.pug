@@ -9,8 +9,11 @@ header
   nav.navbar.navbar-expand-md#main-menu
     a.navbar-brand(href="./")
       img.logo(src=src+'images/logo.png')
-    button.navbar-toggler(type="button", data-toggle="collapse", data-target="#navbarCollapse", aria-controls="navbarCollapse", aria-expanded="false", aria-label="Toggle navigation")
-      span.navbar-toggler-icon
+    button.navbar-toggler.collapsed(type="button", data-toggle="collapse", data-target="#navbarCollapse", aria-controls="navbarCollapse", aria-expanded="false", aria-label="Toggle navigation")
+      span
+      span
+      span
+    </button>
     #navbarCollapse.collapse.navbar-collapse
       ul.navbar-nav.ml-auto
         li.nav-item(class=checkHome)
@@ -19,14 +22,14 @@ header
           a.nav-link.smooth-scroll(href="#portfolio") DỰ ÁN
           ul.subMenu.list-unstyled
             li
-              a(href="/project_goldencity.html") Golden City An Giang
+              a(href="./project_goldencity.html") Golden City An Giang
             li
-              a(href="/project_eden.html") EDEN ROSE
+              a(href="./project_eden.html") EDEN ROSE
             li
-              a(href="/project_phucat.html") PHÚ CÁT CITY
+              a(href="./project_phucat.html") PHÚ CÁT CITY
         li.nav-item(class=checkContact)
           a.nav-link.smooth-scroll(href="/contact.html") LIÊN HỆ
-      a.btnGetNew(data-toggle="modal" data-target="#modalGetNew") NHẬN TIN MỚI
+      a.btnGetNew(href="#" data-toggle="modal" data-target="#modalGetNew") NHẬN TIN MỚI
 
 
 
