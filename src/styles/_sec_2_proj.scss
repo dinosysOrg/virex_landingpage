@@ -1,12 +1,25 @@
 .section-proj-2 {
+  padding: 0 rem(100);
+  @include maxs($sp-1400) {
+    padding: 0 rem(40);
+  }
+  @include maxs($sp-1024) {
+    padding: rem(20) rem(40);
+  }
   &__title {
     &__name {
       color: #4d4d4d;
       font-size: rem(64);
       font-weight: bold;
+      @include maxs($sp-1024) {
+        font-size: rem(32);
+      }
     }
     &__address {
       font-size: rem(24);
+      @include maxs($sp-1024) {
+        font-size: rem(18);
+      }
       &__icon {
         i {
           color: #c7202f;
@@ -14,6 +27,7 @@
       }
       &__txt {
         color: #c7202f;
+        margin-left: 10px;
       }
     }
   }
@@ -21,6 +35,9 @@
     i {
       color: #fbaf3f;
       font-size: rem(36);
+      @include maxs($sp-1024) {
+        font-size: rem(24);
+      }
     }
     &__website {
       cursor: pointer;
@@ -28,6 +45,9 @@
         border: 2px solid #fbaf3f;
         border-radius: 50%;
         padding: 10px 13.5705px;
+        @include maxs($sp-1024) {
+          padding: 10px 11.711px;
+        }
       }
     }
     &__facebook {
@@ -36,6 +56,9 @@
         border: 2px solid #fbaf3f;
         border-radius: 50%;
         padding: 10px 18.719px;
+        @include maxs($sp-1024) {
+          padding: 10px 15.141px;
+        }
       }
     }
     &__youtube {
@@ -44,13 +67,10 @@
         border: 2px solid #fbaf3f;
         border-radius: 50%;
         padding: 10px 10.992px;
+        @include maxs($sp-1024) {
+          padding: 10px 10.992px;
+        }
       }
     }
-  }
-}
-
-@media screen and (min-width: 1440px){
-  .section-proj-2 {
-    max-width: 1400px;
   }
 }

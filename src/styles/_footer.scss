@@ -12,6 +12,13 @@ footer{
     margin-top: rem(20);
     i {
       font-size: rem(40);
+      @include maxs($sp-1024) {
+        font-size: rem(24);
+      }
+      &:hover {
+        color: #be1e2d;
+        border: 1px solid #be1e2d;
+      }
     }
     &__facebook {
       cursor: pointer;
@@ -19,6 +26,9 @@ footer{
         border: 1px solid #ffffff;
         border-radius: 50%;
         padding: 25px 33.5705px;
+        @include maxs($sp-1024) {
+          padding: 10px 15.1485px;
+        }
       }
     }
     &__youtube {
@@ -27,6 +37,10 @@ footer{
         border: 1px solid #ffffff;
         border-radius: 50%;
         padding: 25px;
+        margin: 0 10px;
+        @include maxs($sp-1024) {
+          padding: 10px 10.992px;
+        }
       }
     }
     &__pinterest {
@@ -35,10 +49,21 @@ footer{
         border: 1px solid #ffffff;
         border-radius: 50%;
         padding: 25px 30.711px;
+        @include maxs($sp-1024) {
+          padding: 10px 13.4295px;
+        }
       }
     }
   }
   p{
     margin-bottom: 3px;
+    @include maxs($sp-1024) {
+      font-size: rem(14);
+    }
+  }
+  h3 {
+    @include maxs($sp-1024) {
+      font-size: rem(18);
+    }
   }
 }

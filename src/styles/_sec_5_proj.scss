@@ -1,14 +1,23 @@
 .section-proj-5 {
   &__item {
     color: #464646;
+    @include maxs($sp-640) {
+      margin-bottom: 10px;
+    }
   }
   &__value {
     color: #464646;
     font-weight: bold;
     font-size: rem(24);
+    @include maxs($sp-1024) {
+      font-size: rem(18);
+    }
   }
   &__desc {
     color: #464646;
     font-size: rem(14);
+    @include maxs($sp-1024) {
+      font-size: rem(12);
+    }
   }
 }

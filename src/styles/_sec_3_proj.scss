@@ -3,10 +3,16 @@
     color: #464646;
   }
   &__item {
+    @include maxs($sp-767) {
+      margin-bottom: 15px;
+    }
     &__title {
       color: #c7202f;
       font-size: rem(18);
       font-weight: bold;
+      @include maxs($sp-1024) {
+        font-size: rem(16);
+      }
       &:after {
         position: relative;
         content: "";
@@ -19,6 +25,9 @@
     &__content {
       font-size: rem(28);
       color: #464646;
+      @include maxs($sp-1024) {
+        font-size: rem(18);
+      }
       span {
         color: #464646;
         font-weight: bold;

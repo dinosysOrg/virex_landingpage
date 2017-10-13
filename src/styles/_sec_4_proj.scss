@@ -18,6 +18,9 @@
     &__title {
       color: #c7202f;
       font-size: rem(18);
+      @include maxs($sp-1024) {
+        font-size: rem(16);
+      }
       &:after {
         position: relative;
         content: "";
@@ -30,6 +33,10 @@
     &__content {
       color: #464646;
       font-size: rem(16);
+      @include maxs($sp-1024) {
+        font-size: rem(14);
+        margin-bottom: 15px;
+      }
       &__more {
         color: #464646;
         display: none;
@@ -37,9 +44,17 @@
     }
   }
   &__download {
+    .btn-2 {
+      @include maxs($sp-1024) {
+        padding: 6px 14px;
+      }
+    }
     &__title {
       color: #c7202f;
       font-size: rem(18);
+      @include maxs($sp-1024) {
+        font-size: rem(16);
+      }
       &:after {
         position: relative;
         content: "";
@@ -52,12 +67,20 @@
     &__content {
       color: #464646;
       font-size: rem(16);
+      @include maxs($sp-1024) {
+        font-size: rem(14);
+      }
     }
     &__brochure,
     &__leaflet {
       font-weight: bold;
       cursor: pointer;
       color: #ffffff !important;
+      @include maxs($sp-1200) {
+        width: 100%;
+        margin-bottom: 10px;
+        text-align: center;
+      }
     }
   }
 }
