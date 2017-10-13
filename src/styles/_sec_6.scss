@@ -10,6 +10,11 @@
     display: flex;
     height: 100vh;
     overflow: hidden;
+    @include maxs($sp-767) {
+      display: initial;
+      min-height: 100vh;
+      overflow: initial;
+    }
     .list-inline-item:not(:last-child) {
         margin-right: 0px;
     }
@@ -27,24 +32,48 @@
       flex: 1;
       transition: all 500ms ease;
       position: relative;
+      @include maxs($sp-767) {
+        padding: rem(100) 0px;
+        flex: initial;
+        width: 100%;
+        min-height: 100vh;
+        display: block;
+        background-color: #be1e2c;
+        background-blend-mode: multiply;
+      }
       .title{
         font-family: $font-B;
         font-size: rem(27);
         padding-top: rem(150);
         padding-left: rem(25);
+        @include maxs($sp-767) {
+          padding-top: rem(0);
+        }
       }
       .section-6__boxHover {
         opacity: 0;
         margin-top: rem(40);
         padding-left: rem(25);
+        @include maxs($sp-767) {
+          opacity: 1;
+        }
+        @include maxs($sp-768) {
+          padding-left: 0px;
+        }
         .list-inline-item{
           vertical-align: top;
           margin-left: rem(30);
+          @include maxs($sp-768) {
+            margin-top: rem(20)
+          }
           .lineNumber{
             font-size: rem(80);
             font-family: $font-B;
             padding-right: rem(10);
-            color: rgba(255,255,255,0.6)
+            color: rgba(255,255,255,0.6);
+            @include maxs($sp-768) {
+              font-size: rem(70);
+            }    
           }
           .line{
             display: inline-block;
@@ -55,8 +84,17 @@
             @include maxs($sp-1400) {
               width: 200px;
             }
+            @include maxs($sp-768) {
+              width: 270px;
+            }
+            @include maxs($sp-767) {
+              width: 80%;
+            }
             .icon img{
               width: 50px;
+              @include maxs($sp-768) {
+                width: 40px;
+              }              
             }
             .lineTitle{
               font-size: rem(22);
@@ -75,6 +113,9 @@
         background-position: center center;
         background-color: #be1e2c;
         background-blend-mode: multiply;
+        @include maxs($sp-767) {
+          flex: initial;
+        }
         .title{
           // font-size: rem(25);
         }

@@ -56,3 +56,17 @@
   }
   p, h3{color: #000;}
 }
+body.mobile{
+  .op-0{
+    opacity: 1;
+  }
+  .sec{
+    min-height: 100vh;
+  }
+  footer.sec{
+    min-height: initial;
+  }
+}
+.op-0{
+  opacity: 0;
+}

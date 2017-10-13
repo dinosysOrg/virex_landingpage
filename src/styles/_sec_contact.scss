@@ -1,23 +1,32 @@
 .section-contact{
   background-image: url($src+'images/image-contact.jpg');
   background-position: top;
+  @include maxs($sp-767) {
+    padding: rem(100) 0px;
+  }
   &__title{
     font-size: rem(35);
     font-family: $font-B;
     color: #4d4d4d;
     padding-top: 5%;
-    opacity: 0;
+    @include maxs($sp-768) {
+      padding-top: 20%;
+    }
+    @include maxs($sp-767) {
+      padding-top: initial;
+    }
   }
   &__des{
-    opacity: 0;
     color: #4d4d4d;
     margin-top: rem(15);
     margin-bottom: rem(100)
   }
   .contact-form{
     margin: auto;
-    opacity: 0;
     width: 20%;
+    @include maxs($sp-768) {
+      width: 60%;
+    }
     .form-control{
       border: 0px;
       margin-top: rem(15);

@@ -26,7 +26,6 @@
         display: block;
         .slideDes{
           width: 90%;
-          opacity: 0;
           @include center();
         }
         .slideTitle{
@@ -40,7 +39,6 @@
           text-decoration: none;
           background: rgba(109, 0, 10, 0.75);
           .slideTitle{
-            opacity: 0;
           }
           .slideDes{
             opacity: 1;
