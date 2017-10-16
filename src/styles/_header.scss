@@ -25,6 +25,10 @@ header{
         top: rem(-15);
         z-index: 1;
         transition: 500ms;
+        @include maxs($sp-767) {
+          position: initial;
+          content: initial;
+        }
       }
       &.active{
         a.nav-link{
@@ -131,7 +135,7 @@ header{
   @include maxs($sp-1400) {
     top: 22vh;
   }
-  @include maxs($sp-768) {
+  @include maxs($sp-1024) {
     display: none;
   }
   li{

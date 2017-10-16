@@ -61,7 +61,7 @@ gulp.task('js', function () {
             './src/js/scripts.js',
         ])
         .pipe(concat('app.mins.js'))
-        // .pipe(uglify())
+        .pipe(uglify())
         .pipe(gulp.dest('./public/js'));
 });
 gulp.task('jsproject', function () {
@@ -73,7 +73,7 @@ gulp.task('jsproject', function () {
             './src/js/scripts.project.js',
         ])
         .pipe(concat('app.project.mins.js'))
-        // .pipe(uglify())
+        .pipe(uglify())
         .pipe(gulp.dest('./public/js'));
 });
 gulp.task('jscontact', function () {
@@ -84,7 +84,7 @@ gulp.task('jscontact', function () {
             './src/js/scripts.contact.js',
         ])
         .pipe(concat('app.contact.mins.js'))
-        // .pipe(uglify())
+        .pipe(uglify())
         .pipe(gulp.dest('./public/js'));
 });
 gulp.task('img', function () {

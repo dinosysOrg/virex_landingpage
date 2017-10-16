@@ -14,7 +14,6 @@
   &__snap{
     width: 90%;
     margin: auto;
-    overflow: hidden;
     .projectBox{
       position: relative;
       margin: 0px rem(15);
@@ -31,11 +30,14 @@
         }
         .slideTitle{
           position: absolute;
-          right: rem(10);
+          right: rem(15);
           bottom: rem(10);
           font-size: rem(22);
           color: #faaf3f;
           text-transform: uppercase;
+          @include maxs($sp-1024) {
+            font-size: rem(15);
+          }
         }
         &:hover{
           text-decoration: none;
