@@ -6,7 +6,7 @@
   @include maxs($sp-1024) {
     padding: rem(20) rem(40);
   }
-  @include maxs($sp-480) {
+  @include maxs($sp-640) {
     padding: rem(20) rem(16);
   }
   &__title {
