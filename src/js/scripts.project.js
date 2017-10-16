@@ -90,8 +90,9 @@ document.addEventListener('DOMContentLoaded', loaded, false);
 
 
 function activeTab(event, id){
+  console.log('aaa')
   var i, tabcontent, tablinks, itemId, prevActive;
-  tabcontent = $('.section-proj-6__tab-content_item');
+  tabcontent = $('.section-proj-6__tab-content__item');
   for (i = 0; i < tabcontent.length; i++) {
       tabcontent[i].style.display = "none";
   }
@@ -132,3 +133,19 @@ $('.section-proj-1__button-group__civil-guide').on('click', function() {
 $('.section-proj-1__button-group__position').on('click',function() {
   openGallery(project.gallery.position);
 });
+
+var acc = $('.section-proj-6__arcordion__link').on('click', function() {
+  $('.section-proj-6 .active').removeClass('active');
+  $('.section-proj-6__arcordion__item').css('max-height', '0px');
+  $(this).addClass('active');
+  var panel = $(this).next();
+  if (panel.css('max-height') === '0px') {
+    panel.css('max-height', panel[0].scrollHeight + 'px');
+  } else {
+    panel.css('max-height', '0px');
+  }
+});
+
+var defaultShow = $('#defaultShow');
+defaultShow.css( 'max-height', defaultShow[0].scrollHeight + 'px');
+defaultShow.prev().addClass('active');

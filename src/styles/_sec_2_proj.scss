@@ -6,6 +6,9 @@
   @include maxs($sp-1024) {
     padding: rem(20) rem(40);
   }
+  @include maxs($sp-640) {
+    padding: rem(20) rem(16);
+  }
   &__title {
     &__name {
       color: #4d4d4d;
@@ -18,7 +21,7 @@
     &__address {
       font-size: rem(24);
       @include maxs($sp-1024) {
-        font-size: rem(18);
+        font-size: rem(19);
       }
       &__icon {
         i {
