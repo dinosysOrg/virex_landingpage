@@ -8941,3 +8941,7 @@ var acc = $('.section-proj-6__arcordion__link').on('click', function() {
     panel.css('max-height', '0px');
   }
 });
+
+var defaultShow = $('#defaultShow');
+defaultShow.css( 'max-height', defaultShow[0].scrollHeight + 'px');
+defaultShow.prev().addClass('active');
