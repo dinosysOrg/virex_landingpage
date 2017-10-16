@@ -75,12 +75,10 @@ function handleFormSubmit(event) {  // handles form submit withtout any jquery
 
 function handleFormSubmitModal(event) {  // handles form submit withtout any jquery
   var form = 'gformModal';
-  console.log(form);
   event.preventDefault();           // we are submitting via xhr below
   var dataModal = getFormData(form);         // get the values submitted in the form
-  console.log(dataModal);
 
-  if( !validEmail(dataModal.email) ) {   // if email is not valid show error
+  if( !validEmail(dataModal.Email) ) {   // if email is not valid show error
     document.getElementById('email-invalid').style.display = 'block';
     return false;
   } else {
@@ -104,12 +102,43 @@ function handleFormSubmitModal(event) {  // handles form submit withtout any jqu
   }
 }
 
+
+function handleFormSubmitModa(event) {  // handles form submit withtout any jquery
+  var form = 'gformModa';
+  event.preventDefault();           // we are submitting via xhr below
+  var dataModa = getFormData(form);         // get the values submitted in the form
+
+  if( !validEmail(dataModa.Email) ) {   // if email is not valid show error
+    document.getElementById('email-invalid').style.display = 'block';
+    return false;
+  } else {
+    var url = event.target.action;  //
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', url);
+    // xhr.withCredentials = true;
+    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+    xhr.onreadystatechange = function() {
+        console.log( xhr.status, xhr.statusText )
+        console.log(xhr.responseText);
+        document.getElementById('gformModa').style.display = 'none'; // hide form
+        document.getElementById('thankyou_message_moda').style.display = 'block';
+        return;
+    };
+    // url encode form data for sending as post data
+    var encodedModa = Object.keys(dataModa).map(function(k) {
+        return encodeURIComponent(k) + '=' + encodeURIComponent(dataModa[k])
+    }).join('&')
+    xhr.send(encodedModa);
+  }
+}
+
 function loaded() {
-  console.log('contact form submission handler loaded successfully');
   // bind to the submit event of our form
-  var form = document.getElementById('gform');
+  // var form = document.getElementById('gform');
   var form1 = document.getElementById('gformModal');
-  form.addEventListener("submit", handleFormSubmit, false);
+  var form2 = document.getElementById('gformModa');
+  // form.addEventListener("submit", handleFormSubmit, false);
   form1.addEventListener("submit", handleFormSubmitModal, false);
+  form2.addEventListener("submit", handleFormSubmitModa, false);
 };
 document.addEventListener('DOMContentLoaded', loaded, false);

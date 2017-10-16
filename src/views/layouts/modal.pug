@@ -7,10 +7,14 @@
 				p.text-center Trở thành những người đầu tiên nhận thông báo của chúng tôi về 
 				p.text-center.mb-5 những ưu đãi, những thông tin về dự án của VIREX
 				.clearfix
-					form#gformModal.contact-form(method="POST", action="https://script.google.com/macros/s/AKfycbzbEkeYsq7-T_US8ijFP08vSYK61EsawJkPdGZt4irvNWpKgUtZ/exec")
+					#thankyou_message_modal Thank you for contacting us !
+					form(action="https://script.google.com/macros/s/AKfycbzrUjKObNPZyaFAIge2-h5oQ3GfzSUx1ekjWujO-iY6n1H78Hw/exec", class="contact-form", id="gformModal", method="POST")
 						.form-group
-							input#name.form-control.w-50.m-auto(name="name", type="text", placeholder="Họ và tên")
+							input#name.form-control.w-50.m-auto(name="Name", type="text", placeholder="Họ và tên")
 						.form-group.text-center
-							input#email.form-control.w-50.m-auto(name="email", type="email", required="", placeholder="Email")
+							input#email.form-control.w-50.m-auto(name="Email", type="email", required="", placeholder="Email")
 						div.text-center.pt-3
-								button.btn.btn-default.btn-getNews(type="submit") NHẬN THÔNG TIN
+								button(class="btn btn-primary", type="submit", id="submit-form") nhận thông tin
+
+
+

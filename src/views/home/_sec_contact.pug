@@ -1,10 +1,12 @@
 .sec.section.section-contact(data-anchor="contact")
   .section-contact__title.text-center Đăng kí nhận thông tin
   .section-contact__des.text-center Trở thành những người đầu tiên nhận thông báo của chúng tôi về <br> những ưu đãi, những thông tin về dự án của VIREX
-  form(action="", class="contact-form")
+  #thankyou_message_moda Thank you for contacting us !
+  form(action="https://script.google.com/macros/s/AKfycbzrUjKObNPZyaFAIge2-h5oQ3GfzSUx1ekjWujO-iY6n1H78Hw/exec", class="contact-form", id="gformModa", method="POST")
     .input-group
-      input(type="text", placeholder="Họ và tên", class="form-control")
+      input(type="text", name="Name", placeholder="Họ và tên", class="form-control")
     .input-group
-      input(type="text", placeholder="Email", class="form-control")
+      input(type="email", name="Email", placeholder="Email", class="form-control", required=true)
     .text-center.mt-4
-      a.btn.btn-primary(href="#") nhận thông tin
+      button(class="btn btn-primary", type="submit", id="submit-form") nhận thông tin
+

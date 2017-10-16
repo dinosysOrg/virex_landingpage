@@ -51,6 +51,7 @@ gulp.task('sass', function () {
 });
 gulp.task('js', function () {
     return gulp.src ([
+             './src/js/form-submission-handler.js',
             './src/js/jquery-3.2.1.min.js',
             './src/js/slick.js',
             './src/js/scrolloverflow.js',

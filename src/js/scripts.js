@@ -9,6 +9,23 @@ window.onload = function() {
   $('.loading').fadeOut('slow');
 };
 $(document).ready(function() {
+
+  // var $form = $('form#GetCTA'),
+  // url = 'https://script.google.com/macros/s/AKfycbzrUjKObNPZyaFAIge2-h5oQ3GfzSUx1ekjWujO-iY6n1H78Hw/exec';
+  
+  // $('#submit-form').on('click', function(e) {
+  //   e.preventDefault();
+  //   var jqxhr = $.ajax({
+  //     url: url,
+  //     method: "GET",
+  //     dataType: "json",
+  //     data: $form.serializeObject()
+  //   }).success(
+  //     console.log('thanh cong')
+  //     // do something
+  //   );
+  // })
+
   var device = mobileAndTabletcheck();
   $('.multiple-snap').slick({
     infinite: true,
@@ -35,11 +52,6 @@ $(document).ready(function() {
           if(index === 2){
             $('.section-2__box').addClass('fadeInLeft animated')
           }
-          // if(index === 7){
-          //   $('.section-contact__title').addClass('fadeInLeft animated')
-          //   $('.section-contact__des').addClass('fadeInLeft animated')
-          //   $('.contact-form').addClass('fadeInRight animated')
-          // }
         },
         onLeave: function(index, nextIndex, direction){
           if(nextIndex !== 1){

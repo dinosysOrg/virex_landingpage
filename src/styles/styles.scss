@@ -73,3 +73,10 @@ body.mobile{
 .op-0{
   opacity: 0;
 }
+#thankyou_message_modal, #thankyou_message, #thankyou_message_moda {
+  text-align: center;
+  color: #BE1E2D;
+  font-family: $font-B;
+  font-size: rem(25);
+  display: none;
+}
