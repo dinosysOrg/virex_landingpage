@@ -79,6 +79,9 @@
     @include maxs($sp-1024) {
       margin-top: 15px;
     }
+    @include maxs($sp-767) {
+      display: none;
+    }
     i {
       color: #f6a623;
       font-size: rem(36);
