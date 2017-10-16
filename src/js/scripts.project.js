@@ -1,16 +1,20 @@
+// Google Analytics 
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  
+  ga('create', 'UA-107982810-1', 'auto');
+  ga('send', 'pageview');
 // loading
 window.onload = function() {
   $('.loading').fadeOut('slow');
 };
-
-
-
 function validEmail(email) { // see:
   var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
   return re.test(email);
 }
 // get all data in form and return object
-
 function getFormData(form) {
   var elements = document.getElementById(form).elements; // all form elements
   var fields = Object.keys(elements).map(function(k) {
@@ -45,7 +49,6 @@ function getFormData(form) {
       }
     }
   });
-  console.log(data);
   return data;
 }
 
@@ -64,8 +67,6 @@ function handleFormSubmitModal(event) {  // handles form submit withtout any jqu
     // xhr.withCredentials = true;
     xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
     xhr.onreadystatechange = function() {
-        console.log( xhr.status, xhr.statusText )
-        console.log(xhr.responseText);
         document.getElementById('gformModal').style.display = 'none'; // hide form
         document.getElementById('thankyou_message_modal').style.display = 'block';
         return;

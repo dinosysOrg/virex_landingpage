@@ -1,3 +1,11 @@
+// Google Analytics 
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-107982810-1', 'auto');
+ga('send', 'pageview');
 // check mobile
 window.mobileAndTabletcheck = function() {
   var check = false;
@@ -9,28 +17,36 @@ window.onload = function() {
   $('.loading').fadeOut('slow');
 };
 $(document).ready(function() {
-
-  // var $form = $('form#GetCTA'),
-  // url = 'https://script.google.com/macros/s/AKfycbzrUjKObNPZyaFAIge2-h5oQ3GfzSUx1ekjWujO-iY6n1H78Hw/exec';
-  
-  // $('#submit-form').on('click', function(e) {
-  //   e.preventDefault();
-  //   var jqxhr = $.ajax({
-  //     url: url,
-  //     method: "GET",
-  //     dataType: "json",
-  //     data: $form.serializeObject()
-  //   }).success(
-  //     console.log('thanh cong')
-  //     // do something
-  //   );
-  // })
-
   var device = mobileAndTabletcheck();
   $('.multiple-snap').slick({
     infinite: true,
     slidesToShow: 3,
-    slidesToScroll: 1
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        }
+      },
+      // {
+      //   breakpoint: 480,
+      //   settings: {
+      //     slidesToShow: 1,
+      //     slidesToScroll: 1
+      //   }
+      // }
+    ]
+    
   });
   $('.section-4__slide').carousel({
     interval: 4000
@@ -38,7 +54,7 @@ $(document).ready(function() {
   if (device !== true) {
     $('body').addClass('pc');
     $('#fullpage').fullpage({
-        anchors: ['home', 'about', 'vision', 'comment', 'portfolio','flow', 'contact','footer'],
+        anchors: ['home', 'about', 'vision', 'portfolio', 'comment', 'flow', 'contact', 'footer'],
         sectionSelector: '.sec',
         scrollOverflow: true,
         css3: true,

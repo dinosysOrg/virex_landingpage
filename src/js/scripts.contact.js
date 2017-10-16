@@ -1,3 +1,11 @@
+// Google Analytics 
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  
+  ga('create', 'UA-107982810-1', 'auto');
+  ga('send', 'pageview');
 // loading
 window.onload = function() {
   $('.loading').fadeOut('slow');
@@ -43,7 +51,6 @@ function getFormData(form) {
       }
     }
   });
-  console.log(data);
   return data;
 }
 
@@ -51,7 +58,6 @@ function handleFormSubmit(event) {  // handles form submit withtout any jquery
   var form = 'gform';
   event.preventDefault();           // we are submitting via xhr below
   var data = getFormData(form);         // get the values submitted in the form
-  console.log(data);
   if( !validEmail(data.Email) ) {   // if email is not valid show error
     document.getElementById('email-invalid').style.display = 'block';
     return false;
@@ -62,8 +68,6 @@ function handleFormSubmit(event) {  // handles form submit withtout any jquery
     // xhr.withCredentials = true;
     xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
     xhr.onreadystatechange = function() {
-        console.log( xhr.status, xhr.statusText )
-        console.log(xhr.responseText);
         document.getElementById('gform').style.display = 'none'; // hide form
         document.getElementById('thankyou_message').style.display = 'block';
         return;
@@ -92,8 +96,6 @@ function handleFormSubmitModal(event) {  // handles form submit withtout any jqu
     // xhr.withCredentials = true;
     xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
     xhr.onreadystatechange = function() {
-        console.log( xhr.status, xhr.statusText )
-        console.log(xhr.responseText);
         document.getElementById('gformModal').style.display = 'none'; // hide form
         document.getElementById('thankyou_message_modal').style.display = 'block';
         return;
