@@ -69,6 +69,7 @@
       font-size: rem(16);
       @include maxs($sp-1024) {
         font-size: rem(14);
+        text-align: center;
       }
     }
     &__brochure,
@@ -80,6 +81,15 @@
         width: 100%;
         margin-bottom: 10px;
         text-align: center;
+      }
+      @include maxs($sp-767) {
+        width: 55%;
+      }
+    }
+    &__brochure {
+      margin-right: 10px;
+      @include maxs($sp-1200) {
+        margin-right: 0;
       }
     }
   }

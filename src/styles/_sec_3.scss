@@ -40,7 +40,7 @@
         // min-height: 50vh;
         width: 100%;
         border: 0px;
-        background-color: #be1e2c;
+        background-color: #e4a039;
         background-blend-mode: multiply;
         padding: rem(50) 0px;
       }
@@ -68,6 +68,9 @@
         left: rem(60);
         right: rem(30);
         transition: all 100ms ease-out;
+        li {
+          list-style: disc;
+        }
         @include maxs($sp-1400) {
           top: 20%;
           width: 55%;
@@ -92,9 +95,11 @@
         flex: 3;
         background-size: cover;
         background-position: center center;
-        background-color: #be1e2c;
+        background-color: #e4a039;
         background-blend-mode: multiply;
-        .title{opacity: 0}
+        .title{
+          opacity: 0
+        }
         .txtHover{
           transition-delay: 400ms;
           opacity: 1;
