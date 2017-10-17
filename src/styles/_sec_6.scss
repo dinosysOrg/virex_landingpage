@@ -38,7 +38,7 @@
         width: 100%;
         min-height: 100vh;
         display: block;
-        background-color: #be1e2c;
+        background-color: #e4a039;
         background-blend-mode: multiply;
       }
       .title{
@@ -111,7 +111,7 @@
         flex: 3;
         background-size: cover;
         background-position: center center;
-        background-color: #be1e2c;
+        background-color: #e4a039;
         background-blend-mode: multiply;
         @include maxs($sp-767) {
           flex: initial;
