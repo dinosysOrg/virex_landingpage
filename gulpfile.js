@@ -53,15 +53,15 @@ gulp.task('js', function () {
     return gulp.src ([
              './src/js/form-submission-handler.js',
             './src/js/jquery-3.2.1.min.js',
+            './src/js/popper.min.js',
+            './src/js/bootstrap.js',
             './src/js/slick.js',
             './src/js/scrolloverflow.js',
             './src/js/jquery.fullpage.js',
-            './src/js/popper.min.js',
-            './src/js/bootstrap.js',
             './src/js/scripts.js',
         ])
         .pipe(concat('app.mins.js'))
-        .pipe(uglify())
+        //.pipe(uglify())
         .pipe(gulp.dest('./public/js'));
 });
 gulp.task('jsproject', function () {
@@ -73,7 +73,7 @@ gulp.task('jsproject', function () {
             './src/js/scripts.project.js',
         ])
         .pipe(concat('app.project.mins.js'))
-        .pipe(uglify())
+        //.pipe(uglify())
         .pipe(gulp.dest('./public/js'));
 });
 gulp.task('jscontact', function () {
@@ -84,7 +84,7 @@ gulp.task('jscontact', function () {
             './src/js/scripts.contact.js',
         ])
         .pipe(concat('app.contact.mins.js'))
-        .pipe(uglify())
+        //.pipe(uglify())
         .pipe(gulp.dest('./public/js'));
 });
 gulp.task('img', function () {

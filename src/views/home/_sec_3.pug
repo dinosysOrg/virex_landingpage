@@ -1,24 +1,10 @@
 .sec.section.section-3(data-anchor="vision")
   .container-fuild
     ul.section-3__list.list-inline
-      li.section-3__list_1.list-inline-item
-        h3.title Sứ mệnh
-        .txtHover 
-          span Sứ mệnh
-          p Tạo ra một môi trường giao dịch minh bạch, khép kín trong lĩnh vực bất động sản:
-          ul 
-            li Hỗ trợ chủ đầu tư nắm bắt được thông tin thị trường, tư vấn chiến lược bán hàng…
-            li Hỗ trợ Khách hàng có cái nhìn tổng quan về nhóm sản phẩm mà họ quan tâm, từ đó đưa ra các quyết định mua hoặc đầu tư chính xác, hiệu quả.
-      li.section-3__list_2.list-inline-item
-        h3.title Tầm nhìn
-        .txtHover 
-          span Tầm nhìn
-          p Phát triển VIREX trở thành công ty Bất động sản chuyên nghiệp vững mạnh với thương hiệu uy tín hàng đầu trên thị trường bất động sản Việt Nam. 
-      li.section-3__list_3.list-inline-item
-        h3.title Cốt lõi
-        .txtHover
-          span Cốt lõi
-          p Công nghệ và Con người
-          p Với việc đầu tư vào công nghệ tân tiến, VIREX hỗ trợ người bán tìm kiếm khách hàng mục tiêu nhanh chóng và đáng tin cậy hơn. Theo đó, VIREX sẽ đạt được khối lượng bán hàng lớn gấp nhiều lần so với phương pháp kinh doanh truyền thống.
-          p Mô hình Đối tác VIREX đảm bảo lợi ích cho tất cả các bên, cho phép VIREX hợp tác với các đối tác chuyên nghiệp, bên tư vấn chuyên môn và tránh khỏi thị trường độc quyền hiện nay. VIREX xác thực dựa trên ba yếu tố “Minh mạch, Rõ ràng và An Toàn”.
-  
+      each item, index in homeData.section3.dataVi
+        - i = index + 1
+        li(class=`section-3__list_${i} list-inline-item`)
+          h3.title !{item.title}
+          .txtHover 
+            span !{item.title}
+            div !{item.txt}
