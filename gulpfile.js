@@ -25,6 +25,7 @@ gulp.task('pug', function () {
       './src/views/home/*.pug',
       './src/views/project/*.pug',
       './src/views/contact/*.pug',
+      './src/views/foreigner/*.pug',
     ])
     .pipe(pug({
     }))
@@ -87,6 +88,17 @@ gulp.task('jscontact', function () {
         .pipe(uglify())
         .pipe(gulp.dest('./public/js'));
 });
+gulp.task('jsforeigner', function () {
+    return gulp.src ([
+            './src/js/jquery-3.2.1.min.js',
+            './src/js/popper.min.js',
+            './src/js/bootstrap.js',
+            './src/js/scripts.foreigner.js',
+        ])
+        .pipe(concat('app.foreigner.mins.js'))
+        .pipe(uglify())
+        .pipe(gulp.dest('./public/js'));
+});
 gulp.task('img', function () {
     return gulp.src ([
         './src/assets/images/*.+(jpg|jpeg|gif|png|svg)',
@@ -109,4 +121,4 @@ gulp.task('watch', function(){
     gulp.watch('./public/*.html').on('change', reload)
 });
 
-gulp.task('default', ['watch', 'browser-sync', 'sass', 'pug', 'js', 'jsproject', 'jscontact', 'img', 'font']);
+gulp.task('default', ['watch', 'browser-sync', 'sass', 'pug', 'js', 'jsproject', 'jscontact', 'jsforeigner', 'img', 'font']);

@@ -1,0 +1,119 @@
+.section-foreign-4 {
+  width: 100%;
+  background-color: #f5f5f5;
+  &__title {
+    color: #c7202f;
+    font-size: rem(18);
+    font-weight: bold;
+    &:after {
+      position: relative;
+      content: "";
+      width: 150px;
+      display: block;
+      border-bottom: 2px solid #fbaf3f;
+      margin-top: 10px;
+    }
+  }
+  &__tab-bar {
+    @include maxs($sp-767) {
+      display: none;
+    }
+    &__link {
+      strong {
+        color: #000000;
+      }
+      margin-bottom: 20px;
+      color: #9b9b9b;
+      height: 110px;
+      font-size: rem(16);
+      display: block;
+      background-color: #ffffff;
+      width: 100%;
+      border: none;
+      outline: none;
+      text-align: left;
+      padding: rem(20);
+      cursor: pointer;
+      &:hover{
+        border: solid 1px #ffa933;
+      }
+      &.active {
+        border: solid 1px #ffa933;
+      }
+      &:active,
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+  &__tab-content {
+    background-color: #ffffff;
+    padding: 30px 25px;
+    .accordion-title {
+      color: #be1e2d;
+      font-size: rem(20);
+      font-weight: 600;
+    }
+    &__item {
+      display: none;
+      ul {
+        li {
+          color: #464646;
+          margin-bottom: 20px;
+          line-height: 1.5;
+          @include maxs($sp-1024) {
+            font-size: rem(14);
+          }
+        }
+      }
+    }
+  }
+  .card {
+    border: none;
+    .card-header {
+      border-bottom: solid 1px #e5e5e5;
+      background-color: inherit;
+      padding: 12px 20px 20px 12px;
+      a {
+        color:#4a4a4a;
+        font-size: rem(16);
+        display: block;
+        width: 100%;
+        &:after {
+          font-family: 'FontAwesome';  
+          content: '\f105';
+          position: absolute;
+          top: 15px;
+          right: 0;
+          color: #9b9b9b;
+          font-size: rem(24);
+        }
+        &.collapsed:after {
+          content: '\f107'; 
+        }
+      }
+    }
+    .collapse {
+      padding: rem(20) rem(20) rem(40) rem(30);
+      p {
+        font-size: rem(14) !important;
+        color: #6f6f6f !important;
+      }
+      .note {
+        background-color: rgba(255, 245, 232, 0.8) !important;
+        padding: 12px 15px !important;
+        &__title {
+          color: #c7202f !important;
+          font-weight: bold !important;
+          font-size: rem(14) !important;
+        }
+        strong {
+          color: #000000 !important;
+        }
+      }
+    }
+  }
+  #accordion {
+    padding: 30px 25px;
+  }
+}

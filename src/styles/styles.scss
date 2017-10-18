@@ -18,8 +18,12 @@
 @import 'sec_4_proj';
 @import 'sec_5_proj';
 @import 'sec_6_proj';
-@import 'fancybox_modal.scss';
+@import 'fancybox_modal';
 @import 'sec_1_contact';
+@import 'sec_1_foreign';
+@import 'sec_2_foreign';
+@import 'sec_3_foreign';
+@import 'sec_4_foreign';
 
 .sec{
   position: relative;
@@ -48,7 +52,7 @@
 .animated{
   opacity: 1;
 }
-.project-content {
+.project-content, .foreigner-content {
   header {
     position: absolute;
   }

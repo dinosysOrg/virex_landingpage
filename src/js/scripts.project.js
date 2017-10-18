@@ -90,7 +90,6 @@ document.addEventListener('DOMContentLoaded', loaded, false);
 
 
 function activeTab(event, id){
-  console.log('aaa')
   var i, tabcontent, tablinks, itemId, prevActive;
   tabcontent = $('.section-proj-6__tab-content__item');
   for (i = 0; i < tabcontent.length; i++) {

@@ -5,6 +5,8 @@ include ../../data/data.pug
     - checkContact = 'active'
   if menuIndex===2
     - checkProject = 'active'
+  if menuIndex===3
+    - checkForeign = 'active'
 header
   nav.navbar.navbar-expand-md#main-menu
     a.navbar-brand(href="./")
@@ -27,6 +29,8 @@ header
               a(href="./project_eden.html") EDEN ROSE
             li
               a(href="./project_phucat.html") PHÚ CÁT CITY
+        li.nav-item(class=checkForeign)
+          a.nav-link.smooth-scroll(href="/foreigner.html") FOREIGN INVESTORS
         li.nav-item(class=checkContact)
           a.nav-link.smooth-scroll(href="/contact.html") LIÊN HỆ
       a.btnGetNew(href="#" data-toggle="modal" data-target="#modalGetNew") NHẬN TIN MỚI
