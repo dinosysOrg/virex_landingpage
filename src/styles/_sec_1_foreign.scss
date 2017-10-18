@@ -1,0 +1,21 @@
+.section-foreign-1 {
+  background-image: url($src+'images/bg_foreign_1.jpg');
+  position: relative;
+  align-items: center;
+  display: flex;
+  height: 40vh;
+  &__txt{
+    margin: auto;
+    font-size: rem(42);
+    text-align: center;
+    font-weight: bold;
+    @include maxs($sp-1400) {
+      font-size: rem(30);
+    }
+    @include maxs($sp-768) {
+      padding: 0px 15px;
+      width: 100%;
+      margin-left: initial;
+    }
+  }
+}

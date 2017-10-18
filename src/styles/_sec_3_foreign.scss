@@ -1,0 +1,45 @@
+.section-foreign-3 {
+  &__info {
+    &__title {
+      color: #c7202f;
+      font-size: rem(18);
+      font-weight: bold;
+      &:after {
+        position: relative;
+        content: "";
+        width: 150px;
+        display: block;
+        border-bottom: 2px solid #fbaf3f;
+        margin-top: 10px;
+      }
+    }
+    &__content {
+      .col-sm-6 {
+        padding: 0 30px;
+      }
+      ul {
+        list-style: none;
+        li {
+          color: #000000;
+          margin-top: rem(40);
+          margin-left: rem(10);
+        }
+      }
+      p, strong {
+        color: #000000;
+      }
+      p {
+        margin-top: rem(15);
+        margin-bottom: rem(15);
+      }
+      span {
+        color: #c7202f;
+        display: inline;
+        position: absolute;
+        font-size: rem(24);
+        font-weight: bold;
+        left: 10px;
+      }
+    }
+  }
+}

@@ -1,10 +1,20 @@
-
+// Google Analytics 
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  
+  ga('create', 'UA-107982810-1', 'auto');
+  ga('send', 'pageview');
+// loading
+window.onload = function() {
+  $('.loading').fadeOut('slow');
+};
 function validEmail(email) { // see:
   var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
   return re.test(email);
 }
 // get all data in form and return object
-
 function getFormData(form) {
   var elements = document.getElementById(form).elements; // all form elements
   var fields = Object.keys(elements).map(function(k) {
@@ -42,33 +52,6 @@ function getFormData(form) {
   return data;
 }
 
-function handleFormSubmit(event) {  // handles form submit withtout any jquery
-  var form = 'gform';
-  event.preventDefault();           // we are submitting via xhr below
-  var data = getFormData(form);         // get the values submitted in the form
-  if( !validEmail(data.email) ) {   // if email is not valid show error
-    document.getElementById('email-invalid').style.display = 'block';
-    return false;
-  } else {
-    var url = event.target.action;  //
-    var xhr = new XMLHttpRequest();
-    xhr.open('POST', url);
-    // xhr.withCredentials = true;
-    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-    xhr.onreadystatechange = function() {
-        document.getElementById('gform').style.display = 'none'; // hide form
-        document.getElementById('thankyou_message').style.display = 'block';
-        return;
-    };
-    // url encode form data for sending as post data
-    var encoded = Object.keys(data).map(function(k) {
-        return encodeURIComponent(k) + '=' + encodeURIComponent(data[k])
-    }).join('&')
-    xhr.send(encoded);
-  }
-
-}
-
 function handleFormSubmitModal(event) {  // handles form submit withtout any jquery
   var form = 'gformModal';
   event.preventDefault();           // we are submitting via xhr below
@@ -96,42 +79,25 @@ function handleFormSubmitModal(event) {  // handles form submit withtout any jqu
   }
 }
 
-
-function handleFormSubmitModa(event) {  // handles form submit withtout any jquery
-  var form = 'gformModa';
-  event.preventDefault();           // we are submitting via xhr below
-  var dataModa = getFormData(form);         // get the values submitted in the form
-
-  if( !validEmail(dataModa.Email) ) {   // if email is not valid show error
-    document.getElementById('email-invalid').style.display = 'block';
-    return false;
-  } else {
-    var url = event.target.action;  //
-    var xhr = new XMLHttpRequest();
-    xhr.open('POST', url);
-    // xhr.withCredentials = true;
-    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-    xhr.onreadystatechange = function() {
-
-        document.getElementById('gformModa').style.display = 'none'; // hide form
-        document.getElementById('thankyou_message_moda').style.display = 'block';
-        return;
-    };
-    // url encode form data for sending as post data
-    var encodedModa = Object.keys(dataModa).map(function(k) {
-        return encodeURIComponent(k) + '=' + encodeURIComponent(dataModa[k])
-    }).join('&')
-    xhr.send(encodedModa);
-  }
-}
-
 function loaded() {
   // bind to the submit event of our form
   // var form = document.getElementById('gform');
   var form1 = document.getElementById('gformModal');
-  var form2 = document.getElementById('gformModa');
-  // form.addEventListener("submit", handleFormSubmit, false);
   form1.addEventListener("submit", handleFormSubmitModal, false);
-  form2.addEventListener("submit", handleFormSubmitModa, false);
 };
 document.addEventListener('DOMContentLoaded', loaded, false);
+
+
+function activeTab(event, id){
+  var i, tabcontent, tablinks, itemId, prevActive;
+  tabcontent = $('.section-foreign-4__tab-content__item');
+  for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+  }
+  $('.section-foreign-4 .active').removeClass('active');
+  itemId = '#item' + id;
+  $(itemId).css('display', 'block');
+  event.target.classList.add('active');
+}
+
+$('#defaultOpen').click();
