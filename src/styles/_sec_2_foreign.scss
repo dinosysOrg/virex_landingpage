@@ -1,0 +1,43 @@
+.section-foreign-2 {
+  background-color: #f5f5f5;
+  width: 100%;
+  &__info {
+    &__title {
+      color: #c7202f;
+      font-size: rem(18);
+      font-weight: bold;
+      &:after {
+        position: relative;
+        content: "";
+        width: 150px;
+        display: block;
+        border-bottom: 2px solid #fbaf3f;
+        margin-top: 10px;
+      }
+    }
+    &__content {
+      ul {
+        li {
+          color: #000000;
+          margin-top: rem(40);
+        }
+      }
+      p, strong {
+        color: #000000;
+      }
+      p {
+        margin-top: rem(15);
+        margin-bottom: rem(15);
+      }
+    }
+  }
+  &__img {
+    display: flex;
+    img {
+      margin: auto;
+      max-width: 100%;
+      display: block;
+      height: auto;
+    }
+  }
+}
