@@ -24,7 +24,7 @@
       }
       margin-bottom: 20px;
       color: #9b9b9b;
-      height: 110px;
+      height: auto;
       font-size: rem(16);
       display: block;
       background-color: #ffffff;
@@ -47,15 +47,61 @@
     }
   }
   &__tab-content {
+    @include maxs($sp-767) {
+      display: none;
+    }
     background-color: #ffffff;
     padding: 30px 25px;
-    .accordion-title {
-      color: #be1e2d;
-      font-size: rem(20);
-      font-weight: 600;
-    }
     &__item {
       display: none;
+      ul {
+        @include maxs($sp-767) {
+          margin-right: 20px;
+        }
+      }
+      .transaction {
+        list-style: decimal;
+      }
+      .accordion-title {
+        color: #be1e2d;
+        font-size: rem(20);
+        font-weight: 600;
+        @include maxs($sp-767) {
+          margin: 20px;
+        }
+      }
+      .note {
+        background-color: rgba(255, 245, 232, 0.8);
+        padding: 12px 15px;
+        @include maxs($sp-767) {
+          margin: 20px;
+        }
+        &__title {
+          color: #c7202f;
+          font-weight: bold;
+          font-size: rem(14);
+          font-style: normal;
+        }
+        &__content {
+          font-style: italic;
+          color: #000000;
+          font-size: rem(14);
+        }
+        strong {
+          color: #000000;
+        }
+      }
+      .content-title {
+        color: #be1e2d;
+        font-size: rem(20);
+        font-weight: 600;
+        @include maxs($sp-767) {
+          margin: 20px;
+        }
+      }
+      strong {
+        color: #000000;
+      }
       ul {
         li {
           color: #464646;
@@ -68,52 +114,102 @@
       }
     }
   }
-  .card {
-    border: none;
-    .card-header {
-      border-bottom: solid 1px #e5e5e5;
-      background-color: inherit;
-      padding: 12px 20px 20px 12px;
-      a {
+  &__arcordion {
+    @include  min($sp-768) {
+      display: none;
+      transition: max-height 0.5s ease-out;
+    }
+    padding: 0 15px;
+    &__link {
+      @extend .section-foreign-4__tab-bar__link;
+      margin-bottom: 0;
+    }
+    &__item {
+      @extend .section-foreign-4__tab-content__item;
+      box-sizing: border-box;
+      display: block;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.2s ease-out;
+      background-color: #ffffff;
+      margin-bottom: 25px;
+    }
+  }
+  &__item {
+    &__arcordion {
+      padding: 0 15px;
+      &__link {
         color:#4a4a4a;
         font-size: rem(16);
         display: block;
         width: 100%;
+        border: none;
+        background-color: #ffffff;
+        text-align: left;
+        border-bottom: solid 1px #e5e5e5;
+        margin-bottom: 20px;
+        padding: 12px 20px 20px 12px;
+        position: relative;
         &:after {
           font-family: 'FontAwesome';  
           content: '\f105';
           position: absolute;
-          top: 15px;
           right: 0;
+          top: rem(7);
           color: #9b9b9b;
           font-size: rem(24);
         }
-        &.collapsed:after {
-          content: '\f107'; 
+        &.active {
+          &:after {
+            content: '\f107';
+          }
+        }
+        &:active, &:focus {
+          outline: none;
+          box-shadow: none;
+        }
+      }
+      .item-content {
+        p {
+          color: #6f6f6f;
+          font-size: rem(14);
+          strong {
+            color: #6f6f6f;
+            u {
+              color: #6f6f6f;
+            }
+          }
+        }
+        ul {
+          li {
+            font-size: rem(14);
+            color: #6f6f6f;
+          }
+        }
+      }
+      &__item {
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height 0.5s ease-out;
+        padding-left: rem(20);
+        .note {
+          background-color: rgba(255, 245, 232, 0.8);
+          padding: 12px 15px;
+          &__title {
+            color: #c7202f;
+            font-weight: bold;
+            font-size: rem(14);
+            font-style: normal;
+          }
+          &__content {
+            font-style: italic;
+            color: #000000;
+          }
+          strong {
+            color: #000000;
+          }
         }
       }
     }
-    .collapse {
-      padding: rem(20) rem(20) rem(40) rem(30);
-      p {
-        font-size: rem(14) !important;
-        color: #6f6f6f !important;
-      }
-      .note {
-        background-color: rgba(255, 245, 232, 0.8) !important;
-        padding: 12px 15px !important;
-        &__title {
-          color: #c7202f !important;
-          font-weight: bold !important;
-          font-size: rem(14) !important;
-        }
-        strong {
-          color: #000000 !important;
-        }
-      }
-    }
-  }
-  #accordion {
-    padding: 30px 25px;
   }
 }

@@ -87,6 +87,8 @@ function loaded() {
 };
 document.addEventListener('DOMContentLoaded', loaded, false);
 
+var defaultItemShow;
+var defaultItemShowHeight;
 
 function activeTab(event, id){
   var i, tabcontent, tablinks, itemId, prevActive;
@@ -98,6 +100,44 @@ function activeTab(event, id){
   itemId = '#item' + id;
   $(itemId).css('display', 'block');
   event.target.classList.add('active');
+
+  defaultItemShow = $('#defaultItemShow');
+  if (defaultItemShow[0].scrollHeight > 0) {
+    defaultItemShowHeight = defaultItemShow[0].scrollHeight + 150;
+    defaultItemShow.css( 'max-height', defaultItemShowHeight + 'px');
+    defaultItemShow.prev().addClass('active');
+  }
 }
 
 $('#defaultOpen').click();
+
+var acc = $('.section-foreign-4__arcordion__link').on('click', function() {
+  $('.section-foreign-4 .active').removeClass('active');
+  $('.section-foreign-4__arcordion__item').css('max-height', '0px');
+  var panel = $(this).next();
+  if (panel.css('max-height') === '0px') {
+    $(this).addClass('active');
+    var height = panel[0].scrollHeight + 150;
+    panel.css('max-height', height + 'px');
+  } else {
+    panel.css('max-height', '0px');
+  }
+});
+
+var defaultShow = $('#defaultShow');
+var defaultShowHeight = defaultShow[0].scrollHeight + 150;
+defaultShow.css( 'max-height', defaultShowHeight + 'px');
+defaultShow.prev().addClass('active');
+
+var accItem = $('.section-foreign-4__item__arcordion__link').on('click', function() {
+  $('.section-foreign-4__item__arcordion__link.active').removeClass('active');
+  $('.section-foreign-4__item__arcordion__item').css('max-height', '0px');
+  var panel = $(this).next();
+  if (panel.css('max-height') === '0px') {
+    $(this).addClass('active');
+    var height = panel[0].scrollHeight + 150;
+    panel.css('max-height', height + 'px');
+  } else {
+    panel.css('max-height', '0px');
+  }
+});
