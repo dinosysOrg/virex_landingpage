@@ -1,8 +1,12 @@
+- vi = homeData.section4.dataVi
+- en = homeData.section4.dataEn
+- lang === 'vi' ? data = vi : data = en
+
 .sec.section.section-5(data-anchor="portfolio")
   .section-5__snap
-    .section-5__title.text-center #{homeData.section4.titleVi}
+    .section-5__title.text-center #{data.title}
     .multiple-snap
-      each item in homeData.section4.slideVi
+      each item in data.slide
         .snapBox
           .projectBox
             a.projectBoxLink(href=`./${item.link}`)

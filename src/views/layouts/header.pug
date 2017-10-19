@@ -1,12 +1,8 @@
 include ../../data/data.pug
-  if menuIndex===0
-    - checkHome = 'active'
-  if menuIndex===1
-    - checkContact = 'active'
-  if menuIndex===2
-    - checkProject = 'active'
-  if menuIndex===3
-    - checkForeign = 'active'
+- vi = menuData.dataVi
+- en = menuData.dataEn
+- lang === 'vi' ? data = vi : data = en
+
 header
   nav.navbar.navbar-expand-md#main-menu
     a.navbar-brand(href="./")
@@ -18,22 +14,13 @@ header
     </button>
     #navbarCollapse.collapse.navbar-collapse
       ul.navbar-nav.ml-auto
-        li.nav-item(class=checkHome)
-          a.nav-link.smooth-scroll(href="./") GIỚI THIỆU
-        li.nav-item(class=checkProject)
-          a.nav-link.smooth-scroll(href="#portfolio") DỰ ÁN
-          ul.subMenu.list-unstyled
-            li
-              a(href="./project_goldencity.html") Golden City An Giang
-            li
-              a(href="./project_eden.html") EDEN ROSE
-            li
-              a(href="./project_phucat.html") PHÚ CÁT CITY
-        li.nav-item(class=checkForeign)
-          a.nav-link.smooth-scroll(href="/foreigner.html") FOREIGN INVESTORS
-        li.nav-item(class=checkContact)
-          a.nav-link.smooth-scroll(href="/contact.html") LIÊN HỆ
-      a.btnGetNew(href="#" data-toggle="modal" data-target="#modalGetNew") NHẬN TIN MỚI
-
-
-
+        each item, index in data.menu
+          li.nav-item(class = index === menuIndex ? 'active' : null)
+            a.nav-link.smooth-scroll.text-uppercase(href=`${item.link}`) !{item.name}
+            - if (index === 1) {
+            ul.subMenu.list-unstyled
+              each flat in item.menuProject
+                li
+                  a(href=`./${flat.linkPro}`) !{flat.title}
+            - }
+      a.btnGetNew.text-uppercase(href="#" data-toggle="modal" data-target=`#${data.btnGetNew.link}`) !{data.btnGetNew.name}

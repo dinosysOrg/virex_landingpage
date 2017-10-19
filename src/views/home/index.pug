@@ -4,9 +4,11 @@ block vars
   -title = 'Virex home'
   -bodyClass = 'home-page'
   -menuIndex = 0
+  -lang = 'vi'
   include ../../data/data.pug
   
 block container
+  include ../layouts/header
   include ../layouts/navigator
   #fullpage
     include _sec_1

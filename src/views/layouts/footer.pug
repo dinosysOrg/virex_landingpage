@@ -1,12 +1,16 @@
+- vi = footerData.dataVi
+- en = footerData.dataEn
+- lang === 'vi' ? data = vi : data = en
+
 footer.sec.section.fp-auto-height
   .container
     .row
       .col-12.col-sm-6
-        h3.title Công ty cổ phần VIREX
-        p Địa chỉ: 33A Bà Triệu, P.Hàng Bài, Q.Hoàn Kiếm, Hà Nội.
-        p Tel: <tel>02432097979</tel>
-        p Email: info@virex.vn
-        p Website: <a href="http://virex.vn">virex.vn</a>
+        h3.title !{data.company}
+        p !{data.address}
+        p !{data.tel}
+        p !{data.mail}
+        p !{data.web}
       .col-12.col-sm-6
         ul.social-list.list-inline
           li.list-inline-item
