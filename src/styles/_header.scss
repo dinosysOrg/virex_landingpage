@@ -59,6 +59,9 @@ header{
         font-family: RobotoBold;
         position: relative;
         z-index: 2;
+        @include maxs($sp-768) {
+          font-size: rem(12);
+        }
       }
     }
 

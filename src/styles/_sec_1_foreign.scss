@@ -12,10 +12,22 @@
     @include maxs($sp-1400) {
       font-size: rem(30);
     }
-    @include maxs($sp-768) {
+    @include maxs($sp-1024) {
+      font-size: rem(24);
+    }
+    @include maxs($sp-767) {
       padding: 0px 15px;
       width: 100%;
       margin-left: initial;
+      margin-top: 10%;
+      font-size: rem(18);
+    }
+    @include maxs($sp-480) {
+      padding: 0px 15px;
+      width: 100%;
+      margin-left: initial;
+      margin-top: 25%;
+      font-size: rem(18);
     }
   }
 }
