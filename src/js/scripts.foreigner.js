@@ -106,6 +106,7 @@ function activeTab(event, id){
     defaultItemShowHeight = defaultItemShow[0].scrollHeight + 150;
     defaultItemShow.css( 'max-height', defaultItemShowHeight + 'px');
     defaultItemShow.prev().addClass('active');
+    defaultItemShow.removeAttr('id');
   }
 }
 
@@ -119,6 +120,15 @@ var acc = $('.section-foreign-4__arcordion__link').on('click', function() {
     $(this).addClass('active');
     var height = panel[0].scrollHeight + 150;
     panel.css('max-height', height + 'px');
+    defaultItemShow = $('#defaultItemShow');
+    setTimeout(function(){
+      if (defaultItemShow[0].scrollHeight > 0) {
+        defaultItemShowHeight = defaultItemShow[0].scrollHeight + 150;
+        defaultItemShow.css( 'max-height', defaultItemShowHeight + 'px');
+        defaultItemShow.prev().addClass('active');
+        defaultItemShow.removeAttr('id');
+      }
+    }, 10);
   } else {
     panel.css('max-height', '0px');
   }

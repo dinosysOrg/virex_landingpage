@@ -35,16 +35,18 @@
         .slideDes{
           width: 90%;
           opacity: 0;
-          color: #5a5b5b;
+          //color: #5a5b5b;
+          color: #ffffff;
           @include center();
         }
         .slideTitle{
           position: absolute;
-          right: rem(15);
+          left: rem(15);
           bottom: rem(10);
           font-size: rem(22);
           font-weight: bold;
-          color: #e4a039;
+          //color: #e4a039;
+          color: #ffffff;
           text-transform: uppercase;
           @include maxs($sp-1024) {
             font-size: rem(15);
@@ -52,7 +54,8 @@
         }
         &:hover{
           text-decoration: none;
-          background-color: rgba(250,236,217,0.8);
+          //background-color: rgba(250,236,217,0.8);
+          background-color: rgba(0, 0, 0, 0.81);
           .slideTitle{
             opacity: 0;
           }
