@@ -88,6 +88,9 @@ header{
         @include maxs($sp-767) {
           font-family: $font-B;
         }
+        @include maxs($sp-768) {
+          font-size: rem(12);
+        }
         text-transform: uppercase;
         background-color: transparent;
         color: #fff;
@@ -121,6 +124,9 @@ header{
       background: #be1e2d;
       @include maxs($sp-767) {
         background: transparent;
+      }
+      @include maxs($sp-768) {
+        font-size: rem(12);
       }
     }
     @include maxs($sp-767) {
