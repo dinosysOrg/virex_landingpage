@@ -131,6 +131,13 @@ header{
     }
   }
 }
+body.mobile{
+  .navigator{
+    @include maxs($sp-1366) {
+      display: none;
+    }
+  }
+}
 .navigator{
   position: fixed;
   right: 15px;

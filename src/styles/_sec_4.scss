@@ -39,9 +39,13 @@
     }
     .carousel-item{
       height: 250px;
+      @include maxs($sp-768) {
+        height: 350px;
+      }
       @include maxs($sp-767) {
         height: auto;
       }
+  
     }
     .carousel-indicators{
       top: -15%;
