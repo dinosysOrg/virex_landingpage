@@ -24,7 +24,7 @@ $(document).ready(function() {
     slidesToScroll: 1,
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 1025,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -38,16 +38,13 @@ $(document).ready(function() {
           slidesToScroll: 1,
         }
       },
-      // {
-      //   breakpoint: 480,
-      //   settings: {
-      //     slidesToShow: 1,
-      //     slidesToScroll: 1
-      //   }
-      // }
-    ]
-    
-  });
+    ],
+  })
+
+
+
+
+
   $('.section-4__slide').carousel({
     interval: 4000
   })

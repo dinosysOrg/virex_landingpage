@@ -188,6 +188,9 @@
     @include maxs($sp-768) {
       font-size: 65px;
     }
+    @include maxs($sp-480) {
+      font-size: 45px;
+    }
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -195,9 +198,6 @@
 .slick-prev
 {
     left: -3%;
-    @include maxs($sp-768) {
-      left: -5%;
-    }
 }
 [dir='rtl'] .slick-prev
 {
@@ -218,9 +218,6 @@
 .slick-next
 {
     right: -3%;
-    @include maxs($sp-768) {
-      right: -5%;
-    }
 }
 [dir='rtl'] .slick-next
 {
