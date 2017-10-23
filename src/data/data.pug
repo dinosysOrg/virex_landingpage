@@ -1,22 +1,399 @@
 - var src = './'
 -
-    var slideData = [
-    {
-        title: 'Phú Cát CITY',
-        des: 'Tọa lạc trong tổng thể cụm Dự án phát triển đô thị vệ tinh Hòa Lạc, tiếp giáp với khu dân dụng Bắc Phú Cát có quy mô hơn 90ha, Khu đô thị Phú Cát City là một dự án được quy hoạch đầu tư xây dựng đồng bộ',
-        img: 'pro_img_1.jpg',
-        link: 'project_phucat.html'
-    },
-    {
-        title: 'Eden Rose Thanh Trì',
-        des: 'The Eden Rose - Thanh Trì là dự án gồm tổ hợp các căn biệt thự, villa, shophouse liền kề cao cấp nhất khu vực. The Eden Rose được tích hợp mọi hệ thống tiện ích cao cấp và hiện đại trong một khuôn viên không gian xanh với bầu không khí trong lành. Hiếm có dự án nào đạt đủ các tiêu chí không gian sống lý tưởng như The Eden Rose.',
-        img: 'pro_img_2.jpg',
-        link: 'project_eden.html'
-    },
-    {
-        title: 'Golden City An Giang',
-        des: '',
-        img: 'pro_img_3.jpg',
-        link: 'project_goldencity.html'
+    var modal = {
+        dataVi: {
+            head: `
+            <h3 class="text-center pb-5"> Đăng kí nhận thông tin</h3>
+            <p class="text-center mb-5"> Nhận thông tin từ VIREX về những dự án và các ưu đãi</p>
+            `,
+            input: `Họ và tên`,
+            btn: `nhận thông tin`
+        },
+        dataEn: {
+            head: `
+            <h3 class="text-center pb-5"> Đăng kí nhận thông tin</h3>
+            <p class="text-center mb-5"> Nhận thông tin từ VIREX về những dự án và các ưu đãi</p>
+            `,
+            input: `Name`,
+            btn: `subscribe`
+        }
     }
-    ]
+-
+    var homeData = {
+        section1:{
+            dataVi: {
+                txt: `
+                <p class='mb-0 small'>VIREX hoạt động với phương châm: Tạo ra chuỗi lợi ích đồng hành giữa:</p>
+                <p class='big'>VIREX – KHÁCH HÀNG - CHỦ ĐẦU TƯ – HỆ THỐNG ĐỐI TÁC.</p>
+                `,
+            },
+            dataEn: {
+                txt: `
+                <p class='mb-0 small'>VIREX hoạt động với phương châm: Tạo ra chuỗi lợi ích đồng hành giữa:</p>
+                <p class='big'>VIREX – KHÁCH HÀNG - CHỦ ĐẦU TƯ – HỆ THỐNG ĐỐI TÁC.</p>
+                `
+            }
+        },
+        section2:{
+            dataVi: {
+                txt: `
+                <p>Hiện nay, sự thiếu nhất quán về thông tin của các dự án bất động sản đang khiến khách hàng cảm thấy bối rối và bất an, tạo nên một rào cản lớn cho giao dịch mua bán ở cả trong và ngoài nước. Để giải quyết vấn đề này, nền tảng VIREX ra đời nhằm xác thực và cung cấp thông tin tin cậy, dễ dàng giữa nhà đầu tư và khách hàng.</p>
+                <p>Với một ban điều hành giàu kinh nghiệm, và sự hợp tác chặt chẽ với các chuyên gia và tổ chức hàng đầu về: kinh tế, đầu tư, tài chính, chiến lược, bất động sản, xây dựng… VIREX đặt mục tiêu trở thành một đối tác tin cậy trong lĩnh vực bất động sản tại Việt Nam.</p>
+                `
+            },
+            dataEn: {
+                txt: `
+                <p>Hiện nay, sự thiếu nhất quán về thông tin của các dự án bất động sản đang khiến khách hàng cảm thấy bối rối và bất an, tạo nên một rào cản lớn cho giao dịch mua bán ở cả trong và ngoài nước. Để giải quyết vấn đề này, nền tảng VIREX ra đời nhằm xác thực và cung cấp thông tin tin cậy, dễ dàng giữa nhà đầu tư và khách hàng.</p>
+                <p>Với một ban điều hành giàu kinh nghiệm, và sự hợp tác chặt chẽ với các chuyên gia và tổ chức hàng đầu về: kinh tế, đầu tư, tài chính, chiến lược, bất động sản, xây dựng… VIREX đặt mục tiêu trở thành một đối tác tin cậy trong lĩnh vực bất động sản tại Việt Nam.</p>
+                `
+            }
+        },
+        section3:{
+            dataVi: [
+                {
+                    title: `Sứ mệnh`,
+                    txt: `
+                    <p>Tạo ra một môi trường giao dịch minh bạch, khép kín trong lĩnh vực bất động sản:</p>
+                    <ul>
+                        <li>Hỗ trợ chủ đầu tư nắm bắt được thông tin thị trường, tư vấn chiến lược bán hàng…</li>
+                        <li>Hỗ trợ Khách hàng có cái nhìn tổng quan về nhóm sản phẩm mà họ quan tâm, từ đó đưa ra các quyết định mua hoặc đầu tư chính xác, hiệu quả.</li>
+                    </ul>
+                    `
+                },
+                {
+                    title: `Tầm nhìn`,
+                    txt: `<p>Phát triển VIREX trở thành công ty Bất động sản chuyên nghiệp vững mạnh với thương hiệu uy tín hàng đầu trên thị trường bất động sản Việt Nam.</p>`
+                },
+                {
+                    title: `Cốt lõi`,
+                    txt: `
+                    <p>Công nghệ và Con người</p>
+                    <p>Với việc đầu tư vào công nghệ tân tiến, VIREX hỗ trợ người bán tìm kiếm khách hàng mục tiêu nhanh chóng và đáng tin cậy hơn. Theo đó, VIREX sẽ đạt được khối lượng bán hàng lớn gấp nhiều lần so với phương pháp kinh doanh truyền thống.</p>
+                    <p>Mô hình Đối tác VIREX đảm bảo lợi ích cho tất cả các bên, cho phép VIREX hợp tác với các đối tác chuyên nghiệp, bên tư vấn chuyên môn và tránh khỏi thị trường độc quyền hiện nay. VIREX xác thực dựa trên ba yếu tố “Minh mạch, Rõ ràng và An Toàn”.</p>
+                    `
+                },
+            ],
+            dataEn: [
+                {
+                    title: `Sứ mệnh`,
+                    txt: `
+                    <p>Tạo ra một môi trường giao dịch minh bạch, khép kín trong lĩnh vực bất động sản:</p>
+                    <ul>
+                        <li>Hỗ trợ chủ đầu tư nắm bắt được thông tin thị trường, tư vấn chiến lược bán hàng…</li>
+                        <li>Hỗ trợ Khách hàng có cái nhìn tổng quan về nhóm sản phẩm mà họ quan tâm, từ đó đưa ra các quyết định mua hoặc đầu tư chính xác, hiệu quả.</li>
+                    </ul>
+                    `
+                },
+                {
+                    title: `Tầm nhìn`,
+                    txt: `<p>Phát triển VIREX trở thành công ty Bất động sản chuyên nghiệp vững mạnh với thương hiệu uy tín hàng đầu trên thị trường bất động sản Việt Nam.</p>`
+                },
+                {
+                    title: `Cốt lõi`,
+                    txt: `
+                    <p>Công nghệ và Con người</p>
+                    <p>Với việc đầu tư vào công nghệ tân tiến, VIREX hỗ trợ người bán tìm kiếm khách hàng mục tiêu nhanh chóng và đáng tin cậy hơn. Theo đó, VIREX sẽ đạt được khối lượng bán hàng lớn gấp nhiều lần so với phương pháp kinh doanh truyền thống.</p>
+                    <p>Mô hình Đối tác VIREX đảm bảo lợi ích cho tất cả các bên, cho phép VIREX hợp tác với các đối tác chuyên nghiệp, bên tư vấn chuyên môn và tránh khỏi thị trường độc quyền hiện nay. VIREX xác thực dựa trên ba yếu tố “Minh mạch, Rõ ràng và An Toàn”.</p>
+                    `
+                }
+            ]
+        },
+        section4: {
+            dataVi: {
+                title: "Dự án",
+                slide: [
+                    {
+                        name: "Phú Cát CITY",
+                        des: "Tọa lạc trong tổng thể cụm Dự án phát triển đô thị vệ tinh Hòa Lạc, tiếp giáp với khu dân dụng Bắc Phú Cát có quy mô hơn 90ha, Khu đô thị Phú Cát City là một dự án được quy hoạch đầu tư xây dựng đồng bộ",
+                        img: 'pro_img_1.jpg',
+                        link: 'project_phucat.html'
+                    },
+                    {
+                        name: "Eden Rose Thanh Trì",
+                        des: "The Eden Rose - Thanh Trì là dự án gồm tổ hợp các căn biệt thự, villa, shophouse liền kề cao cấp nhất khu vực. The Eden Rose được tích hợp mọi hệ thống tiện ích cao cấp và hiện đại trong một khuôn viên không gian xanh với bầu không khí trong lành. Hiếm có dự án nào đạt đủ các tiêu chí không gian sống lý tưởng như The Eden Rose.",
+                        img: 'pro_img_2.jpg',
+                        link: 'project_eden.html'
+                    },
+                    {
+                        name: "Golden City An Giang",
+                        des: "",
+                        img: 'pro_img_3.jpg',
+                        link: 'project_goldencity.html'
+                    }
+                ]
+            },
+            dataEn: {
+                title: "Project",
+                slide: [
+                    {
+                        name: "Phú Cát CITY",
+                        des: "Tọa lạc trong tổng thể cụm Dự án phát triển đô thị vệ tinh Hòa Lạc, tiếp giáp với khu dân dụng Bắc Phú Cát có quy mô hơn 90ha, Khu đô thị Phú Cát City là một dự án được quy hoạch đầu tư xây dựng đồng bộ",
+                        img: 'pro_img_1.jpg',
+                        link: 'project_phucat.html'
+                    },
+                    {
+                        name: "Eden Rose Thanh Trì",
+                        des: "The Eden Rose - Thanh Trì là dự án gồm tổ hợp các căn biệt thự, villa, shophouse liền kề cao cấp nhất khu vực. The Eden Rose được tích hợp mọi hệ thống tiện ích cao cấp và hiện đại trong một khuôn viên không gian xanh với bầu không khí trong lành. Hiếm có dự án nào đạt đủ các tiêu chí không gian sống lý tưởng như The Eden Rose.",
+                        img: 'pro_img_2.jpg',
+                        link: 'project_eden.html'
+                    },
+                    {
+                        name: "Golden City An Giang",
+                        des: "",
+                        img: 'pro_img_3.jpg',
+                        link: 'project_goldencity.html'
+                    }
+                ]
+            }
+        },
+        section5: {
+            dataVi: {
+                slide: [
+                    {
+                        data: `
+                        <div class='title'>
+                            “VIREX” đã xoá bỏ mọi rào cản để kiến tạo một sàn giao dịch bất động sản thành công tại Việt Nam, thể hiện được rõ những quan điểm và tầm nhìn chiến lược cho những cơ hội tương lai. Chúng tôi hoàn toàn bị thuyết phục và mong muốn trở thành một phần của nền tảng sơ khai ấy.
+                        </div>
+                        <div class='title mt-3'>
+                            Alphanam tự hào là chủ đầu tư tiên phong tham gia vào VIREX, thực hiện sứ mệnh hiện đại hoá bất động sản tại Việt Nam”.
+                        </div>
+                        <p>CĐT Alphanam</p>
+                        `
+                    }
+                ]
+            },
+            dataEn: {
+                slide: [
+                    {
+                        data: `
+                        <div class='title'>
+                            “VIREX” đã xoá bỏ mọi rào cản để kiến tạo một sàn giao dịch bất động sản thành công tại Việt Nam, thể hiện được rõ những quan điểm và tầm nhìn chiến lược cho những cơ hội tương lai. Chúng tôi hoàn toàn bị thuyết phục và mong muốn trở thành một phần của nền tảng sơ khai ấy.
+                        </div>
+                        <div class='title mt-3'>
+                            Alphanam tự hào là chủ đầu tư tiên phong tham gia vào VIREX, thực hiện sứ mệnh hiện đại hoá bất động sản tại Việt Nam”.
+                        </div>
+                        <p>CĐT Alphanam</p>
+                        `
+                    }
+                ]
+            }
+        },
+        section6: {
+            dataVi: {
+                listData: [
+                    {
+                        title: `Dành cho nhà phân phối </br> & chủ đầu tư (coming soon)`,
+                        list: [
+                            {
+                                icon: 'icon-signupaccount.svg',
+                                txt: 'Đăng ký tài khoản tại website',
+                                des: 'Bạn sẽ cần cung cấp những thông tin cơ bản.',
+                            },
+                            {
+                                icon: 'icon-update-listing.svg',
+                                txt: 'Cập nhật dự án bất động sản',
+                                des: 'Bạn có thể sử dụng template được thiết kế sẵn. Danh sách các dự án có thể cập nhật không giới hạn.',
+                            }
+                        ]
+                    },
+                    {
+                        title: `Dành cho Khách hàng </br> & Nhà đầu tư (coming soon)`,
+                        list: [
+                            {
+                                icon: 'icon-search.svg',
+                                txt: 'Tìm kiếm và chia sẻ',
+                                des: 'Thỏa sức khám phá với tất cả danh mục bất động sản trên website',
+                            },
+                            {
+                                icon: 'icon-signupaccount.svg',
+                                txt: 'Đăng ký để lưu trữ và cá nhân hóa',
+                                des: 'Lưu lại thông tin bạn ưa thích, cũng như lựa chọn phương thức thanh toán phù hợp.',
+                            },
+                            {
+                                icon: 'icon-airplane.svg',
+                                txt: 'Liên hệ với đại lý kinh doanh',
+                                des: 'Bạn có thể trực tiếp liên hệ với đại lý kinh doanh từ website và yêu cầu được trao đổi thông tin.',
+                            },
+                        ]
+                    }
+                ]
+            },
+            dataEn: {
+                listData: [
+                    {
+                        title: `Dành cho nhà phân phối </br> & chủ đầu tư (coming soon)`,
+                        list: [
+                            {
+                                icon: 'icon-signupaccount.svg',
+                                txt: 'Đăng ký tài khoản tại website',
+                                des: 'Bạn sẽ cần cung cấp những thông tin cơ bản.',
+                            },
+                            {
+                                icon: 'icon-update-listing.svg',
+                                txt: 'Cập nhật dự án bất động sản',
+                                des: 'Bạn có thể sử dụng template được thiết kế sẵn. Danh sách các dự án có thể cập nhật không giới hạn.',
+                            }
+                        ]
+                    },
+                    {
+                        title: `Dành cho Khách hàng </br> & Nhà đầu tư (coming soon)`,
+                        list: [
+                            {
+                                icon: 'icon-search.svg',
+                                txt: 'Tìm kiếm và chia sẻ',
+                                des: 'Thỏa sức khám phá với tất cả danh mục bất động sản trên website',
+                            },
+                            {
+                                icon: 'icon-signupaccount.svg',
+                                txt: 'Đăng ký để lưu trữ và cá nhân hóa',
+                                des: 'Lưu lại thông tin bạn ưa thích, cũng như lựa chọn phương thức thanh toán phù hợp.',
+                            },
+                            {
+                                icon: 'icon-airplane.svg',
+                                txt: 'Liên hệ với đại lý kinh doanh',
+                                des: 'Bạn có thể trực tiếp liên hệ với đại lý kinh doanh từ website và yêu cầu được trao đổi thông tin.',
+                            },
+                        ]
+                    }
+                ]
+            },
+        },
+        section7: {
+            dataVi: {
+                title: `Đăng kí nhận thông tin`,
+                des: `Trở thành những người đầu tiên nhận thông báo của chúng tôi về </br> những ưu đãi, những thông tin về dự án của VIREX`,
+                input: `Họ và tên`,
+                button: `NHẬN THÔNG TIN`
+            },
+            dataEn: {
+                title: `Đăng kí nhận thông tin`,
+                des: `Trở thành những người đầu tiên nhận thông báo của chúng tôi về </br> những ưu đãi, những thông tin về dự án của VIREX`,
+                input: `Họ và tên`,
+                button: `NHẬN THÔNG TIN`
+            }
+        }
+    }
+-
+    var footerData = {
+        dataVi: {
+            company: `Công ty cổ phần VIREX`,
+            address: `Địa chỉ: 33A Bà Triệu, P.Hàng Bài, Q.Hoàn Kiếm, Hà Nội.`,
+            tel: `Điện thoại: <tel>02432097979</tel>`,
+            mail: `Email: info@virex.vn`,
+            web: `Website: <a href="http://virex.vn">virex.vn</a>`
+        },
+        dataEn: {
+            company: `Công ty cổ phần VIREX`,
+            address: `Địa chỉ: 33A Bà Triệu, P.Hàng Bài, Q.Hoàn Kiếm, Hà Nội.`,
+            tel: `Tel: <tel>02432097979</tel>`,
+            mail: `Email: info@virex.vn`,
+            web: `Website: <a href="http://virex.vn">virex.vn</a>`
+        }
+    }
+-
+    var menuData = {
+        dataVi: {
+            logo: {
+                link: `./index_VI.html`,
+            },
+            btnGetNew: {
+                name: `nhận tin mới`,
+                link: `modalGetNew`
+            },
+            lang: [
+                {
+                    name: `en`,
+                    link: ``,
+                },
+                {
+                    name: `vi`,
+                    link: ``,
+                },
+            ],
+            menu: [
+                {
+                    name: `giới thiệu`,
+                    link: `./index_VI.html`,
+                },
+                {
+                    name: `dự án`,
+                    link: `#portfolio`,
+                    menuProject: [
+                        {
+                            title: `Golden City An Giang`,
+                            linkPro: `project_goldencity_VI.html`
+                        },
+                        {
+                            title: `EDEN ROSE`,
+                            linkPro: `project_eden_VI.html`
+                        },
+                        {
+                            title: `PHÚ CÁT CITY`,
+                            linkPro: `project_phucat_VI.html`
+                        },
+                    ]
+                },
+                {
+                    name: `đầu tư`,
+                    link: `foreigner_VI.html`,
+                },
+                {
+                    name: `liên hệ`,
+                    link: `contact_VI.html`,
+                },
+            ]
+        },
+        dataEn: {
+            logo: {
+                link: `./index_EN.html`,
+            },
+            btnGetNew: {
+                name: `Get news`,
+                link: `modalGetNew`
+            },
+            lang: [
+                {
+                    name: `en`,
+                    link: ``,
+                },
+                {
+                    name: `vi`,
+                    link: ``,
+                },
+            ],
+            menu: [
+                {
+                    name: `Introduction`,
+                    link: `./index_EN.html`,
+                },
+                {
+                    name: `Projects`,
+                    link: `#portfolio`,
+                    menuProject: [
+                        {
+                            title: `Golden City An Giang`,
+                            linkPro: `project_goldencity_EN.html`
+                        },
+                        {
+                            title: `EDEN ROSE`,
+                            linkPro: `project_eden_EN.html`
+                        },
+                        {
+                            title: `PHU CAT CITY`,
+                            linkPro: `project_phucat_EN.html`
+                        },
+                    ]
+                },
+                {
+                    name: `Foreign Investment`,
+                    link: `foreigner_EN.html`,
+                },
+                {
+                    name: `Contact`,
+                    link: `contact_EN.html`,
+                },
+            ]
+        }
+    }
+
+ 

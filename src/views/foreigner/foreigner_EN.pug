@@ -3,9 +3,12 @@ extends ../layouts/layout_foreigner
 block vars
   -title = 'For Foreigner'
   -bodyClass = 'foreigner-page'
-  -menuIndex = 3
+  -menuIndex = 2
+  -lang = 'en'
+  -pageName= 'foreigner'
+  include ../../data/data.pug
   -
-    data = {
+    dataForeigner = {
       condition: {
         info: `
           <ul>
@@ -266,7 +269,10 @@ block vars
     }
 
 block container
+  include ../layouts/header
   include _sec_1
   include _sec_2
   include _sec_3
   include _sec_4
+  include ../layouts/footer
+  include ../layouts/modal

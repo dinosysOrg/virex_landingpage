@@ -17,6 +17,9 @@ window.onload = function() {
 };
 $(document).ready(function() {
   var device = mobileAndTabletcheck();
+  // $('.section-4__slide').carousel({
+  //   interval: 4000
+  // })
   $('.multiple-snap').slick({
     infinite: true,
     slidesToShow: 3,
@@ -37,16 +40,8 @@ $(document).ready(function() {
           slidesToScroll: 1,
         }
       },
-    ],
-  })
-
-
-
-
-
-  $('.section-4__slide').carousel({
-    interval: 4000
-  })
+    ]
+  });
   if (device !== true) {
     $('body').addClass('pc');
     $('#fullpage').fullpage({

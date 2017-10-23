@@ -1,0 +1,15 @@
+extends ../layouts/layout_contact
+
+block vars
+  -title = 'Contact page'
+  -bodyClass = 'contact-page'
+  -menuIndex = 3
+  -lang = 'en'
+  -pageName= 'contact'
+  include ../../data/data.pug
+  
+block container
+  include ../layouts/header
+  include _sec_1
+  include ../layouts/footer
+  include ../layouts/modal

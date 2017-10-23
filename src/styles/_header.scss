@@ -70,7 +70,7 @@ header{
     display: none;
     position: absolute;
     width: 200px;
-    left: -100%;
+    left: -50px;
     padding-top: 5px;
     @include maxs($sp-767) {
       display: initial;
@@ -241,5 +241,18 @@ body.mobile{
 .logo{
   @include maxs($sp-767) {
     width: 80px;
+  }
+}
+ul.listLang{
+  margin-bottom: 0px;
+  margin-left: 0px;
+  padding-left: 0px;
+  li{
+    display: inline;
+    padding: 0px rem(7);
+    a{color: rgba(255,255,255,0.5);font-family: $font-B;font-size: 15px;}
+    a.active{
+      color: rgba(255,255,255,1);
+    }
   }
 }
