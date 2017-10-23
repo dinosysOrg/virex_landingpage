@@ -1,4 +1,7 @@
+- vi = homeData.section1.dataVi
+- en = homeData.section1.dataEn
+- lang === 'vi' ? dataLang = vi : dataLang = en
+
 .sec.section.section-1(data-anchor="home")
-  .section-1__txt.op-0 
-    p.small.mb-0 VIREX hoạt động với phương châm: Tạo ra chuỗi lợi ích đồng hành giữa:
-    p.big VIREX – KHÁCH HÀNG - CHỦ ĐẦU TƯ – HỆ THỐNG ĐỐI TÁC.
+  .section-1__txt.op-0 !{dataLang.txt}
+    

@@ -1,10 +1,11 @@
+- vi = homeData.section2.dataVi
+- en = homeData.section2.dataEn
+- lang === 'vi' ? dataLang = vi : dataLang = en
+
 .sec.section.section-2(data-anchor="about")
   .section-2__box.p-4.op-0
-    .section-2__txt
-      p Hiện nay, sự thiếu nhất quán về thông tin của các dự án bất động sản đang khiến khách hàng cảm thấy bối rối và bất an, tạo nên một rào cản lớn cho giao dịch mua bán ở cả trong và ngoài nước. Để giải quyết vấn đề này, nền tảng VIREX ra đời nhằm xác thực và cung cấp thông tin tin cậy, dễ dàng giữa nhà đầu tư và khách hàng.
-      p Với một ban điều hành giàu kinh nghiệm, và sự hợp tác chặt chẽ với các chuyên gia và tổ chức hàng đầu về: kinh tế, đầu tư, tài chính, chiến lược, bất động sản, xây dựng… VIREX đặt mục tiêu trở thành một đối tác tin cậy trong lĩnh vực bất động sản tại Việt Nam.
+    .section-2__txt !{dataLang.txt}
       img(src="./images/icon_section_2.png")
-    //- .section-2__title.mt-4 VIREX sẽ cung cấp một nền tảng duy nhất với cổng thông tin tin cậy từ nhà đầu tư và chuyển tới khách hàng. Danh sách tất cả các dự án sẽ được phân loại, dễ dàng tìm kiếm thông tin và đều được VIREX xác thực.
 
 
 

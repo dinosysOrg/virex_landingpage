@@ -3,7 +3,10 @@ extends ../layouts/layout_project
 block vars
   -title = 'Phú Cát City'
   -bodyClass = 'project-page'
-  -menuIndex = 2
+  -menuIndex = 1
+  -lang = 'en'
+  -pageName= 'project_phucat'
+  include ../../data/data.pug
   -
     project = {
       banner:"./images/image-phucat.jpg",
@@ -83,9 +86,12 @@ block vars
     }
 
 block container
+  include ../layouts/header
   include _sec_1
   include _sec_2
   include _sec_3
   include _sec_4
   include _sec_5
   include _sec_6
+  include ../layouts/footer
+  include ../layouts/modal

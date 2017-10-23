@@ -9,14 +9,12 @@ html(lang='en')
   meta(name="viewport", content="width=device-width, initial-scale=1, minimal-ui")
   title=title
   link(rel='stylesheet', href='./css/styles.min.css')
-  
+
 body(class="page-content", data-spy="scroll" data-target="#navigation" data-offset="100")
   .loading
     .boxLoading
       .circle
-  include header
   block container
-  include modal
 script(src='./js/app.mins.js')
 
 

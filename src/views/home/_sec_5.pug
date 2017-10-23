@@ -1,11 +1,16 @@
-.sec.section.section-5(data-anchor="portfolio")
-  .section-5__snap
-    .section-5__title.text-center Dự án
-    .multiple-snap
-      each item in slideData
-        .snapBox
-          .projectBox
-            a.projectBoxLink(href=`./${item.link}`, target="_blank")
-              .slideTitle=item.title
-              .slideDes=item.des
-            img.w-100(src=src+'images/'+item.img)
+- vi = homeData.section5.dataVi
+- en = homeData.section5.dataEn
+- lang === 'vi' ? dataLang = vi : dataLang = en
+
+.sec.section.section-4(data-anchor="comment")
+  #commentSlide.carousel.slideNew.section-4__slide
+    ol.carousel-indicators
+      each item, index in dataLang.slide
+        li(data-target="#commentSlide", data-slide-to=index, class=index === 0 ? 'active' : null)
+    .carousel-inner
+      each item, index in dataLang.slide
+        .carousel-item(class= index === 0 ? 'active' : null)
+          .carousel-content !{item.data}
+    a.carousel-control-next(href="#commentSlide", role="button", data-slide="next")
+      span.carousel-control-next-icon(aria-hidden="true")
+      span.sr-only Next

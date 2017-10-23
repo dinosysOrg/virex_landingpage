@@ -1,15 +1,15 @@
-.sec.section.section-4(data-anchor="comment")
-  #commentSlide.carousel.slideNew.section-4__slide
-    ol.carousel-indicators
-      li.active(data-target="#commentSlide", data-slide-to="0")
-      //- li(data-target="#commentSlide", data-slide-to="1")
-      //- li(data-target="#commentSlide", data-slide-to="2")
-    .carousel-inner
-      .carousel-item.active
-        .carousel-content
-          .title “VIREX” đã xoá bỏ mọi rào cản để kiến tạo một sàn giao dịch bất động sản thành công tại Việt Nam, thể hiện được rõ những quan điểm và tầm nhìn chiến lược cho những cơ hội tương lai. Chúng tôi hoàn toàn bị thuyết phục và mong muốn trở thành một phần của nền tảng sơ khai ấy.
-          .title.mt-3 Alphanam tự hào là chủ đầu tư tiên phong tham gia vào VIREX, thực hiện sứ mệnh hiện đại hoá bất động sản tại Việt Nam”.
-          p CĐT Alphanam
-    a.carousel-control-next(href="#commentSlide", role="button", data-slide="next")
-      span.carousel-control-next-icon(aria-hidden="true")
-      span.sr-only Next
+- vi = homeData.section4.dataVi
+- en = homeData.section4.dataEn
+- lang === 'vi' ? dataLang = vi : dataLang = en
+
+.sec.section.section-5(data-anchor="portfolio")
+  .section-5__snap
+    .section-5__title.text-center #{dataLang.title}
+    .multiple-snap
+      each item in dataLang.slide
+        .snapBox
+          .projectBox
+            a.projectBoxLink(href=`./${item.link}`, target="_blank")
+              .slideTitle=item.name
+              .slideDes=item.des
+            img.w-100(src=src+'images/'+item.img)
