@@ -4,6 +4,9 @@ block vars
   -title = 'Eden Rose'
   -bodyClass = 'project-page'
   -menuIndex = 1
+  -lang = 'en'
+  -pageName= 'project_eden'
+  include ../../data/data.pug
   -
     project = {
       banner:"./images/image-eden-rose.jpg",
@@ -73,9 +76,12 @@ block vars
     }
 
 block container
+  include ../layouts/header
   include _sec_1
   include _sec_2
   include _sec_3
   include _sec_4
   include _sec_5
   include _sec_6
+  include ../layouts/footer
+  include ../layouts/modal

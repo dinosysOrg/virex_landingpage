@@ -1,14 +1,14 @@
 - vi = homeData.section5.dataVi
 - en = homeData.section5.dataEn
-- lang === 'vi' ? data = vi : data = en
+- lang === 'vi' ? dataLang = vi : dataLang = en
 
 .sec.section.section-4(data-anchor="comment")
   #commentSlide.carousel.slideNew.section-4__slide
     ol.carousel-indicators
-      each item, index in data.slide
+      each item, index in dataLang.slide
         li(data-target="#commentSlide", data-slide-to=index, class=index === 0 ? 'active' : null)
     .carousel-inner
-      each item, index in data.slide
+      each item, index in dataLang.slide
         .carousel-item(class= index === 0 ? 'active' : null)
           .carousel-content !{item.data}
     a.carousel-control-next(href="#commentSlide", role="button", data-slide="next")

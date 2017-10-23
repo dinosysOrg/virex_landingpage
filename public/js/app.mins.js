@@ -12242,7 +12242,6 @@ if ( typeof module != 'undefined' && module.exports ) {
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
 ga('create', 'UA-107982810-1', 'auto');
 ga('send', 'pageview');
 // check mobile
@@ -12266,7 +12265,7 @@ $(document).ready(function() {
     slidesToScroll: 1,
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 1025,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -12311,5 +12310,17 @@ $(document).ready(function() {
     });
   } else{
     $('body').addClass('mobile');
+    if (window.innerWidth <= 1024 && window.innerWidth > window.innerHeight) {
+      $('.section-5').css("padding","50px 0px")
+    } else {
+      $('.section-5').css("padding","0px 0px")
+    }
+    window.onresize = function(event) {
+      if (window.innerWidth <= 1024 && window.innerWidth > window.innerHeight) {
+        $('.section-5').css("padding","50px 0px")
+      } else{
+        $('.section-5').css("padding","0px 0px")
+      }
+    };
   }
 });

@@ -1,13 +1,13 @@
 - vi = homeData.section6.dataVi
 - en = homeData.section6.dataEn
-- lang === 'vi' ? data = vi : data = en
+- lang === 'vi' ? dataLang = vi : dataLang = en
 
 .sec.section.section-6(data-anchor="flow")
   .container-fuild
     ul.section-6__list.list-inline
-      each item, index in data.listData
+      each item, index in dataLang.listData
         - i = index + 1
-        li.list-inline-item.section-6__li(class=`section-6__list_${i}`)
+        li.list-inline-item.section-6__li(class=`section-6__list_${i}`, onclick="void(0)")
           h3.title !{item.title}
           ul.section-6__boxHover.list-inline
             each array, index in item.list

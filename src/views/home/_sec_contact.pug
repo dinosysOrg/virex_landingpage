@@ -1,16 +1,16 @@
 - vi = homeData.section7.dataVi
 - en = homeData.section7.dataEn
-- lang === 'vi' ? data = vi : data = en
+- lang === 'vi' ? dataLang = vi : dataLang = en
 
 .sec.section.section-contact(data-anchor="contact")
-  .section-contact__title.text-center !{data.title}
-  .section-contact__des.text-center !{data.des}
+  .section-contact__title.text-center !{dataLang.title}
+  .section-contact__des.text-center !{dataLang.des}
   #thankyou_message_moda Thank you for contacting us !
   form(action="https://script.google.com/macros/s/AKfycbzrUjKObNPZyaFAIge2-h5oQ3GfzSUx1ekjWujO-iY6n1H78Hw/exec", class="contact-form", id="gformModa", method="POST")
     .input-group
-      input(type="text", name="Name", placeholder=`${data.input}`, class="form-control")
+      input(type="text", name="Name", placeholder=`${dataLang.input}`, class="form-control")
     .input-group
       input(type="email", name="Email", placeholder="Email", class="form-control", required=true)
     .text-center.mt-4
-      button(class="btn btn-primary", type="submit", id="submit-form") !{data.button}
+      button(class="btn btn-primary", type="submit", id="submit-form") !{dataLang.button}
 

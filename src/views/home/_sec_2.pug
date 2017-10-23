@@ -1,10 +1,11 @@
 - vi = homeData.section2.dataVi
 - en = homeData.section2.dataEn
-- lang === 'vi' ? data = vi : data = en
+- lang === 'vi' ? dataLang = vi : dataLang = en
 
 .sec.section.section-2(data-anchor="about")
   .section-2__box.p-4.op-0
-    .section-2__txt !{data.txt}
+    .section-2__txt !{dataLang.txt}
+      img(src="./images/icon_section_2.png")
 
 
 

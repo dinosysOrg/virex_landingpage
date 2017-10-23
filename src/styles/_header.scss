@@ -59,6 +59,9 @@ header{
         font-family: RobotoBold;
         position: relative;
         z-index: 2;
+        @include maxs($sp-768) {
+          font-size: rem(12);
+        }
       }
     }
 
@@ -67,7 +70,7 @@ header{
     display: none;
     position: absolute;
     width: 200px;
-    left: -100%;
+    left: -50px;
     padding-top: 5px;
     @include maxs($sp-767) {
       display: initial;
@@ -84,6 +87,9 @@ header{
       a{
         @include maxs($sp-767) {
           font-family: $font-B;
+        }
+        @include maxs($sp-768) {
+          font-size: rem(12);
         }
         text-transform: uppercase;
         background-color: transparent;
@@ -119,12 +125,22 @@ header{
       @include maxs($sp-767) {
         background: transparent;
       }
+      @include maxs($sp-768) {
+        font-size: rem(12);
+      }
     }
     @include maxs($sp-767) {
       border: 0px;
       margin-left: 10px;
       padding: 0px;
       font-family: $font-B;
+    }
+  }
+}
+body.mobile{
+  .navigator{
+    @include maxs($sp-1366) {
+      display: none;
     }
   }
 }
@@ -225,5 +241,18 @@ header{
 .logo{
   @include maxs($sp-767) {
     width: 80px;
+  }
+}
+ul.listLang{
+  margin-bottom: 0px;
+  margin-left: 0px;
+  padding-left: 0px;
+  li{
+    display: inline;
+    padding: 0px rem(7);
+    a{color: rgba(255,255,255,0.5);font-family: $font-B;font-size: 15px;}
+    a.active{
+      color: rgba(255,255,255,1);
+    }
   }
 }

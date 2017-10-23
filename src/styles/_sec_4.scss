@@ -9,6 +9,9 @@
     margin-top: auto;
     margin-bottom: 6%;
     margin-left: rem(60);
+    @include maxs($sp-1024) {
+      width: 75%;
+    }
     @include maxs($sp-768) {
       width: 70%;
       margin-top: initial;
@@ -36,9 +39,13 @@
     }
     .carousel-item{
       height: 250px;
+      @include maxs($sp-768) {
+        height: 350px;
+      }
       @include maxs($sp-767) {
         height: auto;
       }
+  
     }
     .carousel-indicators{
       top: -15%;

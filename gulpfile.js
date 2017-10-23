@@ -14,7 +14,8 @@ var reload = browserSync.reload;
 gulp.task('browser-sync', function() {
     browserSync.init({
         server: {
-            baseDir: "./public"
+            baseDir: "./public/",
+            index: "index_VI.html",
         }
     });
 });
@@ -85,7 +86,7 @@ gulp.task('jscontact', function () {
             './src/js/scripts.contact.js',
         ])
         .pipe(concat('app.contact.mins.js'))
-        //.pipe(uglify())
+        .pipe(uglify())
         .pipe(gulp.dest('./public/js'));
 });
 gulp.task('jsforeigner', function () {

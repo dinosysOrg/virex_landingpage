@@ -1,0 +1,28 @@
+extends ../layouts/layout
+
+block vars
+  -title = 'Virex home'
+  -bodyClass = 'home-page'
+  -menuIndex = 0
+  -lang = 'vi'
+  -pageName= 'index'
+   include ../../data/data.pug
+  
+block container
+  include ../layouts/header
+  include ../layouts/navigator
+  #fullpage
+    include _sec_1
+    include _sec_2
+    include _sec_3
+    include _sec_4
+    include _sec_5
+    include _sec_6
+    include _sec_contact
+    include ../layouts/footer
+  include ../layouts/modal
+  
+ 
+
+
+

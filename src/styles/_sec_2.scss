@@ -4,25 +4,48 @@
   display: flex;
   align-items: center;
   height: 100%;
-  @include maxs($sp-768) {
-    padding: rem(100) 0px;
-  }
   &__box{
     margin-right: auto;
-    width: 900px;
-    margin-left: 5%;
-    background: rgba(250,236,217,0.75);
+    height: 100vh;
+    width: 45%;
+    //margin-left: 5%;
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.75);
     p {
-      color: #5a5b5b;
+      color: #000000;
+      padding: 0 rem(80);
+      @include maxs($sp-1024) {
+        padding: 0 rem(60);
+        font-size: rem(16);
+      }
+      @include maxs($sp-767) {
+        padding: 0 rem(20);
+        font-size: rem(16);
+      }
+      @include maxs($sp-320) {
+        padding: 0 rem(20);
+        font-size: rem(14);
+      }
     }
     @include maxs($sp-1400) {
       width: 60%;
     }
     @include maxs($sp-768) {
-      width: 85%;
-      margin-left: initial;
+      width: 100%;
+      height: 100vh;
+      //margin-left: initial;
       margin-right: initial;
-      margin: auto;
+      //margin: auto;
+    }
+    img {
+      float: right;
+      clear: both;
+      margin-top: rem(50);
+      margin-right: 10%;
+      @include maxs($sp-768) {
+        max-width: 50%;
+        margin-top: rem(30);
+      }
     }
   }
   &__title{
@@ -30,5 +53,6 @@
   }
   &__txt{
     font-size: rem(18);
+    margin: auto;
   }
 }

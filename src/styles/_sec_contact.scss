@@ -24,6 +24,9 @@
   .contact-form{
     margin: auto;
     width: 20%;
+    @include maxs($sp-1024) {
+      width: 40%;
+    }
     @include maxs($sp-768) {
       width: 60%;
     }
@@ -31,6 +34,7 @@
       border: 0px;
       margin-top: rem(15);
       border-radius: 5px;
+      z-index: 0;
     }
   }
 }

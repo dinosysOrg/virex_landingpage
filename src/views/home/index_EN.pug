@@ -4,8 +4,9 @@ block vars
   -title = 'Virex home'
   -bodyClass = 'home-page'
   -menuIndex = 0
-  -lang = 'vi'
-  include ../../data/data.pug
+  -lang = 'en'
+  -pageName= 'index'
+   include ../../data/data.pug
   
 block container
   include ../layouts/header
@@ -19,6 +20,7 @@ block container
     include _sec_6
     include _sec_contact
     include ../layouts/footer
+  include ../layouts/modal
   
  
 

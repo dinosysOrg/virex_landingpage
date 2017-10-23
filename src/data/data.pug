@@ -1,31 +1,50 @@
 - var src = './'
 -
+    var modal = {
+        dataVi: {
+            head: `
+            <h3 class="text-center pb-5"> Đăng kí nhận thông tin</h3>
+            <p class="text-center mb-5"> Nhận thông tin từ VIREX về những dự án và các ưu đãi</p>
+            `,
+            input: `Họ và tên`,
+            btn: `nhận thông tin`
+        },
+        dataEn: {
+            head: `
+            <h3 class="text-center pb-5"> Đăng kí nhận thông tin</h3>
+            <p class="text-center mb-5"> Nhận thông tin từ VIREX về những dự án và các ưu đãi</p>
+            `,
+            input: `Name`,
+            btn: `subscribe`
+        }
+    }
+-
     var homeData = {
         section1:{
             dataVi: {
                 txt: `
-                <p class='mb-0'>VIREX hoạt động với phương châm: Tạo ra chuỗi lợi ích đồng hành giữa:</p>
-                <p>VIREX – KHÁCH HÀNG - CHỦ ĐẦU TƯ – HỆ THỐNG ĐỐI TÁC.</p>
-                `
+                <p class='mb-0 small'>VIREX hoạt động với phương châm: Tạo ra chuỗi lợi ích đồng hành giữa:</p>
+                <p class='big'>VIREX – KHÁCH HÀNG - CHỦ ĐẦU TƯ – HỆ THỐNG ĐỐI TÁC.</p>
+                `,
             },
             dataEn: {
                 txt: `
-                <p class='mb-0'>VIREX hoạt động với phương châm: Tạo ra chuỗi lợi ích đồng hành giữa:</p>
-                <p>VIREX – KHÁCH HÀNG - CHỦ ĐẦU TƯ – HỆ THỐNG ĐỐI TÁC.</p>
+                <p class='mb-0 small'>VIREX hoạt động với phương châm: Tạo ra chuỗi lợi ích đồng hành giữa:</p>
+                <p class='big'>VIREX – KHÁCH HÀNG - CHỦ ĐẦU TƯ – HỆ THỐNG ĐỐI TÁC.</p>
                 `
             }
         },
         section2:{
             dataVi: {
                 txt: `
-                <p>Hiện nay tại Việt Nam, nguồn thông tin về các dự án bất động sản đều chưa nhất quán, khiến khách hàng cảm thấy bối rối và bất an, tạo nên một rào cản lớn cho những giao dịch mua bán ở cả trong và ngoài nước. VIREX sẽ ra đời một nền tảng duy nhất cung cấp thông tin tin cậy, dễ dàng tìm kiếm, từ nhà đầu tư tới khách hàng, được VIREX xác thực.</p>
-                <p>Chúng tôi tự hào là đơn vị nhận được nhiều sự quan tâm, hợp tác, cộng tác của đội ngũ cố vấn là các chuyên gia đầu ngành tại Việt Nam trong các lĩnh vực: Đầu tư, Xây dựng, Tài chính, Kinh tế, Bất động sản, Tư vấn chiến lược, Pháp luật, Marketing… VIREX quy tụ được đội ngũ ban điều hành có nhiều kinh nghiệm, và giữ mối liên kết chặt chẽ trong các tổ chức tại Việt Nam như: Hiệp hội Bất động sản Việt Nam, Hội môi giới Bất động sản Việt Nam, Hội Bất động sản Du lịch Việt Nam, Câu lạc bộ Bất động sản Hà Nội… Chúng tôi liên tục cập nhật thông tin thị trường, để trở thành cố vấn tin cậy của đối tác.</p>
+                <p>Hiện nay, sự thiếu nhất quán về thông tin của các dự án bất động sản đang khiến khách hàng cảm thấy bối rối và bất an, tạo nên một rào cản lớn cho giao dịch mua bán ở cả trong và ngoài nước. Để giải quyết vấn đề này, nền tảng VIREX ra đời nhằm xác thực và cung cấp thông tin tin cậy, dễ dàng giữa nhà đầu tư và khách hàng.</p>
+                <p>Với một ban điều hành giàu kinh nghiệm, và sự hợp tác chặt chẽ với các chuyên gia và tổ chức hàng đầu về: kinh tế, đầu tư, tài chính, chiến lược, bất động sản, xây dựng… VIREX đặt mục tiêu trở thành một đối tác tin cậy trong lĩnh vực bất động sản tại Việt Nam.</p>
                 `
             },
             dataEn: {
                 txt: `
-                <p>Hiện nay tại Việt Nam, nguồn thông tin về các dự án bất động sản đều chưa nhất quán, khiến khách hàng cảm thấy bối rối và bất an, tạo nên một rào cản lớn cho những giao dịch mua bán ở cả trong và ngoài nước. VIREX sẽ ra đời một nền tảng duy nhất cung cấp thông tin tin cậy, dễ dàng tìm kiếm, từ nhà đầu tư tới khách hàng, được VIREX xác thực.</p>
-                <p>Chúng tôi tự hào là đơn vị nhận được nhiều sự quan tâm, hợp tác, cộng tác của đội ngũ cố vấn là các chuyên gia đầu ngành tại Việt Nam trong các lĩnh vực: Đầu tư, Xây dựng, Tài chính, Kinh tế, Bất động sản, Tư vấn chiến lược, Pháp luật, Marketing… VIREX quy tụ được đội ngũ ban điều hành có nhiều kinh nghiệm, và giữ mối liên kết chặt chẽ trong các tổ chức tại Việt Nam như: Hiệp hội Bất động sản Việt Nam, Hội môi giới Bất động sản Việt Nam, Hội Bất động sản Du lịch Việt Nam, Câu lạc bộ Bất động sản Hà Nội… Chúng tôi liên tục cập nhật thông tin thị trường, để trở thành cố vấn tin cậy của đối tác.</p>
+                <p>Hiện nay, sự thiếu nhất quán về thông tin của các dự án bất động sản đang khiến khách hàng cảm thấy bối rối và bất an, tạo nên một rào cản lớn cho giao dịch mua bán ở cả trong và ngoài nước. Để giải quyết vấn đề này, nền tảng VIREX ra đời nhằm xác thực và cung cấp thông tin tin cậy, dễ dàng giữa nhà đầu tư và khách hàng.</p>
+                <p>Với một ban điều hành giàu kinh nghiệm, và sự hợp tác chặt chẽ với các chuyên gia và tổ chức hàng đầu về: kinh tế, đầu tư, tài chính, chiến lược, bất động sản, xây dựng… VIREX đặt mục tiêu trở thành một đối tác tin cậy trong lĩnh vực bất động sản tại Việt Nam.</p>
                 `
             }
         },
@@ -52,9 +71,9 @@
                     <p>Với việc đầu tư vào công nghệ tân tiến, VIREX hỗ trợ người bán tìm kiếm khách hàng mục tiêu nhanh chóng và đáng tin cậy hơn. Theo đó, VIREX sẽ đạt được khối lượng bán hàng lớn gấp nhiều lần so với phương pháp kinh doanh truyền thống.</p>
                     <p>Mô hình Đối tác VIREX đảm bảo lợi ích cho tất cả các bên, cho phép VIREX hợp tác với các đối tác chuyên nghiệp, bên tư vấn chuyên môn và tránh khỏi thị trường độc quyền hiện nay. VIREX xác thực dựa trên ba yếu tố “Minh mạch, Rõ ràng và An Toàn”.</p>
                     `
-                }
+                },
             ],
-            dataEN: [
+            dataEn: [
                 {
                     title: `Sứ mệnh`,
                     txt: `
@@ -274,24 +293,27 @@
 -
     var menuData = {
         dataVi: {
+            logo: {
+                link: `./index_VI.html`,
+            },
             btnGetNew: {
                 name: `nhận tin mới`,
                 link: `modalGetNew`
             },
             lang: [
                 {
-                    name: `EN`,
+                    name: `en`,
                     link: ``,
                 },
                 {
-                    name: `VI`,
+                    name: `vi`,
                     link: ``,
                 },
             ],
             menu: [
                 {
                     name: `giới thiệu`,
-                    link: `./`,
+                    link: `./index_VI.html`,
                 },
                 {
                     name: `dự án`,
@@ -299,82 +321,77 @@
                     menuProject: [
                         {
                             title: `Golden City An Giang`,
-                            linkPro: `project_goldencity.html`
+                            linkPro: `project_goldencity_VI.html`
                         },
                         {
                             title: `EDEN ROSE`,
-                            linkPro: `project_eden.html`
+                            linkPro: `project_eden_VI.html`
                         },
                         {
                             title: `PHÚ CÁT CITY`,
-                            linkPro: `project_phucat.html`
+                            linkPro: `project_phucat_VI.html`
                         },
                     ]
                 },
                 {
                     name: `đầu tư`,
-                    link: `foreigner.html`,
+                    link: `foreigner_VI.html`,
                 },
                 {
                     name: `liên hệ`,
-                    link: `contact.html`,
-                },
-                {
-                    name: `EN`,
-                    link: `contact.html`,
-                },
-                {
-                    name: `VI`,
-                    link: `contact.html`,
+                    link: `contact_VI.html`,
                 },
             ]
         },
         dataEn: {
+            logo: {
+                link: `./index_EN.html`,
+            },
             btnGetNew: {
-                name: `nhận tin mới`,
+                name: `Get news`,
                 link: `modalGetNew`
             },
             lang: [
                 {
-                    name: `EN`,
+                    name: `en`,
                     link: ``,
                 },
                 {
-                    name: `VI`,
+                    name: `vi`,
                     link: ``,
                 },
             ],
             menu: [
                 {
-                    name: `giới thiệu`,
-                    link: `./`,
+                    name: `Introduction`,
+                    link: `./index_EN.html`,
                 },
                 {
-                    name: `dự án`,
+                    name: `Projects`,
                     link: `#portfolio`,
                     menuProject: [
                         {
                             title: `Golden City An Giang`,
-                            linkPro: `project_goldencity.html`
+                            linkPro: `project_goldencity_EN.html`
                         },
                         {
                             title: `EDEN ROSE`,
-                            linkPro: `project_eden.html`
+                            linkPro: `project_eden_EN.html`
                         },
                         {
-                            title: `PHÚ CÁT CITY`,
-                            linkPro: `project_phucat.html`
+                            title: `PHU CAT CITY`,
+                            linkPro: `project_phucat_EN.html`
                         },
                     ]
                 },
                 {
-                    name: `đầu tư`,
-                    link: `foreigner.html`,
+                    name: `Foreign Investment`,
+                    link: `foreigner_EN.html`,
                 },
                 {
-                    name: `liên hệ`,
-                    link: `contact.html`,
-                }
+                    name: `Contact`,
+                    link: `contact_EN.html`,
+                },
             ]
         }
     }

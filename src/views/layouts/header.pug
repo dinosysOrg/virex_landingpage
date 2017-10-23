@@ -1,11 +1,10 @@
-include ../../data/data.pug
 - vi = menuData.dataVi
 - en = menuData.dataEn
 - lang === 'vi' ? data = vi : data = en
 
 header
   nav.navbar.navbar-expand-md#main-menu
-    a.navbar-brand(href="./")
+    a.navbar-brand(href=`${data.logo.link}`)
       img.logo(src=src+'images/logo.png')
     button.navbar-toggler.collapsed(type="button", data-toggle="collapse", data-target="#navbarCollapse", aria-controls="navbarCollapse", aria-expanded="false", aria-label="Toggle navigation")
       span
@@ -24,3 +23,8 @@ header
                   a(href=`./${flat.linkPro}`) !{flat.title}
             - }
       a.btnGetNew.text-uppercase(href="#" data-toggle="modal" data-target=`#${data.btnGetNew.link}`) !{data.btnGetNew.name}
+      ul.listLang
+        each langMenu in data.lang
+          li
+            a.text-uppercase(href=`${pageName}_${langMenu.name.toUpperCase()}.html` class = langMenu.name === lang ? 'active' : null ) !{langMenu.name}
+      

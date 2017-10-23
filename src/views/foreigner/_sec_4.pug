@@ -12,6 +12,18 @@
           strong 3. Legal issues related to the process of selling housing 
           |to foreigners and related procedures / matters
       .section-foreign-4__tab-content.col-md-8
-        .section-foreign-4__tab-content__item#item1 !{data.sell.conditions}
-        .section-foreign-4__tab-content__item#item2 !{data.sell.transaction}
-        .section-foreign-4__tab-content__item#item3 !{data.sell.issues}
+        .section-foreign-4__tab-content__item#item1 !{dataForeigner.sell.conditions}
+        .section-foreign-4__tab-content__item#item2 !{dataForeigner.sell.transaction}
+        .section-foreign-4__tab-content__item#item3 !{dataForeigner.sell.issues}
+      .section-foreign-4__arcordion
+        button.section-foreign-4__arcordion__link 
+          strong 1. Conditions for buying houses in Vietnam 
+          |of foreigners and overseas Vietnamese
+        .section-foreign-4__arcordion__item#defaultShow !{dataForeigner.sell.conditions}
+        button.section-foreign-4__arcordion__link
+          strong 2. Transaction Procedure
+        .section-foreign-4__arcordion__item !{dataForeigner.sell.transaction}
+        button.section-foreign-4__arcordion__link
+          strong 3. Legal issues related to the process of selling housing 
+          |to foreigners and related procedures / matters
+        .section-foreign-4__arcordion__item !{dataForeigner.sell.issues}
