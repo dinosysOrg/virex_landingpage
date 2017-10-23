@@ -1,5 +1,9 @@
+- vi = foreignData.dataVi.section3
+- en = foreignData.dataEn.section3
+- lang === 'vi' ? dataLang = vi : dataLang = en
+
 .sec-foreign.section-foreign-3.container.mt-5.mb-5
   .row
     .section-foreign-3__info.col-12
-      .section-foreign-3__info__title.col-12 TRANSACTION PROCEDURE:
+      .section-foreign-3__info__title.col-12 !{dataLang.txt}
       .section-foreign-3__info__content.row.px-2 !{dataForeigner.transaction.info}

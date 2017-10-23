@@ -8921,13 +8921,13 @@ $('.more').click(function(){
 });
 
 $('.section-proj-1__button-group__picture').on('click', function() {
-  openGallery(project.gallery.picture);
+  openGallery(photos.picture);
 });
 $('.section-proj-1__button-group__civil-guide').on('click', function() {
-  openGallery(project.gallery.guide);
+  openGallery(photos.guide);
 });
 $('.section-proj-1__button-group__position').on('click',function() {
-  openGallery(project.gallery.position);
+  openGallery(photos.position);
 });
 
 var acc = $('.section-proj-6__arcordion__link').on('click', function() {

@@ -1,8 +1,11 @@
+- vi = foreignData.dataVi.section2
+- en = foreignData.dataEn.section2
+- lang === 'vi' ? dataLang = vi : dataLang = en
 
 .sec-foreign.section-foreign-2.mb-5.py-5
   .container
     .row
-      .section-foreign-2__info__title.col-12 CONDITIONS FOR BUYING HOUSES IN VIETNAME OF FOREIGNERS AND OVERSEA VIETNAMESES
+      .section-foreign-2__info__title.col-12 !{dataLang.txt}
       .section-foreign-2__info.col-12.col-sm-6
         .section-foreign-2__info__content !{dataForeigner.condition.info}
       .section-foreign-2__img.col-12.col-sm-6

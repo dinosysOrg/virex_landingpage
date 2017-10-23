@@ -1,15 +1,19 @@
+- vi = contactData.dataVi
+- en = contactData.dataEn
+- lang === 'vi' ? dataLang = vi : dataLang = en
+
 .sec-contact.sec-contact-1#contact
   .container
     .row.justify-content-center
       .sec-contact-1__form.col-12.col-md-6
         #thankyou_message Thank you for contacting us !
         form(action="https://script.google.com/macros/s/AKfycbzrUjKObNPZyaFAIge2-h5oQ3GfzSUx1ekjWujO-iY6n1H78Hw/exec", class="contact-form", id="gform", method="POST")
-          input.name(type="text" name="Name" placeholder="Họ và tên")
+          input.name(type="text" name="Name" placeholder=`${dataLang.namePlaceholder}`)
           input.email(type="Email" name="Email" placeholder="Email", required="")
-          input.phone(type="tel" name="Phone" placeholder="Số điện thoại")
-          textarea#message(name="Message", rows="8" placeholder="Lời nhắn")
+          input.phone(type="tel" name="Phone" placeholder=`${dataLang.phonePlaceholder}`)
+          textarea#message(name="Message", rows="8" placeholder=`${dataLang.messagePlaceholder}`)
           .sec-contact-1__button.mt-3.text-center
-            button.btn(type="submit") Gửi
+            button.btn(type="submit") !{dataLang.buttonText}
       .sec-contact-1__info.col-12.col-md-6
         .sec-contact-1__social
           a.sec-contact-1__social__facebook.d-inline-block
@@ -18,9 +22,8 @@
             i.fa.fa-youtube-play
           a.sec-contact-1__social__pinterest.d-inline-block
             i.fa.fa-pinterest-p
-        .sec-contact-1__info__company-name Công ty cổ phần VIREX
-        .sec-contact-1__info__company-contact
-          |Địa chỉ: 33A Bà Triệu, P.Hàng Bài, Q.Hoàn Kiếm, Hà Nội.
+        .sec-contact-1__info__company-name !{dataLang.companyName}
+        .sec-contact-1__info__company-contact !{dataLang.address}
           br
           |Tel: <tel>02432097979</tel>
           br
