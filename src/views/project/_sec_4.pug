@@ -1,14 +1,18 @@
+- vi = projectData.dataVi.section4
+- en = projectData.dataEn.section4
+- lang === 'vi' ? dataLang = vi : dataLang = en
+
 .sec-proj.section-proj-4.mt-5.py-5#detail
   .container
     .row
       .section-proj-4__detail.col-md-8
-        .section-proj-4__detail__title GIỚI THIỆU CHUNG
+        .section-proj-4__detail__title !{dataLang.introduction}
         .section-proj-4__detail__content.mt-4 !{project.detail.text}
           if project.detail.more.length > 0
             span.section-proj-4__detail__content__more #{project.detail.more} 
-            span.more xem thêm
+            span.more !{dataLang.more}
       .section-proj-4__download.col-md-4
-        .section-proj-4__download__title TÀI LIỆU TẢI VỀ
+        .section-proj-4__download__title !{dataLang.document}
         .section-proj-4__download__content.mt-4
           a(href=project.brochure).section-proj-4__download__brochure.btn-2.d-inline-block#brochure
             i.fa.fa-download.mr-2

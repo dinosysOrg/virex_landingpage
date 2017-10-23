@@ -1,29 +1,29 @@
+- vi = foreignData.dataVi.section4
+- en = foreignData.dataEn.section4
+- lang === 'vi' ? dataLang = vi : dataLang = en
+
 .sec-foreign.section-foreign-4.mt-5.py-5
   .container
     .row
-      .section-foreign-4__title.col-12.mb-4 THE PROCEDURE OF SELLING HOUSES FOR FOREIGNERS AND OVERSEAS VIETNAMESE
+      .section-foreign-4__title.col-12.mb-4 !{dataLang.title}
       .section-foreign-4__tab-bar.col-md-4
         button(onclick='activeTab(event, 1)').section-foreign-4__tab-bar__link#defaultOpen 
-          strong 1. Conditions for buying houses in Vietnam 
-          |of foreigners and overseas Vietnamese
+          strong !{dataLang.condition}
         button(onclick='activeTab(event, 2)').section-foreign-4__tab-bar__link 
-          strong 2. Transaction Procedure
+          strong !{dataLang.transaction}
         button(onclick='activeTab(event, 3)').section-foreign-4__tab-bar__link 
-          strong 3. Legal issues related to the process of selling housing 
-          |to foreigners and related procedures / matters
+          strong !{dataLang.issue}
       .section-foreign-4__tab-content.col-md-8
         .section-foreign-4__tab-content__item#item1 !{dataForeigner.sell.conditions}
         .section-foreign-4__tab-content__item#item2 !{dataForeigner.sell.transaction}
         .section-foreign-4__tab-content__item#item3 !{dataForeigner.sell.issues}
       .section-foreign-4__arcordion
         button.section-foreign-4__arcordion__link 
-          strong 1. Conditions for buying houses in Vietnam 
-          |of foreigners and overseas Vietnamese
+          strong !{dataLang.condition}
         .section-foreign-4__arcordion__item#defaultShow !{dataForeigner.sell.conditions}
         button.section-foreign-4__arcordion__link
-          strong 2. Transaction Procedure
+          strong !{dataLang.transaction}
         .section-foreign-4__arcordion__item !{dataForeigner.sell.transaction}
         button.section-foreign-4__arcordion__link
-          strong 3. Legal issues related to the process of selling housing 
-          |to foreigners and related procedures / matters
+          strong !{dataLang.issue}
         .section-foreign-4__arcordion__item !{dataForeigner.sell.issues}

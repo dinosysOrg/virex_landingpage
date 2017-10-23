@@ -1,8 +1,12 @@
+- vi = projectData.dataVi.section1
+- en = projectData.dataEn.section1
+- lang === 'vi' ? dataLang = vi : dataLang = en
+
 script.
   var photos = !{JSON.stringify(project.gallery)};
 
 div(style={'background-image': 'url('+ project.banner +')'}).sec-proj.section-proj-1#banner
   .section-proj-1__button-group.row
-    a.fancybox.section-proj-1__button-group__picture.btn.col HÌNH ẢNH
-    a.fancybox.section-proj-1__button-group__civil-guide.btn.col MẶT BẰNG
-    a.fancybox.section-proj-1__button-group__position.btn.col VỊ TRÍ
+    a.fancybox.section-proj-1__button-group__picture.btn.col !{dataLang.photo}
+    a.fancybox.section-proj-1__button-group__civil-guide.btn.col !{dataLang.guide}
+    a.fancybox.section-proj-1__button-group__position.btn.col !{dataLang.position}

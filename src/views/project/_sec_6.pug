@@ -1,14 +1,18 @@
+- vi = projectData.dataVi.section6
+- en = projectData.dataEn.section6
+- lang === 'vi' ? dataLang = vi : dataLang = en
+
 .sec-proj.section-proj-6.mt-5.mb-5.container
   .row
     .section-proj-6__tab-bar.col-md-4
-      button(onclick='activeTab(event, 1)').section-proj-6__tab-bar__link#defaultOpen CHỦ ĐẦU TƯ
-      button(onclick='activeTab(event, 2)').section-proj-6__tab-bar__link ĐƠN VỊ THIẾT KẾ
-      button(onclick='activeTab(event, 3)').section-proj-6__tab-bar__link ĐƠN VỊ THI CÔNG
-      button(onclick='activeTab(event, 4)').section-proj-6__tab-bar__link VỊ TRÍ
-      button(onclick='activeTab(event, 5)').section-proj-6__tab-bar__link THÔNG TIN THIẾT KẾ
-      button(onclick='activeTab(event, 6)').section-proj-6__tab-bar__link HỆ THỐNG TIỆN ÍCH
-      button(onclick='activeTab(event, 7)').section-proj-6__tab-bar__link TIẾN ĐỘ THI CÔNG VÀ PHÁP LÝ
-      button(onclick='activeTab(event, 8)').section-proj-6__tab-bar__link GIÁ BÁN VÀ TIẾN ĐỘ THANH TOÁN
+      button(onclick='activeTab(event, 1)').section-proj-6__tab-bar__link#defaultOpen !{dataLang.investor}
+      button(onclick='activeTab(event, 2)').section-proj-6__tab-bar__link !{dataLang.design}
+      button(onclick='activeTab(event, 3)').section-proj-6__tab-bar__link !{dataLang.construct}
+      button(onclick='activeTab(event, 4)').section-proj-6__tab-bar__link !{dataLang.position}
+      button(onclick='activeTab(event, 5)').section-proj-6__tab-bar__link !{dataLang.design_info}
+      button(onclick='activeTab(event, 6)').section-proj-6__tab-bar__link !{dataLang.utility}
+      button(onclick='activeTab(event, 7)').section-proj-6__tab-bar__link !{dataLang.progress}
+      button(onclick='activeTab(event, 8)').section-proj-6__tab-bar__link !{dataLang.price}
     .section-proj-6__tab-content.col-md-8
       .section-proj-6__tab-content__item#item1 !{project.other.investor}
       .section-proj-6__tab-content__item#item2 !{project.other.design}
@@ -19,19 +23,19 @@
       .section-proj-6__tab-content__item#item7 !{project.other.progress}
       .section-proj-6__tab-content__item#item8 !{project.other.price}
     .section-proj-6__arcordion
-      button.section-proj-6__arcordion__link CHỦ ĐẦU TƯ
+      button.section-proj-6__arcordion__link !{dataLang.investor}
       .section-proj-6__arcordion__item#defaultShow !{project.other.investor}
-      button.section-proj-6__arcordion__link ĐƠN VỊ THIẾT KẾ
+      button.section-proj-6__arcordion__link !{dataLang.design}
       .section-proj-6__arcordion__item !{project.other.design}
-      button.section-proj-6__arcordion__link ĐƠN VỊ THI CÔNG
+      button.section-proj-6__arcordion__link !{dataLang.construct}
       .section-proj-6__arcordion__item !{project.other.construct}
-      button.section-proj-6__arcordion__link VỊ TRÍ
+      button.section-proj-6__arcordion__link !{dataLang.position}
       .section-proj-6__arcordion__item !{project.other.position}
-      button.section-proj-6__arcordion__link THÔNG TIN THIẾT KẾ
+      button.section-proj-6__arcordion__link !{dataLang.design_info}
       .section-proj-6__arcordion__item !{project.other.design_info}
-      button.section-proj-6__arcordion__link HỆ THỐNG TIỆN ÍCH
+      button.section-proj-6__arcordion__link !{dataLang.utility}
       .section-proj-6__arcordion__item !{project.other.utility}
-      button.section-proj-6__arcordion__link TIẾN ĐỘ THI CÔNG VÀ PHÁP LÝ
+      button.section-proj-6__arcordion__link !{dataLang.progress}
       .section-proj-6__arcordion__item !{project.other.progress}
-      button.section-proj-6__arcordion__link GIÁ BÁN VÀ TIẾN ĐỘ THANH TOÁN
+      button.section-proj-6__arcordion__link !{dataLang.price}
       .section-proj-6__arcordion__item !{project.other.price}
