@@ -12,7 +12,8 @@ header{
       position: relative;
       display: block;
       margin: rem(0) rem(10);
-      @include maxs($sp-767) {
+      @include maxs($sp-768) {
+        margin: rem(0) rem(3);
       }
       &:after{
         content: '';
@@ -139,7 +140,7 @@ header{
 }
 body.mobile{
   .navigator{
-    @include maxs($sp-1366) {
+    @include maxs($sp-767) {
       display: none;
     }
   }
@@ -152,9 +153,9 @@ body.mobile{
   @include maxs($sp-1400) {
     top: 22vh;
   }
-  @include maxs($sp-1024) {
-    display: none;
-  }
+  // @include maxs($sp-768) {
+  //   display: none;
+  // }
   li{
     cursor: pointer;
     margin: rem(10) 0px;
@@ -239,6 +240,9 @@ body.mobile{
 	transform: rotate(0);
 }
 .logo{
+  @include maxs($sp-768) {
+    width: 80px;
+  }
   @include maxs($sp-767) {
     width: 80px;
   }
