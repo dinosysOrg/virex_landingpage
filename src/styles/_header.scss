@@ -125,15 +125,15 @@ header{
       @include maxs($sp-767) {
         background: transparent;
       }
-      @include maxs($sp-768) {
-        font-size: rem(12);
-      }
     }
     @include maxs($sp-767) {
       border: 0px;
       margin-left: 10px;
       padding: 0px;
       font-family: $font-B;
+    }
+    @include maxs($sp-768) {
+      font-size: rem(12);
     }
   }
 }
@@ -250,7 +250,14 @@ ul.listLang{
   li{
     display: inline;
     padding: 0px rem(7);
-    a{color: rgba(255,255,255,0.5);font-family: $font-B;font-size: 15px;}
+    a {
+      color: rgba(255,255,255,0.5);
+      font-family: $font-B;
+      font-size: rem(15);
+      @include maxs($sp-768) {
+        font-size: rem(12);
+      }
+    }
     a.active{
       color: rgba(255,255,255,1);
     }
