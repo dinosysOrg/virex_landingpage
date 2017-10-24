@@ -67,8 +67,18 @@
   p, h3{color: #000;}
 }
 body.mobile{
-  .op-0{
-    opacity: 1;
+  // .op-0{
+  //   opacity: 0;
+  // }
+  @include maxs($sp-768) {
+    .op-0{
+      opacity: 0;
+    }
+  }
+  @include maxs($sp-767) {
+    .op-0{
+      opacity: 1;
+    }
   }
   .sec{
     min-height: 100vh;

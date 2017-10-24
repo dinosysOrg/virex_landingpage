@@ -12259,30 +12259,31 @@ $(document).ready(function() {
   // $('.section-4__slide').carousel({
   //   interval: 4000
   // })
-  $('.multiple-snap').slick({
-    infinite: true,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    responsive: [
-      {
-        breakpoint: 1025,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          infinite: true,
-        }
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        }
-      },
-    ]
-  });
+  
   if (device !== true) {
     $('body').addClass('pc');
+    $('.multiple-snap').slick({
+      infinite: true,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      responsive: [
+        {
+          breakpoint: 1025,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            infinite: true,
+          }
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+          }
+        },
+      ]
+    });
     $('#fullpage').fullpage({
         anchors: ['home', 'about', 'vision', 'portfolio', 'comment', 'flow', 'contact', 'footer'],
         sectionSelector: '.sec',
@@ -12310,10 +12311,73 @@ $(document).ready(function() {
     });
   } else{
     $('body').addClass('mobile');
+    if (window.innerWidth >= 768) {
+      $('#fullpage').fullpage({
+        anchors: ['home', 'about', 'vision', 'portfolio', 'comment', 'flow', 'contact', 'footer'],
+        sectionSelector: '.sec',
+        scrollOverflow: false,
+        css3: true,
+        verticalCentered: false,
+        menu: '#navigation',
+        afterRender: function(){},
+        afterLoad: function(anchorLink, index){
+          if(index === 1){
+            $('.section-1__txt').addClass('fadeInRight animated')
+          }
+          if(index === 2){
+            $('.section-2__box').addClass('fadeInLeft animated')
+          }
+        },
+      });
+    }
     if (window.innerWidth <= 1024 && window.innerWidth > window.innerHeight) {
       $('.section-5').css("padding","50px 0px")
+      $('.multiple-snap').slick({
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        responsive: [
+          {
+            breakpoint: 1025,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1,
+              infinite: true,
+            }
+          },
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+            }
+          },
+        ]
+      });
     } else {
       $('.section-5').css("padding","0px 0px")
+      $('.multiple-snap').slick({
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        responsive: [
+          {
+            breakpoint: 1025,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              infinite: true,
+            }
+          },
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+            }
+          },
+        ]
+      });
     }
     window.onresize = function(event) {
       if (window.innerWidth <= 1024 && window.innerWidth > window.innerHeight) {
