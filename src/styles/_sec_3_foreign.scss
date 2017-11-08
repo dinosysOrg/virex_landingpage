@@ -1,5 +1,11 @@
 .section-foreign-3 {
   &__info {
+    .section-note {
+      strong, u {
+        color: #c7202f;
+      }
+      font-size: rem(12);
+    }
     &__title {
       color: #c7202f;
       font-size: rem(18);
