@@ -87,6 +87,12 @@
           color: #000000;
           font-size: rem(14);
         }
+        ul {
+          li {
+            font-size: rem(14);
+            color: #000000;
+          }
+        }
         strong {
           color: #000000;
         }
@@ -101,6 +107,9 @@
       }
       strong {
         color: #000000;
+      }
+      a {
+        color: #be1e2d;
       }
       ul {
         li {
@@ -180,7 +189,7 @@
             }
           }
         }
-        ul {
+        ul, ol {
           li {
             font-size: rem(14);
             color: #6f6f6f;

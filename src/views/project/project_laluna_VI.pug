@@ -1,0 +1,228 @@
+extends ../layouts/layout_project
+
+block vars
+  -title = 'Laluna Nha Trang'
+  -bodyClass = 'project-page'
+  -menuIndex = 1
+  -lang = 'vi'
+  -pageName= 'project_laluna'
+  include ../../data/data.pug
+  -
+    project = {
+      banner:"./images/image-laluna.png",
+      name: "Condotel Swisstouches La Luna Resort – Marina Bay",
+      address: "Khu Đô Thị Vĩnh Hòa, Nha Trang, Khánh Hòa",
+      info: {
+          model: "Khách sạn, căn hộ cao cấp",
+          investor: "Công Ty Cổ Phần Khách Sạn <strong>Bến Du Thuyền</strong>",
+          price: " Trên 3000 USD/m2"
+      },
+      detail: {
+        text: `
+          La Luna Resort Nha Trang là siêu dự án Condotel được xây dựng trên khu đất " Vàng " có tổng diện tích rộng hơn 4.74ha ngay mặt 
+          tiền biển đắt giá nhất của thành phố Nha Trang. Trong tương lai khi chính thức đi vào hoạt động, dự án sẽ cung cấp cho thị trường 1.997
+          căn hộ tiêu chuẩn quốc tế 5 sao đáp ứng nhu cầu của cư dân về một khu nghỉ dưỡng thực thụ.</br>
+          Căn hộ La Luna Nha Trang mang phong cách thiết kế hiện đại từ những công trình kiến trúc của châu âu cùng không gian sống đẳng cấp,
+          Swisstouches La Luna sẽ là một trong những điểm nghỉ dưỡng tuyệt vời để khách hàng có thể tận hưởng kỳ kỷ trọn vẹn cùng gia đình.
+        `,
+        more: ``
+      },
+      area: {
+        contruction: {
+          value: "4,74 ha",
+          desc: "Tổng diện tích xây dựng"
+        },
+        greenery: {
+          value: "20%",
+          desc: "Diện tích cây xanh và hồ điều hòa"
+        },
+        mansion: {
+          value: "24m2-390m2",
+          desc: "Diện tích căn hộ"
+        },
+        apartment: {
+          value: "1997",
+          desc: "Số lượng căn hộ"
+        }
+      },
+      other: {
+        investor: `
+          <p>
+            Dự án được đầu tư bởi Cty CP Khách sạn Bến Du Thuyền (Marina Hotel JSC) có trụ sở chính tọa lạc tại Đường Nguyễn Cơ Thạch,
+            Khu đô thị Vĩnh Hòa, Phường Vĩnh Hòa, Thành phố Nha Trang, Việt Nam.
+          </p>
+          <p>
+            Công ty CP Khách sạn Bến Du Thuyền tuy là một cái tên khá mới nhưng đã thu hút sự chú ý của giới BDS Nha Trang với dự án 
+            condotel Swisstouches La Luna Resort tiêu chuẩn 5 sao quốc tế. Nhờ sự cân nhắc lựa chọn vị trí đắc địa cùng các đơn vị uy 
+            tín để đầu tư và song hành, chủ đầu tư CTCP Khách sạn Bến Du Thuyền nắm trong tay thế mạnh về bất động sản nghỉ dưỡng, đồng 
+            thời mang lại niềm tin và hiệu quả cho các nhà đầu tư.
+          </p>
+          <p>
+            Hướng đến phong cách thiết kế tinh tế, độc đáo và đẳng cấp thế giới, CTCP Khách sạn Bến Du Thuyền bước đầu thành công trong 
+            việc bắt tay với thương hiệu quản lý khách sạn hàng đầu thế giới Tập đoàn Swisstouches Hotels & Resorts cho khu căn hộ nghỉ
+              dưỡng Swisstouches La Luna Resort sang trọng tại Nha Trang nhằm đem đến cho khách hàng những trải nghiệm tuyệt vời về chất 
+              lượng và dịch vụ hoàn hảo
+          </p>
+        `,
+        design: `
+          <p><strong>Đơn vị quản lý: Swisstouches Hotel & Resort: </strong></p>
+          <p>Swisstouches Hotel & Resort là thương hiệu quản lý khách sạn cao cấp đến từ Thụy Sỹ, với hệ thống 18.000 phòng khách sạn và khu nghỉ
+           dưỡng mang tên Swisstouches đạt tiêu chuẩn 5 sao cùng các trung tâm nghiên cứu ẩm thực, sự kiện, khách sạn, liên kết với 500.000 nghìn đại
+            lý du lịch để tạo ra mạng lưới đặt phòng liên quốc gia, , công suất phòng luôn đạt 70%</p>
+          <p><strong>Đơn vị thiết kế: Grandland Group</strong></p>
+          <p>Doanh nghiệp thiết kế hàng đầu tại Hong Kong. Công ty đã có 20 năm kinh nghiệm với hơn 1,500 chuyên gia thiết kế tại Hồng Kong và nước ngoài.</p>
+          <p>Công ty đã giành 500 giải thưởng thiết kế tại Hồng Kong và thế giới.</p>
+          <p>Những dự án thiết kế tiêu biểu: Guangzhou Grandview Marriott Hotel, Huizhou Egret Lake Agile Sheraton Resort Hotel, Shan Hai Tian Marriott Hotel Sanya,
+           Huzhou Sheraton Hot Sping Resort Hotel…</p>
+        `,
+        construct: `
+          <p> Công ty CP Xây dựng và kinh doanh địa ốc Tân Kỳ</p>
+          <ul>
+            <li>
+              Công ty CP Xây dựng và kinh doanh địa ốc Tân Kỷ (TAKCO) là đơn vị có thương hiệu và tên tuổi trong lĩnh vực thi công, xây lắp tại Việt Nam với nhiều 
+              dự án trọng điểm tại các thành phố lớn trên toàn quốc.
+            </li>
+            <li>
+              TAKCO đạt hệ thống quản lý chất lượng theo tiêu chuẩn ISO 9001-2000 cùng nhiều chứng chỉ, giải thưởng uy tín trong nước.
+            </li>
+            <li>
+              Các dự án tiêu biểu đã triển khai: Nhà máy điện tử Sam Sung, Trung tâm hành chính Đà Nẵng, Khu căn hộ cao cấp Azura Đã Nẵng, Biệt
+               thự khu II Đại Quang Minh, Kingston Residence,…
+            </li>
+          </ul>
+          `,
+        position: `
+          <ul>
+            <li>
+              Địa thế kim cương nằm ngay dưới chân núi cô Tiên, vị thế <strong>“Tọa Sơn Hướng Thủy”</strong> dọc theo cung đường vàng Trần Phú – Phạm Văn Đồng
+            </li>
+            <li>
+             Nằm gần các khu danh lam thắng cảnh: <strong>tháp bà Ponagar, Hòn Chồng…</strong>
+            </li>
+            <li>
+              Phía trước là <strong>Bến du thuyền quốc tế đẳng cấp đầu tiên tại Việt Nam </strong>
+            </li>
+          </ul>
+        `,
+        design_info: `
+          <p>
+            Dự án La Luna Resort được thiết kế hoàn hảo trong từng đường nét giúp khách hàng có thể cảm nhận rõ được vẻ đẹp sang trọng,
+             xa hoa nhưng cũng không kém phần tinh tế và đầy chất phá cách mà ít dự án nào hiện nay đang sở hữu. Khối căn hộ Condotel La Luna 
+             được chia làm 4 phân khu chính: A, B, C, D
+          </p>
+          <ul>
+            <li>
+              Khu A được bố trí 2 toà căn hộ cao 35 tầng với 5 tầng thương mại dịch vụ với mật độ xây dựng thấp chỉ chiếm 62% tổng diện tích khu đất.
+            </li>
+            <li>
+              Khu B bố trí có 1 toà căn hộ cao 35 tầng và 1 tầng hầm có mật độ xây dựng chỉ chiếm 59%. Khối căn hộ tại dự án Condotel Nha Trang đều được bố trí từ 1
+               đến 4 phòng ngủ và khu căn hộ Pẹnhouse đẳng cấp chắc chắn sẽ đáp ứng được mọi nhu cầu của khách hàng.
+            </li>
+          </ul>
+        `,
+        utility: `
+          <p>Với cách thức thiết kế 100% căn hộ hướng biển, cùng phong cách kiến trúc sang trọng, tinh tế và độc đáo. Không có bất cứ vật chắn
+           nào trước mặt, các căn hộ tại đây đều được sở hữu khung cảnh êm ả thoải mái nhất có thể. Mỗi khi kéo rèm mở cửa, hay đứng ra ban công,
+            du khách cũng có thể ôm trọn được cảnh biển vào lòng, tận hưởng những làn gió mát lạnh từ biển xanh thổi vào.</p>
+          <p>Ở 4 tầng đế là sáng tạo trong thiết kế các dịch vụ tiện ích, mỗi tầng là một phân phối tiện ích khác nhau như:</p>
+          <ul>
+            <li class="mb-0">
+              Phòng gym, Spa cao cấp
+            </li>
+            <li class="mb-0">
+              Khu mua sắm, trung tâm thương mại
+            </li>
+            <li class="mb-0">
+              Rạp chiếu phim, khu vui chơi giải trí, công viên
+            </li>
+            <li class="mb-0">
+              Trung tâm hội họp hay các event quan trọng
+            </li>
+            <li class="mb-0">
+              Hệ thống nhà hàng san trọng, chuyên nghiệp
+            </li>
+          </ul>
+          <p>Kế tiếp 30 tầng trên là kiểu tháp nổi tạo không gian chìm đắm vào biển cả lúc hoàng hôn đầy khởi sắc hay lúc chiều tà êm ả nhẹ nhàng.
+           Mỗi căn hộ với hệ thống nội thất được thiết kế chuyên nghiệp phù hợp với không gian căn phòng và nhu cầu phòng thủy của chủ sở hữu.</p>
+        `,
+        progress: `
+          <p>Tiến độ thi công</p>
+          <p>Hiện nay, dự án đã được hoàn thiện phần móng và đang trong giai đoạn thi công gấp rút, toàn bộ đội ngũ công nhân và máy móc đang tích cực 
+          làm ngày và đêm để kế hoạch dự án hoàn thành đúng như tiến độ và bắt đầu đi vào hoạt động vào quý I/2018 theo đúng như dự kiến mà dự án đã đề 
+          ra.</p>
+          <p>Pháp lý</p>
+          <ul>
+            <li>Giấy phép đăng ký kinh doanh của sở kế hoạch đầu tư tỉnh Khánh Hòa số 2161/17 ban hành ngày 19 tháng 01 năm 2017</li>
+            <li>Giấy chứng nhận đầu tư của UBND tỉnh Khánh Hòa ban hành ngày 22 tháng 6 năm 2016</li>
+            <li>Giấy phép xây dựng số 20/GPXD-SXD của sở Xây Dựng tỉnh Khánh Hòa ban hành ngày 08 tháng 3 năm 2016</li>
+            <li>Quyết định giao đất số 3714/QĐ-UBND của UBND tỉnh Khánh Hòa ban hành ngày 21 tháng 12 năm 2015</li>
+            <li>Giấy chứng nhận quyền sử dụng đất CD355466 cấp ngày 06 tháng 6 năm 2016 tại UBND tỉnh Khánh Hòa</li>
+            <li>Phê duyệt 1/500 của bộ Xây Dựng và UBND tỉnh Khánh Hòa</li>
+            <li>Thỏa thuận tĩnh không số 441/TC-QC của bộ Tổng tham mưu Cục tác chiến  ban hành ngày 07 tháng 12 năm 2016</li>
+            <li>Giấy chứng nhận phòng cháy chữa cháy số 5323/TD-PCCC-P6 của bộ Công An Cục Cảnh Sát PCCC ban hành ngày 11 tháng 11 năm 2015</li>
+          </ul>
+        `,
+        price: `
+          <p>
+            <strong>Giá bán: Trên 3000 USD/m2</strong>
+          </p>
+          <p>
+            Phương thức thanh toán:</br>
+            <ol>
+              <li>Đặt cọc: 50.000.000đ/ căn </li>
+              <li>Ký hợp đồng mua bán: 30% giá trị căn hộ nghỉ dưỡng (đã bao gồm VAT và tiền đặt cọc) – thanh toán 15 ngày kể từ đặt cọc</li>
+              <li>Đợt 1: 15% giá bán (đã bao gồm VAT) – sau khi hoàn thành xây dựng hết tầng 10</li>
+              <li>Đợt 2: 25% giá bán (đã bao gồm VAT) – sau khi hoàn thành xây dựng hết tầng 20</li>
+              <li>Đợt 3: 25% giá bán (đã bao gồm VAT) – sau khi hoàn thành xây dựng hết tầng 36</li>
+              <li>Đợt 4: 05% giá bán (đã bao gồm VAT) – khi nhận sổ hồng</li>
+            </ol>
+            <ul>
+              <li>Hỗ trợ lãi suất 0% trong 18 tháng</li>
+              <li>Vay tối đa 70% GTCH </li>
+              <li> Ân hạn nợ gốc trong 18 tháng</li>
+            </ul>
+          </p>
+        `,
+      },
+      gallery: {
+        picture: [ 
+          {src : './images/gallery/lalunanhatrang/pictures/1.jpg'}, 
+          {src : './images/gallery/lalunanhatrang/pictures/2.jpg'},
+          {src : './images/gallery/lalunanhatrang/pictures/3.jpg'},
+          {src : './images/gallery/lalunanhatrang/pictures/4.jpg'},
+          {src : './images/gallery/lalunanhatrang/pictures/5.jpg'},
+          {src : './images/gallery/lalunanhatrang/pictures/6.jpg'},
+          {src : './images/gallery/lalunanhatrang/pictures/7.jpg'},
+          {src : './images/gallery/lalunanhatrang/pictures/8.jpg'},
+          {src : './images/gallery/lalunanhatrang/pictures/9.jpg'},
+          {src : './images/gallery/lalunanhatrang/pictures/10.jpg'},
+          {src : './images/gallery/lalunanhatrang/pictures/11.jpg'},
+        ],
+        guide: [ 
+          {src : './images/gallery/lalunanhatrang/guides/1.jpg'},
+          {src : './images/gallery/lalunanhatrang/guides/2.jpg'},
+          {src : './images/gallery/lalunanhatrang/guides/3.jpg'},
+          {src : './images/gallery/lalunanhatrang/guides/4.jpg'},
+          {src : './images/gallery/lalunanhatrang/guides/5.jpg'}
+        ],
+        position: [ 
+          {src : './images/gallery/lalunanhatrang/positions/1.jpg'}
+        ],
+      },
+      website: "",
+      facebook: "",
+      youtube: "",
+      leaflet: "",
+      brochure: "https://drive.google.com/open?id=0B_8fWDtOsOgDSzhKV2xoN0dSVFE"
+    }
+
+block container
+  include ../layouts/header
+  include _sec_1
+  include _sec_2
+  include _sec_3
+  include _sec_4
+  include _sec_5
+  include _sec_6
+  include ../layouts/footer
+  include ../layouts/modal

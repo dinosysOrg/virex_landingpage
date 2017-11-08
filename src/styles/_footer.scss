@@ -9,9 +9,10 @@ footer{
     margin-top: rem(10);
   }
   .social-list{
+    display: none;
     margin-top: rem(20);
     i {
-      font-size: rem(40);
+      font-size: rem(24);
       @include maxs($sp-1024) {
         font-size: rem(24);
       }

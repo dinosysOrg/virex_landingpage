@@ -2,6 +2,12 @@
   background-color: #f5f5f5;
   width: 100%;
   &__info {
+    .section-note {
+      strong, u {
+        color: #c7202f;
+      }
+      font-size: rem(12);
+    }
     &__title {
       color: #c7202f;
       font-size: rem(18);
