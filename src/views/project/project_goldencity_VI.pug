@@ -13,16 +13,14 @@ block vars
       name: "Golden City An Giang",
       address: "Phường Mỹ Hòa, Thành Phố Long Xuyên, Tỉnh An Giang",
       info: {
-          model: `Nhà liền kề, biệt thự liền kề, shophouse, villa`,
+          model: `Biệt thự, nhà phố thương mại (shophouse), nhà liền kề`,
           investor: `Công ty cổ phần dịch vụ và thương mại <strong>Đông Á</strong> (thuộc <strong>Alphanam Group</strong>)`,
-          price: `<strong>Giá đất:</strong> 18 – 40 triệu/m2 </br> <strong>Giá nhà:</strong> Xây thô 3,5 triệu/m2 tầng và hoàn thiện mặt 
-          ngoài 4,5 triệu/m2`
+          price: `<strong>Giá đất:</strong> 15.5 triệu/m2 </br> <strong>Hoàn thiện nhà:</strong> Xây thô 3,5 tầng`
       },
       detail: {
-        text: `<strong>Golden City An Giang</strong> tọa lạc tại phường Mỹ Hòa, thành phố Long Xuyên, tỉnh An Giang. Sở hữu vị trí vàng đắc địa tại 
-        ngã ba giao lộ Nguyễn Hoàng và Nguyễn Thái Học, dự án kết nối linh hoạt với các khu vực quan trọng của tỉnh An Giang bằng hệ thống giao thông
-         thuận tiện.<br/><br/>Dự án nằm cạnh nhiều cơ quan hành chính cùng các tiện ích chung của khu vực, thuận tiện để cư dân tận hưởng trọn vẹn 
-         cuộc sống tiện nghi. `,
+        text: `Chúng tôi tin rằng cuộc sống tốt lành cho mọi người là sự hòa quyện giữa kiến trúc hiện đại và không gian hưởng
+         thụ hòa mình với thiên nhiên. Được bao bọc bởi dòng sông Long Xuyên thơ mộng, Golden City An Giang hứa hẹn đem đến những 
+         trải nghiệm đẳng cấp trong lòng thành phố xanh, giữ gìn nét “hào sảng, phóng khoáng” đậm chất miền Tây Nam Bộ.`,
         more: ``,
       },
       area: {
@@ -35,12 +33,12 @@ block vars
           desc: "Tỷ lệ diện tích cảnh quan"
         },
         mansion: {
-          value: "90 - 505 m2",
-          desc: "Diện tích lô đất"
+          value: "300m2 trở lên, 3 tầng",
+          desc: "Biệt thự"
         },
         apartment: {
-          value: "> 1300 lô",
-          desc: "Số lượng lô đất, biệt thự, nhà phố thương mại"
+          value: "100m2 trở lên, 3,5 tầng",
+          desc: "Nhà liền kề "
         }
       },
       other: {
@@ -65,7 +63,7 @@ block vars
             </li>
             <li>
               <strong>Chủ trì thiết kế :</strong>
-              <ul style="list-style-type: square">
+              <ul style="list-style-type: circle">
                 <li class="mb-0">Tiến sỹ/Kiến trúc sư: Salvador Perez Arroyo</li>
                 <li class="mb-0">Quốc tịch: Tây Ban Nha</li>
                 <li class="mb-0">Top 10 kiến trúc sư nổi tiếng thế giới</li>
@@ -75,16 +73,22 @@ block vars
                 <li class="mb-0">Trường phái kiến trúc hậu hiện đại</li>
               </ul>
             </li>
+            <li><strong>Đối tác song hành: VP Bank, Vietcombank</strong></li>
           </ul>
           `,
-        construct: ``,
+        construct: `
+          (Chủ đầu tư không muốn công bố)
+        `,
         position: `
           <ul>
             <li>
-              Với những lợi thế không thể bỏ qua, miền Tây đang là chốn dừng chân lý tưởng cho các nhà đầu tư bât động sản cao cấp. Trong đó, An Giang 
-              là một thị trường mới nổi đang được xem là tiềm năng bậc nhất tại đây.</br>Một trong những dự án đang thu hút sự quan tâm là Golden City An 
-              Giang. Với vị trí đắc địa ngay trung tâm TP. Long Xuyên, thành phố lớn thứ nhì Đồng bằng sông Cửu Long. Tiềm năng phát triển ở đây luôn
-              được giới đầu tư đánh giá cao, UBND tỉnh An Giang cũng định hướng đến 2020, TP.Long Xuyên sẽ trở thành thành phố loại 1 của tỉnh.
+              Với những lợi thế không thể bỏ qua, miền Tây đang là chốn dừng chân lý tưởng cho các nhà đầu tư bât động sản cao cấp.
+               Trong đó, An Giang là một thị trường mới nổi đang được xem là tiềm năng bậc nhất tại đây.
+            </li>
+            <li>
+              Một trong những dự án đang thu hút sự quan tâm là Golden City An Giang. Với vị trí đắc địa ngay trung tâm TP. Long Xuyên,
+               thành phố lớn thứ nhì Đồng bằng sông Cửu Long. Tiềm năng phát triển ở đây luôn được giới đầu tư đánh giá cao, UBND tỉnh An
+                Giang cũng định hướng đến 2020, TP.Long Xuyên sẽ trở thành thành phố loại 1 của tỉnh.
             </li>
             <li>
               Golden City An Giang tọa lạc tại phường Mỹ Hòa, thành phố Long Xuyên, tỉnh An Giang. Sở hữu vị trí vàng đắc địa tại ngã ba giao lộ
@@ -102,38 +106,27 @@ block vars
         design_info: `
           <ul>
             <li>
-              Đất ở: Diện tích 30.762 m2, chiếm tỷ lệ 55,60%
+              Nhà phố thương mại (Shophouse):
               <ul style="list-style-type: circle">
-                <li class="mb-0">Nhà ở liền kề: 22.904 m2, chiếm tỷ lệ 41,40%</li>
-                <li class="mb-0">Nhà ở riêng lẻ kết hợp dịch vụ: 7.858 m2</li>
+                <li class="mb-0">100m2 (5mx20m)</li>
+                <li class="mb-0">114m2 (6mx19m)</li>
+                <li class="mb-0">120m2 (6mx20m)</li>
               </ul>
             </li>
-            <li>Đất cây xanh: 1.592 m2</li>
             <li>
-              Đất nhà ở liền kề: Gồm 6 khu. Ký hiệu (L1), (L2), (L3), (L4), (L5), (L6).
-              </br>Tổng diện tích đất: 22.904 m2 chia thành 172 nền nhà liền kế
-              </br>Mật độ xây dựng tối đa: 80%
-              </br>Tầng cao tối đa: 05 tầng
-              </br>Chỉ giới xây dựng: Cách chỉ giới đường đỏ tối thiểu:
+              Biệt thự
               <ul style="list-style-type: circle">
-                <li class="mb-0">3m đối với nền nhà tiếp giáp đường Nguyễn Hoàng, đường Nguyễn Thái Học</li>
-                <li class="mb-0">Trùng chỉ giới đường đỏ đối với các tuyến đường tiếp giáp khác</li>
-                <li class="mb-0">1m đối với ranh khu đất tiếp giáp phía sau nhà</li>
+                <li class="mb-0">300ms (15mx20m)</li>
               </ul>
             </li>
-            <li>Nhà ở riêng lẻ kết hợp dịch vụ: Gồm 12 khu. Ký hiệu (L1-1, 10), (L1-9,18), (L2-1),
-             ( L2-17,36), (L2-21), (L3-19,38), (L4-1), (L4-17,36), (L5-1,15), (L5-14,28), (L6-1), (L6-19).
-              </br>Tổng diện tích: 7.858 m2 chia thành 19 nền nhà ở  riêng lẻ kết hợp dịch vụ, chiếm 14,20% tổng diện tích
-              </br>Mật độ xây dựng tối đa: 60% ( riêng đối với lô L6-1 tối đa 50%)
-              </br>Tầng cao tối đa: 05 tầng
-              </br>Chỉ giới xây dựng: Cách chỉ giới đường đỏ tối thiểu:
+            <li>
+              Nhà liền kề
               <ul style="list-style-type: circle">
-                <li class="mb-0">3m đối với các tuyến đường tiếp giáp khu đất</li>
-                <li class="mb-0">1m đối với ranh khu đất tiếp giáp hai bên và phía sau nhà</li>
+                <li class="mb-0">100m2 (5mx20m)</li>
+                <li class="mb-0">114m2 (6mx19m)</li>
+                <li class="mb-0">120m2 (6mx20m)</li>
               </ul>
             </li>
-            <li>Đất cây xanh: Bố trí trên trục đường số 21, diện tích đất: 1.592m2, chiếm tỷ lệ 2,88%</li>
-            <li>Đất giao thông: 22.974 m2, chiếm 41,52% tổng diện tích</li>
           </ul>
         `,
         utility: `
@@ -170,32 +163,11 @@ block vars
         `,
         progress: ` 
           <p><strong>Tiến độ thi công</strong></p>
-          <p>
-            Đầu tư xây dựng Khu đô thị Golden City thuộc Khu liên hợp văn hóa, thể thao, dịch vụ, hội chợ triển lãm và dân cư với quy mô 43,39 ha bao
-            gồm 02 giai đoạn như sau:
-          </p>
-            <ul style="list-style-type: circle">
-                <li class="mb-0">Giai đoạn 1: 22,5 ha</li>
-                <li class="mb-0">Giai đoạn 2: 20,89 ha</li>
-            </ul>
-          <p>Tiến độ thực hiện dự án từ năm 2015 đến năm 2016. Trong đó:</p>
           <ul>
-            <li>
-              Giai đoạn 1:
-              <ul style="list-style-type: circle">
-                <li class="mb-0">Từ Quý II/2015 đến Quý III/2015: Bước chuẩn bị đầu tư</li>
-                <li class="mb-0">Từ Quý III/2015 đến Quý II/2016: Thực hiện dự án đầu tư</li>
-                <li class="mb-0">Quý III/2016: Đưa dự án vào khai thác, sử dụng</li>
-              </ul>
-            </li>
-            <li>
-              Giai đoạn 2:
-              <ul style="list-style-type: circle">
-                <li class="mb-0">Từ Quý II/2015 đến Quý III/2015: Bước chuẩn bị đầu tư</li>
-                <li class="mb-0">Từ Quý III/2015 đến Quý II/2016: Thực hiện dự án đầu tư</li>
-                <li class="mb-0">Quý III/2016: Đưa dự án vào khai thác, sử dụng</li>
-              </ul>
-            </li>
+            <li>Đầu tư xây dựng Khu đô thị Golden City thuộc Khu liên hợp văn hóa, thể thao, dịch vụ, hội chợ triển lãm và dân cư 
+            với quy mô 43,39 ha bao gồm 02 giai đoạn như sau:</li>
+            <li>Giai đoạn 1: 22,5 ha | Đã hoàn thành cơ sở hạ tầng. Sẵn sàng bàn giao lô đất cho chủ sở hữu</li>
+            <li>Giai đoạn 2: 20,89 ha | Đang thi công</li>
           </ul>
           <p>
             <strong>Pháp lý</strong>
@@ -207,8 +179,8 @@ block vars
         `,
         price: `
           <p>
-            <strong>Giá đất:</strong> Dao động trong khoảng từ 18 – 40 triệu/m2 tùy vị trí. </br>
-            <strong>Giá nhà:</strong> Xây thô 3,5 tầng và hoàn thiện mặt ngoài 4,5 triệu/m2
+            <strong>Giá đất:</strong> 15.5 triệu/m2 tùy vị trí.</br>
+            <strong>Hoàn thiện nhà:</strong> Xây thô 3,5 tầng
           </p>
           <p>
             Tiến độ thanh toán: 
