@@ -4,6 +4,8 @@
 
 script.
   var photos = !{JSON.stringify(project.gallery)};
+  var construct = !{JSON.stringify(project.other.construct)};
+  console.log(construct.length);
 
 div(style={'background-image': 'url('+ project.banner +')'}).sec-proj.section-proj-1#banner
   .section-proj-1__button-group.row

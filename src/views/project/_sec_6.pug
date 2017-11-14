@@ -7,7 +7,9 @@
     .section-proj-6__tab-bar.col-md-4
       button(onclick='activeTab(event, 1)').section-proj-6__tab-bar__link#defaultOpen !{dataLang.investor}
       button(onclick='activeTab(event, 2)').section-proj-6__tab-bar__link !{dataLang.design}
+      - if (project.other.construct.length > 0) {
       button(onclick='activeTab(event, 3)').section-proj-6__tab-bar__link !{dataLang.construct}
+      - }
       button(onclick='activeTab(event, 4)').section-proj-6__tab-bar__link !{dataLang.position}
       button(onclick='activeTab(event, 5)').section-proj-6__tab-bar__link !{dataLang.design_info}
       button(onclick='activeTab(event, 6)').section-proj-6__tab-bar__link !{dataLang.utility}
@@ -16,7 +18,9 @@
     .section-proj-6__tab-content.col-md-8
       .section-proj-6__tab-content__item#item1 !{project.other.investor}
       .section-proj-6__tab-content__item#item2 !{project.other.design}
+      - if (project.other.construct.length > 0) {
       .section-proj-6__tab-content__item#item3 !{project.other.construct}
+      - }
       .section-proj-6__tab-content__item#item4 !{project.other.position}
       .section-proj-6__tab-content__item#item5 !{project.other.design_info}
       .section-proj-6__tab-content__item#item6 !{project.other.utility}
@@ -27,8 +31,10 @@
       .section-proj-6__arcordion__item#defaultShow !{project.other.investor}
       button.section-proj-6__arcordion__link !{dataLang.design}
       .section-proj-6__arcordion__item !{project.other.design}
+      - if (project.other.construct.length > 0) {
       button.section-proj-6__arcordion__link !{dataLang.construct}
       .section-proj-6__arcordion__item !{project.other.construct}
+      - }
       button.section-proj-6__arcordion__link !{dataLang.position}
       .section-proj-6__arcordion__item !{project.other.position}
       button.section-proj-6__arcordion__link !{dataLang.design_info}
